@@ -1,8 +1,13 @@
 import Head from "next/head";
 
-export default function CustomHead({ pageTitle, pageDescription }: {
+export default function CustomHead({ 
+  pageTitle, 
+  pageDescription,
+  metas
+}: {
   pageTitle: string
   pageDescription: string
+  metas?: JSX.Element | JSX.Element[]
 }) {
   const titleOutput = `Andrea Losavio | ${pageTitle}`
 
@@ -28,6 +33,8 @@ export default function CustomHead({ pageTitle, pageDescription }: {
       <meta property="twitter:title" content={titleOutput} />
       <meta property="twitter:description" content={pageDescription} />
       <meta property="twitter:image" content="/images/website-thumbnail.png" />
+
+      {metas}
     </Head>
   )
 }

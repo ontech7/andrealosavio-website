@@ -1,16 +1,14 @@
-import CustomHead from '@/components/layout/head';
+import Layout from '@/components/layout';
 
 export default function PrivacyPolicy() {
   return (
-    <>
-      <CustomHead 
-        pageTitle="Privacy Policy"
-        pageDescription="La privacy policy di www.andrealosavio.com"
-      />
-      
+    <Layout
+      title="Privacy Policy"
+      description="La privacy policy di www.andrealosavio.com"
+    >
       <main>
         PrivacyPolicy
       </main>
-    </>
+    </Layout>
   )
 }

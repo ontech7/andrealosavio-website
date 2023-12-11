@@ -1,16 +1,14 @@
-import CustomHead from '@/components/layout/head';
+import Layout from '@/components/layout';
 
 export default function Servizi() {
   return (
-    <>
-      <CustomHead 
-        pageTitle="Servizi di consulenza, creazione siti web, e tanto altro"
-        pageDescription="Creazione di siti web, eCommerce, consulenza, progettazione e design, insegnante on-demand e collaborazioni con Start Up e Aziende. Scopri di più"
-      />
-      
+    <Layout
+      title="Servizi di consulenza, creazione siti web, e tanto altro"
+      description="Creazione di siti web, eCommerce, consulenza, progettazione e design, insegnante on-demand e collaborazioni con Start Up e Aziende. Scopri di più"
+    >
       <main>
         Servizi
       </main>
-    </>
+    </Layout>
   )
 }

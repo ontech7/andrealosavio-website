@@ -1,16 +1,14 @@
-import CustomHead from '@/components/layout/head';
+import Layout from '@/components/layout';
 
 export default function Portfolio() {
   return (
-    <>
-      <CustomHead 
-        pageTitle="Il mio portfolio"
-        pageDescription="Qui sono racchiusi tutti i progetti personali e clienti con cui ho lavorato sinora. Scopri di più"
-      />
-      
+    <Layout
+      title="Il mio portfolio"
+      description="Qui sono racchiusi tutti i progetti personali e clienti con cui ho lavorato sinora. Scopri di più"
+    >
       <main>
         Portfolio
       </main>
-    </>
+    </Layout>
   )
 }
