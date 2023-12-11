@@ -24,14 +24,14 @@ export default function HeaderDesktop() {
       }}
     >
 
-      <Link href="/" sx={{ height: 35 }}>
+      <NextLink href="/" sx={{ height: 35 }}>
         <img 
           sx={{ height: "100%", width: "auto" }}
           src="/images/logo.svg" 
           alt="logo" 
           title="Andrea Losavio's website logo" 
         />
-      </Link>
+      </NextLink>
 
       <Navbar>
         {menuVoicesMap

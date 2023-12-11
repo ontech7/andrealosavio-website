@@ -3,13 +3,13 @@ import { useState } from "react";
 
 import { Box, Link } from 'theme-ui';
 
+import CopyrightText from "../../common/copyright";
+import SocialLinks from "../../common/socials";
 import HamburgerButton from "../hamburger";
 import Navbar from "../navbar";
 import NavbarItem from "../navbar/item";
 
 import { menuVoicesMap } from "@/shared-data/navbar";
-import CopyrightText from "../../common/copyright";
-import SocialLinks from "../../common/socials";
 
 export default function HeaderMobile() {
   const mobile = "@media (max-width: 991px)";
@@ -54,14 +54,14 @@ export default function HeaderMobile() {
         }}
       >
 
-        <Link href="/" sx={{ height: "30px" }}>
+        <NextLink href="/" sx={{ height: "30px" }}>
           <img 
             sx={{ height: "100%", width: "auto" }}
             src="/images/logo.svg" 
             alt="logo" 
             title="Andrea Losavio's website logo" 
           />
-        </Link>
+        </NextLink>
 
         <HamburgerButton
           isOpen={isOpen}
