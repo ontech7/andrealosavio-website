@@ -22,15 +22,15 @@ export default function HamburgerOpenIcon({ isOpen }: { isOpen: boolean }) {
           width: !isOpen 
             ? "100%" : "0%",
 
-          "&:nth-child(1)": { 
+          "&:nth-of-type(1)": { 
             transitionDelay: !isOpen 
               ? "0.6s" : "0.1s" 
           },
-          "&:nth-child(2)": { 
+          "&:nth-of-type(2)": { 
             transitionDelay: !isOpen 
               ? "0.5s" : "0.2s" 
           },
-          "&:nth-child(3)": { 
+          "&:nth-of-type(3)": { 
             transitionDelay: !isOpen 
               ? "0.4s" : "0.3s" 
           }

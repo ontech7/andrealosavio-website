@@ -1,12 +1,19 @@
 import NextLink from "next/link";
+import { useRouter } from "next/router";
 
 import { Link } from 'theme-ui';
 
-export default function NavbarItem({ label, href }: {
+export default function NavbarItem({ 
+  label, 
+  href, 
+  noHover 
+}: {
   label: string
   href: string
+  noHover?: boolean
 }) {
-  const mobile = "@media (max-width: 991px)";
+  const router = useRouter();
+  const [path] = router.asPath.split("#");
 
   return (
     <li>
@@ -15,8 +22,9 @@ export default function NavbarItem({ label, href }: {
         variant="navlink" 
         href={href}
         sx={{ 
-          [mobile]: { 
-            "&::after": { bg: "transparent", transition: "none" }
+          "&::after": {
+            ...path == href ? { transform: "scale(1)" } : {},
+            ...noHover ? { bg: "transparent", transition: "none" } : {}
           }
         }}
       >

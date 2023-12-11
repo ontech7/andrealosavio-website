@@ -23,14 +23,14 @@ export default function HamburgerCloseIcon({ isOpen }: { isOpen: boolean }) {
           width: !isOpen 
             ? "0%" : "100%",
 
-          "&:nth-child(1)": { 
+          "&:nth-of-type(1)": { 
             transformOrigin: "0% 0%",
             transform: "rotate(45deg)",
             transitionDelay: !isOpen 
               ? "0.1s" : "0.6s"
           },
 
-          "&:nth-child(2)": { 
+          "&:nth-of-type(2)": { 
             transformOrigin: "0% 100%",
             transform: "rotate(-45deg)",
             transitionDelay: !isOpen 

@@ -106,6 +106,7 @@ export default function HeaderMobile() {
                 key={label} 
                 label={label} 
                 href={href} 
+                noHover
               />
 
             )}
