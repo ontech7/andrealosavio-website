@@ -1,4 +1,3 @@
-
 import CustomHead from '@/components/layout/head';
 
 export default function Homepage() {
@@ -10,7 +9,7 @@ export default function Homepage() {
       />
       
       <main>
-        
+        Homepage
       </main>
     </>
   )

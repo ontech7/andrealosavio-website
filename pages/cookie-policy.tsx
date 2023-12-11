@@ -1,5 +1,16 @@
+import CustomHead from '@/components/layout/head';
+
 export default function CookiePolicy() {
   return (
-    <div>CookiePolicy</div>
+    <>
+      <CustomHead 
+        pageTitle="Cookie Policy"
+        pageDescription="La cookie policy di www.andrealosavio.com"
+      />
+      
+      <main>
+        CookiePolicy
+      </main>
+    </>
   )
 }
