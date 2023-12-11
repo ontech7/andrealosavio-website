@@ -11,6 +11,7 @@ export const buttonBaseProps: ThemeUICSSObject = {
   fontSize: "link",
   fontWeight: 700,
   textDecoration: "none",
+  textTransform: "uppercase",
   borderRadius: "3px",
   fontFamily: "inherit"
 }

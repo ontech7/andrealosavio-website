@@ -12,5 +12,28 @@ export const links: Record<string, ThemeUICSSObject> = {
     ...buttonBaseProps,
     bg: "yellow",
     color: "black"
+  },
+  navlink: {
+    position: "relative",
+    display: "inline-block",
+    textDecoration: "none",
+    color: "white",
+    fontWeight: 500,
+    "&::after": {
+      content: '""',
+      position: "absolute",
+      bottom: 0,
+      left: 0,
+      width: "100%",
+      height: "3px",
+      marginBottom: "-5px",
+      backgroundColor: "green",
+      transform: "scale(0)",
+      transition: "transform 0.3s ease-in-out"
+    },
+    "&:hover::after": {
+      transformOrigin: "center",
+      transform: "scale(1)"
+    }
   }
 }
