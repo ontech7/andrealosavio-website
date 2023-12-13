@@ -6,7 +6,7 @@ import HeaderMobile from "./variant/mobile";
 
 export default function Header() {
   return (
-    <Box as="header" bg="blue">
+    <Box as="header" bg="blue" p="15px 0">
       
       {/** @media (min-width: 992px) */}
       <HeaderDesktop />

@@ -1,8 +1,8 @@
 import type { ThemeUIStyleObject } from "theme-ui"
 
-export default function Navbar({ children, extraSx }: {
+export default function Navbar({ children, ssx }: {
   children: JSX.Element | JSX.Element[] | string
-  extraSx?: ThemeUIStyleObject
+  ssx?: ThemeUIStyleObject
 }) {
   return (
     <ul
@@ -12,7 +12,7 @@ export default function Navbar({ children, extraSx }: {
         padding: 0,
         display: "flex",
         gap: "40px",
-        ...extraSx
+        ...ssx
       }}
     >
 

@@ -4,12 +4,14 @@ import { useState } from "react";
 import { Box, Link } from 'theme-ui';
 
 import CopyrightText from "../../common/copyright";
+import Navbar from "../../common/navbar";
+import NavbarItem from "../../common/navbar/item";
 import SocialLinks from "../../common/socials";
 import HamburgerButton from "../hamburger";
-import Navbar from "../navbar";
-import NavbarItem from "../navbar/item";
 
 import { menuVoicesMap } from "@/shared-data/navbar";
+import LayoutLogo from "../../common/logo";
+import LayoutWrapper from "../../common/wrapper";
 
 export default function HeaderMobile() {
   const mobile = "@media (max-width: 991px)";
@@ -41,27 +43,14 @@ export default function HeaderMobile() {
         }}
       />
 
-      <Box
-        sx={{
-          position: "relative",
+      <LayoutWrapper
+        ssx={{
           display: "none",
-          justifyContent: "space-between",
-          alignItems: "center",
-          maxWidth: 1200,
-          margin: "0 auto",
-          padding: "15px 20px",
-          [mobile]: { display: "flex" }
+          [mobile]: { display: "flex" },
         }}
       >
 
-        <NextLink href="/" sx={{ height: "30px" }}>
-          <img 
-            sx={{ height: "100%", width: "auto" }}
-            src="/images/logo.svg" 
-            alt="logo" 
-            title="Andrea Losavio's website logo" 
-          />
-        </NextLink>
+        <LayoutLogo />
 
         <HamburgerButton
           isOpen={isOpen}
@@ -89,7 +78,7 @@ export default function HeaderMobile() {
         >
 
           <Navbar
-            extraSx={{
+            ssx={{
               flexDirection: "column",
               gap: "20px",
               "& a": {
@@ -125,15 +114,11 @@ export default function HeaderMobile() {
 
           <CopyrightText />
 
-          <SocialLinks
-            extraSx={{
-              alignSelf: "flex-end"
-            }}
-          />
+          <SocialLinks ssx={{ alignSelf: "flex-end" }} />
 
         </Box>
 
-      </Box>
+      </LayoutWrapper>
     </>
   )
 }

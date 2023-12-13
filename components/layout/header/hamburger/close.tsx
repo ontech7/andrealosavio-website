@@ -11,7 +11,7 @@ export default function HamburgerCloseIcon({ isOpen }: { isOpen: boolean }) {
           ? "absolute" : "fixed",
         height: "20px",
         width: "26px",
-        right: "20px",
+        right: !isOpen ? 0 : "19px",
         flexDirection: "column",
         justifyContent: "space-between",
 

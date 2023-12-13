@@ -1,9 +1,11 @@
 import NextLink from "next/link";
 
-import { Box, Link } from 'theme-ui';
+import { Link } from 'theme-ui';
 
-import Navbar from "../navbar";
-import NavbarItem from "../navbar/item";
+import LayoutLogo from "../../common/logo";
+import Navbar from "../../common/navbar";
+import NavbarItem from "../../common/navbar/item";
+import LayoutWrapper from "../../common/wrapper";
 
 import { menuVoicesMap } from "@/shared-data/navbar";
 
@@ -11,27 +13,14 @@ export default function HeaderDesktop() {
   const mobile = "@media (max-width: 991px)";
 
   return (
-    <Box
-      sx={{
-        position: "relative",
+    <LayoutWrapper
+      ssx={{
         display: "flex",
-        justifyContent: "space-between",
-        alignItems: "center",
-        maxWidth: 1200,
-        margin: "0 auto",
-        padding: "15px 20px",
-        [mobile]: { display: "none" }
+        [mobile]: { display: "none" },
       }}
     >
 
-      <NextLink href="/" sx={{ height: 35 }}>
-        <img 
-          sx={{ height: "100%", width: "auto" }}
-          src="/images/logo.svg" 
-          alt="logo" 
-          title="Andrea Losavio's website logo" 
-        />
-      </NextLink>
+      <LayoutLogo />
 
       <Navbar>
         {menuVoicesMap
@@ -55,6 +44,6 @@ export default function HeaderDesktop() {
         CONTATTAMI
       </Link>
 
-    </Box>
+    </LayoutWrapper>
   )
 }

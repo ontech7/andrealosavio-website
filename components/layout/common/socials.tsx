@@ -4,15 +4,15 @@ import { Box, ThemeUIStyleObject } from 'theme-ui'
 
 import { socialLinks } from '@/shared-data/navbar'
 
-export default function SocialLinks({ extraSx }: {
-  extraSx?: ThemeUIStyleObject
+export default function SocialLinks({ ssx }: {
+  ssx?: ThemeUIStyleObject
 }) {
   return (
     <Box
       sx={{
         display: "flex",
         gap: "5px",
-        ...extraSx
+        ...ssx
       }}
     >
 

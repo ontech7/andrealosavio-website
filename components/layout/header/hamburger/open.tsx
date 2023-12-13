@@ -10,7 +10,7 @@ export default function HamburgerOpenIcon({ isOpen }: { isOpen: boolean }) {
         position: "absolute",
         height: "20px",
         width: "26px",
-        right: "20px",
+        right: 0,
         flexDirection: "column",
         justifyContent: "space-between",
 

@@ -23,7 +23,7 @@ export default function HamburgerButton({
           position: "absolute",
           height: "20px",
           width: "26px",
-          right: "20px",
+          right: 0,
           opacity: 0,
           margin: 0
         }}
