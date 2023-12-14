@@ -47,10 +47,12 @@ export default function Homepage() {
             }}
           >
             <Image
-              src="/images/programmer.svg"
+              src="/images/programmer.png"
               alt="Immagine rappresentativa di Andrea Losavio"
               fill
               priority
+              unoptimized
+              sx={{ width: "auto !important", height: "100% !important", mx: "auto" }}
             />
           </Box>
 
