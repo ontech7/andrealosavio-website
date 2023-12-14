@@ -48,7 +48,7 @@ export default function Homepage() {
               right: 0,
               bottom: 0,
               [breakpoints.tablet]: { width: "70%", bottom: "60px" },
-              [breakpoints.mobile]: { position: "relative", alignSelf: "center", width: "100%", height: "290px", mb: "-80px" }
+              [breakpoints.mobile]: { position: "relative", alignSelf: "center", width: "100%", height: "40vh", mb: "-80px" }
             }}
           >
             <Lottie
