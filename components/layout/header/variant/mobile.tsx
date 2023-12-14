@@ -10,6 +10,7 @@ import SocialLinks from "../../common/socials";
 import HamburgerButton from "../hamburger";
 
 import { menuVoicesMap } from "@/shared-data/navbar";
+import { ArrowRightCircleIcon } from "@heroicons/react/24/solid";
 import LayoutLogo from "../../common/logo";
 import LayoutWrapper from "../../common/wrapper";
 
@@ -108,6 +109,11 @@ export default function HeaderMobile() {
             sx={{ alignSelf: "start" }}
           >
             CONTATTAMI
+
+            <ArrowRightCircleIcon 
+              sx={{ color: "black", ml: 2 }} 
+              width={24} 
+            />
           </Link>
 
           <Box sx={{ flexGrow: 1 }} />

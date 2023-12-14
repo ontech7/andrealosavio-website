@@ -7,7 +7,7 @@ export const buttonBaseProps: ThemeUICSSObject = {
   display: "inline-flex",
   alignItems: "center",
   justifyContent: "center",
-  padding: "12px 25px",
+  padding: "10px 25px",
   fontSize: "link",
   fontWeight: 700,
   textDecoration: "none",

@@ -11,7 +11,7 @@ export default function SocialLinks({ ssx }: {
     <Box
       sx={{
         display: "flex",
-        gap: "5px",
+        gap: "8px",
         ...ssx
       }}
     >

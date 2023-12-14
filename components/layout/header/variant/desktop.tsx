@@ -8,6 +8,7 @@ import NavbarItem from "../../common/navbar/item";
 import LayoutWrapper from "../../common/wrapper";
 
 import { menuVoicesMap } from "@/shared-data/navbar";
+import { ArrowRightCircleIcon } from "@heroicons/react/24/solid";
 
 export default function HeaderDesktop() {
   const mobile = "@media (max-width: 991px)";
@@ -42,6 +43,11 @@ export default function HeaderDesktop() {
         href="/contattami"
       >
         CONTATTAMI
+
+        <ArrowRightCircleIcon 
+          sx={{ color: "black", ml: 2 }} 
+          width={24} 
+        />
       </Link>
 
     </LayoutWrapper>
