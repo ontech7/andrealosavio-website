@@ -43,14 +43,14 @@ export default function Homepage() {
               right: 0,
               bottom: 0,
               [breakpoints.tablet]: { width: "60%", bottom: "30px" },
-              [breakpoints.mobile]: { position: "relative", alignSelf: "center", width: "100%", height: 200 }
+              [breakpoints.mobile]: { position: "relative", alignSelf: "center", width: "100%", height: "30vh" }
             }}
           >
             <Image
               src="/images/programmer.svg"
               alt="Immagine rappresentativa di Andrea Losavio"
               fill
-              sx={{ top: 0, left: 0}}
+              priority
             />
           </Box>
 
