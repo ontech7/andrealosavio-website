@@ -1,22 +1,21 @@
 import NextLink from "next/link";
 import { useState } from "react";
 
+import { ArrowRightCircleIcon } from "@heroicons/react/24/solid";
 import { Box, Link } from 'theme-ui';
 
 import CopyrightText from "../../common/copyright";
+import LayoutLogo from "../../common/logo";
 import Navbar from "../../common/navbar";
 import NavbarItem from "../../common/navbar/item";
 import SocialLinks from "../../common/socials";
+import LayoutWrapper from "../../common/wrapper";
 import HamburgerButton from "../hamburger";
 
 import { menuVoicesMap } from "@/shared-data/navbar";
-import { ArrowRightCircleIcon } from "@heroicons/react/24/solid";
-import LayoutLogo from "../../common/logo";
-import LayoutWrapper from "../../common/wrapper";
+import { breakpoints } from "@/shared-data/theme";
 
 export default function HeaderMobile() {
-  const mobile = "@media (max-width: 991px)";
-  
   const [isOpen, setOpen] = useState(false);
   const toggle = () => setOpen(p => !p);
 
@@ -40,14 +39,14 @@ export default function HeaderMobile() {
           backgroundColor: !isOpen ? "rgb(0,0,0,0)" : "rgb(0,0,0,0.5)",
           pointerEvents: !isOpen ? "none" : "all",
           transition: "background-color .5s ease-in-out",
-          [mobile]: { display: "block" }
+          [breakpoints.tablet]: { display: "block" }
         }}
       />
 
       <LayoutWrapper
         ssx={{
           display: "none",
-          [mobile]: { display: "flex" },
+          [breakpoints.tablet]: { display: "flex" },
         }}
       >
 

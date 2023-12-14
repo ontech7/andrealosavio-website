@@ -62,3 +62,20 @@ b {
 li a {
   padding: 10px;
 }
+
+/**********/
+/* tablet */
+/**********/
+@media (max-width: 991px) {
+  h1 {
+    font-size: 35px !important;
+  }
+
+  h2 {
+    font-size: 30px !important;
+  }
+
+  h3 {
+    font-size: 25px !important;
+  }
+}

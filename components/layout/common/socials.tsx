@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-import { Box, ThemeUIStyleObject } from 'theme-ui'
+import { Box, type ThemeUIStyleObject } from 'theme-ui'
 
 import { socialLinks } from '@/shared-data/navbar'
 

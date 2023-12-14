@@ -1,10 +1,10 @@
 import NextLink from "next/link";
 
-export default function LayoutLogo() {
-  const mobile = "@media (max-width: 991px)";
+import { breakpoints } from '@/shared-data/theme';
 
+export default function LayoutLogo() {
   return (
-    <NextLink href="/" sx={{ height: 35, [mobile]: { height: 30 } }}>
+    <NextLink href="/" sx={{ height: 35, [breakpoints.tablet]: { height: 30 } }}>
       <img 
         sx={{ height: "100%", width: "auto" }}
         src="/images/logo.svg" 

@@ -1,7 +1,7 @@
 import type { ThemeUIStyleObject } from "theme-ui"
 
 export default function Navbar({ children, ssx }: {
-  children: JSX.Element | JSX.Element[] | string
+  children?: JSX.Element | JSX.Element[] | string
   ssx?: ThemeUIStyleObject
 }) {
   return (

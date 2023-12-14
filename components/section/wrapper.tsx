@@ -1,7 +1,7 @@
-import { Box, type ThemeUIStyleObject } from 'theme-ui';
+import { Box, type ThemeUIStyleObject } from 'theme-ui'
 
-export default function LayoutWrapper({ 
-  children ,
+export default function SectionWrapper({
+  children,
   ssx
 }: {
   children?: JSX.Element | JSX.Element[] | string
@@ -11,12 +11,10 @@ export default function LayoutWrapper({
     <Box
       sx={{
         position: "relative",
-        display: "flex",
-        justifyContent: "space-between",
-        alignItems: "center",
         maxWidth: "90%",
         width: 1200,
         margin: "0 auto",
+        height: "100%",
         ...ssx
       }}
     >

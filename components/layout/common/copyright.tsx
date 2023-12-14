@@ -6,12 +6,14 @@ export default function CopyrightText() {
   return (
     <Box
       sx={{
-        "& p": { fontSize: 16, color: "white" },
+        "& p": { fontSize: 16 },
         "& a": { color: "green", fontWeight: 400 }
       }}
     >
 
-      <Paragraph>© Copyright 2022 | Andrea Losavio</Paragraph>
+      <Paragraph>
+        © Copyright 2023 | Andrea Losavio
+      </Paragraph>
 
       <Paragraph>
 
@@ -22,7 +24,9 @@ export default function CopyrightText() {
         >
           Privacy Policy
         </Link>
+
         {" - "}
+
         <Link 
           as={NextLink} 
           target="_blank" 
@@ -33,7 +37,9 @@ export default function CopyrightText() {
 
       </Paragraph>
 
-      <Paragraph>P.I. 12705460967</Paragraph>
+      <Paragraph>
+        P.I. 12705460967
+      </Paragraph>
 
     </Box>
   )

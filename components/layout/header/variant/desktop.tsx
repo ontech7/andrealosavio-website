@@ -2,22 +2,22 @@ import NextLink from "next/link";
 
 import { Link } from 'theme-ui';
 
+import { ArrowRightCircleIcon } from "@heroicons/react/24/solid";
 import LayoutLogo from "../../common/logo";
 import Navbar from "../../common/navbar";
+
 import NavbarItem from "../../common/navbar/item";
 import LayoutWrapper from "../../common/wrapper";
 
 import { menuVoicesMap } from "@/shared-data/navbar";
-import { ArrowRightCircleIcon } from "@heroicons/react/24/solid";
+import { breakpoints } from "@/shared-data/theme";
 
 export default function HeaderDesktop() {
-  const mobile = "@media (max-width: 991px)";
-
   return (
     <LayoutWrapper
       ssx={{
         display: "flex",
-        [mobile]: { display: "none" },
+        [breakpoints.tablet]: { display: "none" },
       }}
     >
 

@@ -1,6 +1,6 @@
 
-import { menuVoicesMap } from '@/shared-data/navbar';
 import { Box } from 'theme-ui';
+
 import CopyrightText from '../common/copyright';
 import LayoutLogo from "../common/logo";
 import Navbar from '../common/navbar';
@@ -8,35 +8,23 @@ import NavbarItem from '../common/navbar/item';
 import SocialLinks from '../common/socials';
 import LayoutWrapper from '../common/wrapper';
 
-export default function Footer() {
-  const mobile = "@media (max-width: 991px)";
+import { menuVoicesMap } from '@/shared-data/navbar';
+import { breakpoints } from '@/shared-data/theme';
+import FooterWrapper from './wrapper';
 
+export default function Footer() {
   return (
     <Box as="footer" bg="blue" p="40px 0">
 
       <LayoutWrapper ssx={{ flexDirection: "column" }}>
 
-        <Box
-          sx={{
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "flex-end",
-            width: "100%",
-            columnGap: "20px",
-            rowGap: "40px",
-            mb: "40px",
-            [mobile]: {
-              flexDirection: "column",
-              alignItems: "flex-start"
-            }
-          }}
-        >
+        <FooterWrapper ssx={{ rowGap: "40px", mb: "40px" }}>
 
           <LayoutLogo />
 
           <Navbar
             ssx={{
-              [mobile]: { flexDirection: "column", gap: "20px" }
+              [breakpoints.tablet]: { flexDirection: "column", gap: "20px" }
             }}
           >
             {menuVoicesMap
@@ -52,28 +40,15 @@ export default function Footer() {
             )}
           </Navbar>
 
-        </Box>
+        </FooterWrapper>
 
-        <Box
-          sx={{
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "flex-end",
-            width: "100%",
-            columnGap: "20px",
-            rowGap: "20px",
-            [mobile]: {
-              flexDirection: "column",
-              alignItems: "flex-start"
-            }
-          }}
-        >
+        <FooterWrapper ssx={{ rowGap: "20px" }}>
 
           <CopyrightText />
 
           <SocialLinks ssx={{ alignSelf: "flex-end" }} />
 
-        </Box>
+        </FooterWrapper>
 
       </LayoutWrapper>
 
