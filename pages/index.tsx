@@ -1,4 +1,6 @@
+import developerLottie from "@/libs/lottie/developer.json";
 import NextLink from "next/link";
+import Lottie from "react-lottie-player";
 
 import { ArrowDownCircleIcon } from '@heroicons/react/24/outline';
 
@@ -9,7 +11,7 @@ import KeyPoint from '@/components/key-point';
 import Layout from '@/components/layout';
 import Section from '@/components/section';
 import SectionWrapper from '@/components/section/wrapper';
-import Image from "next/image";
+
 
 export default function Homepage() {
   return (
@@ -22,7 +24,7 @@ export default function Homepage() {
         bg="blue" 
         ssx={{
           display: "flex",
-          height: "650px",
+          height: "850px",
           paddingTop: "135px",
           [breakpoints.tablet]: { paddingTop: "80px" },
           [breakpoints.mobile]: { height: "auto", paddingTop: 0, paddingBottom: "30px" }
@@ -37,22 +39,23 @@ export default function Homepage() {
 
           <Box
             sx={{
+              zIndex: 0,
+              display: "flex",
+              alignItems: "flex-end",
               position: "absolute",
-              width: "40%",
-              height: "70%",
+              width: "50%",
+              height: "100%",
               right: 0,
               bottom: 0,
-              [breakpoints.tablet]: { width: "60%", bottom: "30px" },
-              [breakpoints.mobile]: { position: "relative", alignSelf: "center", width: "100%", height: "30vh" }
+              [breakpoints.tablet]: { width: "70%", bottom: "60px" },
+              [breakpoints.mobile]: { position: "relative", alignSelf: "center", width: "100%", height: "290px", mb: "-80px" }
             }}
           >
-            <Image
-              src="/images/programmer.png"
-              alt="Immagine rappresentativa di Andrea Losavio"
-              fill
-              priority
-              unoptimized
-              sx={{ width: "auto !important", height: "100% !important", mx: "auto" }}
+            <Lottie
+              loop
+              animationData={developerLottie}
+              play
+              sx={{ zIndex: -1, width: "100%", height: "auto" }}
             />
           </Box>
 
