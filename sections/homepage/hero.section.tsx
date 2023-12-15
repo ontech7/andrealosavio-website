@@ -2,15 +2,15 @@ import developerLottie from "@/libs/lottie/developer.json";
 import NextLink from "next/link";
 import Lottie from "react-lottie-player";
 
-import { ArrowDownCircleIcon } from '@heroicons/react/24/outline';
-
 import { breakpoints } from '@/shared-data/theme';
+import { ArrowDownCircleIcon } from '@heroicons/react/24/outline';
 import { Box, Heading, Link, Paragraph } from 'theme-ui';
+
+import Section from '@/components/section';
+import SectionWrapper from '@/components/section/wrapper';
 
 import Background from "@/components/background";
 import KeyPoint from '@/components/key-point';
-import Section from '@/components/section';
-import SectionWrapper from '@/components/section/wrapper';
 
 export default function HeroSection() {
   return (

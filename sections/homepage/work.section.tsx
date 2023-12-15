@@ -1,11 +1,12 @@
+import { breakpoints } from "@/shared-data/theme";
 import { Box, Paragraph } from "theme-ui";
 
 import Section from "@/components/section";
 import SectionWrapper from "@/components/section/wrapper";
-import WorkItem from "@/components/work/item";
 
 import Background from "@/components/background";
-import { breakpoints } from "@/shared-data/theme";
+import WorkItem from "@/components/work/item";
+
 import { worksMap } from "@/shared-data/work";
 
 export default function WorkSection() {
@@ -41,9 +42,14 @@ export default function WorkSection() {
               gap: "40px"
             }}
           >
+
             {worksMap.map(item => 
-              <WorkItem {...item} />
+              <WorkItem 
+                key={item.href}
+                {...item} 
+              />
             )}
+            
           </Box>
 
         </SectionWrapper>

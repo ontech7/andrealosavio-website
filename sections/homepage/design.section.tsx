@@ -1,17 +1,16 @@
 import Image from 'next/image'
 import NextLink from "next/link"
 
+import { BriefcaseIcon } from '@heroicons/react/24/outline'
 import { Heading, Link, Paragraph } from 'theme-ui'
 
 import Section from '@/components/section'
+import HalfBox from '@/components/section/half-box'
 import SectionWrapper from '@/components/section/wrapper'
 
+import Background from '@/components/background'
 import HighlightText from '@/components/highlight-text'
 import KeyPoint from '@/components/key-point'
-
-import Background from '@/components/background'
-import HalfBox from '@/components/section/half-box'
-import { BriefcaseIcon } from '@heroicons/react/24/outline'
 
 export default function DesignSection() {
   return (

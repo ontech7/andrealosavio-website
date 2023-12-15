@@ -1,17 +1,15 @@
 import Image from 'next/image'
 import NextLink from "next/link"
 
+import { ArrowRightCircleIcon } from '@heroicons/react/24/solid'
 import { Heading, Link, Paragraph } from 'theme-ui'
 
 import Section from '@/components/section'
+import HalfBox from '@/components/section/half-box'
 import SectionWrapper from '@/components/section/wrapper'
 
 import HighlightText from '@/components/highlight-text'
-
-import Background from '@/components/background'
 import KeyPoint from '@/components/key-point'
-import HalfBox from '@/components/section/half-box'
-import { ArrowRightCircleIcon } from '@heroicons/react/24/solid'
 
 export default function WebsiteSection() {
   return (
@@ -75,11 +73,6 @@ export default function WebsiteSection() {
 
         </SectionWrapper>
       </Section>
-
-      <Background 
-        bgImg="light-short" 
-        placement="bottom" 
-      />
 
     </>
   )

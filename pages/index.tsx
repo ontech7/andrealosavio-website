@@ -1,6 +1,7 @@
 import Layout from '@/components/layout';
-import DesignSection from "@/sections/homepage/design.section";
 
+import CollaborationSection from '@/sections/homepage/collaboration.section';
+import DesignSection from "@/sections/homepage/design.section";
 import HeroSection from "@/sections/homepage/hero.section";
 import WebsiteSection from '@/sections/homepage/website.section';
 import WorkSection from "@/sections/homepage/work.section";
@@ -15,6 +16,7 @@ export default function Homepage() {
       <WorkSection />
       <DesignSection />
       <WebsiteSection />
+      <CollaborationSection />
     </Layout>
   )
 }

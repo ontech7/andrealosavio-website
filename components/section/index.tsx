@@ -18,8 +18,8 @@ export default function Section({
     <Box
       id={id}
       as="section"
-      {...bg ? { bg } : {}} 
       sx={{
+        ...bg ? { background: bg } : {},
         position: "relative",
         padding: !high ? "40px 0" : "80px 0",
         overflowX: "hidden",
