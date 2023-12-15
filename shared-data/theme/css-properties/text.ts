@@ -5,5 +5,5 @@ export const text: Record<string, ThemeUICSSObject> = {
   h2: { fontSize: "45px", fontWeight: 600, color: "black" },
   h2_special: { fontSize: "45px", fontWeight: 500, color: "grey"},
   h3: { fontSize: "30px", fontWeight: 600, color: "black" },
-  paragraph: { fontSize: "18px", color: "white" }
+  paragraph: { fontSize: "18px", fontWeight: 400, lineHeight: "27px", color: "white" }
 }
