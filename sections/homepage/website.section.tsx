@@ -66,6 +66,7 @@ export default function WebsiteSection() {
             <Image
               src="/images/projects/caffe-barocco/all-together.png"
               alt="Caffè Barocco Web Design by Andrea Losavio"
+              priority
               width={1158}
               height={668}
             />

@@ -29,6 +29,7 @@ export default function DesignSection() {
             <Image
               src="/images/projects/burger-shop/all-together.png"
               alt="Buger Shop Web Design by Andrea Losavio"
+              priority
               width={1160}
               height={1172}
             />

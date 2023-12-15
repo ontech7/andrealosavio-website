@@ -31,6 +31,7 @@ export default function CollaborationSection() {
         src="/images/chisono/lavoro-blurred.webp"
         alt="La mia postazione di lavoro"
         fill
+        priority
         sx={{ objectFit: "cover" }}
       />
     
