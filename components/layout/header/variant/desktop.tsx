@@ -9,7 +9,7 @@ import Navbar from "../../common/navbar";
 import NavbarItem from "../../common/navbar/item";
 import LayoutWrapper from "../../common/wrapper";
 
-import { menuVoicesMap } from "@/shared-data/navbar";
+import { menuVoicesMap } from "@/shared-data/navbar/menu";
 import { breakpoints } from "@/shared-data/theme";
 
 export default function HeaderDesktop() {
