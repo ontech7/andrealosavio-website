@@ -1,7 +1,9 @@
+import type { ReactNode } from "react"
+
 import type { ThemeUIStyleObject } from "theme-ui"
 
 export default function Navbar({ children, ssx }: {
-  children?: JSX.Element | JSX.Element[] | string
+  children?: ReactNode
   ssx?: ThemeUIStyleObject
 }) {
   return (

@@ -1,7 +1,7 @@
-import NextLink from "next/link";
+
 import { useRouter } from "next/router";
 
-import { Link } from 'theme-ui';
+import Link from "@/components/link";
 
 export default function NavbarItem({ 
   label, 
@@ -18,17 +18,18 @@ export default function NavbarItem({
   return (
     <li>
       <Link 
-        as={NextLink} 
         variant="navlink" 
         href={href}
-        sx={{ 
+        ssx={{ 
           "&::after": {
             ...path == href ? { transform: "scale(1)" } : {},
             ...noHover ? { bg: "transparent", transition: "none" } : {}
           }
         }}
       >
+
         {label}
+        
       </Link>
     </li>
   )

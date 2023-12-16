@@ -1,8 +1,7 @@
-import NextLink from "next/link";
 import { useState } from "react";
 
 import { ArrowRightCircleIcon } from "@heroicons/react/24/solid";
-import { Box, Link } from 'theme-ui';
+import { Box } from 'theme-ui';
 
 import CopyrightText from "../../common/copyright";
 import LayoutLogo from "../../common/logo";
@@ -12,7 +11,9 @@ import SocialLinks from "../../common/socials";
 import LayoutWrapper from "../../common/wrapper";
 import HamburgerButton from "../hamburger";
 
-import { menuVoicesMap } from "@/shared-data/navbar/menu";
+import Link from "@/components/link";
+
+import { menuVoicesMap } from "@/shared-data/constants/navbar/menu";
 import { breakpoints } from "@/shared-data/theme";
 
 export default function HeaderMobile() {
@@ -101,11 +102,10 @@ export default function HeaderMobile() {
             )}
           </Navbar>
 
-          <Link 
-            as={NextLink}
+          <Link
             variant="secondary"
             href="/contattami"
-            sx={{ alignSelf: "start" }}
+            ssx={{ alignSelf: "start" }}
           >
             CONTATTAMI
 

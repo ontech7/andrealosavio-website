@@ -1,10 +1,11 @@
+import type { ReactNode } from 'react';
 import { Box, type ThemeUIStyleObject } from 'theme-ui';
 
 export default function LayoutWrapper({ 
   children ,
   ssx
 }: {
-  children?: JSX.Element | JSX.Element[] | string
+  children?: ReactNode
   ssx?: ThemeUIStyleObject
 }) {
   return (

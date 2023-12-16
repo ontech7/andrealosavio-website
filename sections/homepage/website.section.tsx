@@ -1,15 +1,15 @@
 import Image from 'next/image'
-import NextLink from "next/link"
 
 import { ArrowRightCircleIcon } from '@heroicons/react/24/solid'
-import { Heading, Link, Paragraph } from 'theme-ui'
+import { Heading, Paragraph } from 'theme-ui'
 
 import Section from '@/components/section'
-import HalfBox from '@/components/section/half-box'
+import SizableBox from '@/components/section/sizable-box'
 import SectionWrapper from '@/components/section/wrapper'
 
 import HighlightText from '@/components/highlight-text'
 import KeyPoint from '@/components/key-point'
+import Link from '@/components/link'
 
 export default function WebsiteSection() {
   return (
@@ -24,7 +24,7 @@ export default function WebsiteSection() {
           ssx={{ gap: "40px" }}
         >
 
-          <HalfBox>
+          <SizableBox>
             <Heading as="h2" variant="h2">
               Perché è importante avere un {" "}
               <HighlightText color="yellow">Sito Web</HighlightText>
@@ -47,11 +47,10 @@ export default function WebsiteSection() {
               ed è quello che farò con te.
             </Paragraph>
 
-            <Link 
-              as={NextLink} 
+            <Link
               variant="secondary" 
               href="/contattami" 
-              sx={{ alignSelf: "flex-start", mt: "25px" }}
+              ssx={{ alignSelf: "flex-start", mt: "25px" }}
             >
               INIZIAMO
 
@@ -60,9 +59,9 @@ export default function WebsiteSection() {
                 sx={{ color: "black", ml: 2 }} 
               />
             </Link>
-          </HalfBox>
+          </SizableBox>
 
-          <HalfBox>
+          <SizableBox>
             <Image
               src="/images/projects/caffe-barocco/all-together.png"
               alt="Caffè Barocco Web Design by Andrea Losavio"
@@ -70,7 +69,7 @@ export default function WebsiteSection() {
               width={1158}
               height={668}
             />
-          </HalfBox>
+          </SizableBox>
 
         </SectionWrapper>
       </Section>

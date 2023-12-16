@@ -26,7 +26,7 @@ export const links: Record<string, ThemeUICSSObject> = {
       left: 0,
       width: "100%",
       height: "3px",
-      marginBottom: "-5px",
+      mb: "-5px",
       backgroundColor: "green",
       transform: "scale(0)",
       transition: "transform 0.3s ease-in-out"

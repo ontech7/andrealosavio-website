@@ -1,5 +1,5 @@
+import { Work } from '@/shared-data/constants/work'
 import { breakpoints } from '@/shared-data/theme'
-import { Work } from '@/shared-data/work'
 import Image from 'next/image'
 import Link from 'next/link'
 

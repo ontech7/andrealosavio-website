@@ -1,6 +1,6 @@
-import NextLink from "next/link";
+import { Box, Paragraph } from 'theme-ui';
 
-import { Box, Link, Paragraph } from 'theme-ui';
+import Link from "@/components/link";
 
 export default function CopyrightText() {
   return (
@@ -17,21 +17,13 @@ export default function CopyrightText() {
 
       <Paragraph>
 
-        <Link 
-          as={NextLink} 
-          target="_blank" 
-          href="/privacy-policy"
-        >
+        <Link newTab href="/privacy-policy">
           Privacy Policy
         </Link>
 
         {" - "}
 
-        <Link 
-          as={NextLink} 
-          target="_blank" 
-          href="/cookie-policy"
-        >
+        <Link newTab href="/cookie-policy">
           Cookie Policy
         </Link>
 

@@ -1,16 +1,15 @@
 import Image from "next/image"
-import NextLink from "next/link"
 
-import { breakpoints } from "@/shared-data/theme"
 import { ChatBubbleBottomCenterTextIcon } from '@heroicons/react/24/outline'
-import { Box, Heading, Link, Paragraph } from 'theme-ui'
+import { Box, Heading, Paragraph } from 'theme-ui'
 
 import Section from '@/components/section'
-import HalfBox from '@/components/section/half-box'
+import SizableBox from '@/components/section/sizable-box'
 import SectionWrapper from '@/components/section/wrapper'
 
 import Background from "@/components/background"
 import KeyPoint from "@/components/key-point"
+import Link from "@/components/link"
 
 export default function CollaborationSection() {
   return (
@@ -36,15 +35,15 @@ export default function CollaborationSection() {
       />
     
       <Section 
-        id="design" 
+        id="collaboration" 
         bg="transparentGreen"
-        ssx={{ marginTop: "1px", textAlign: "center" }}
+        ssx={{ mt: "1px", textAlign: "center" }}
       >
         <SectionWrapper 
           ssx={{ justifyContent: "center", py: "40px" }}
         >
 
-          <HalfBox ssx={{ [breakpoints.mobile]: { width: "90%" } }}>
+          <SizableBox width={[,,"90%"]}>
             <Heading as="h2" variant="h2" color="white">
               Sei una Start Up in cerca di {" "}
               <KeyPoint>collaborazioni</KeyPoint>?
@@ -54,11 +53,10 @@ export default function CollaborationSection() {
               Sono sempre aperto ad eventuali lavori e opportunità di partnerships.
             </Paragraph>
 
-            <Link 
-              as={NextLink} 
+            <Link
               variant="secondary" 
               href="/contattami?s=collab" 
-              sx={{ alignSelf: "center" }}
+              ssx={{ alignSelf: "center" }}
             >
               DISCUTIAMONE
 
@@ -67,7 +65,7 @@ export default function CollaborationSection() {
                 sx={{ color: "black", ml: 2 }} 
               />
             </Link>
-          </HalfBox>
+          </SizableBox>
 
         </SectionWrapper>
       </Section>

@@ -1,3 +1,5 @@
+import type { ReactNode } from 'react'
+
 import { breakpoints } from '@/shared-data/theme'
 import { Box, ThemeUICSSObject, type ThemeUIStyleObject } from 'theme-ui'
 
@@ -16,7 +18,7 @@ export default function SectionWrapper({
   ssx
 }: {
   direction?: FlexDirectionDevice
-  children?: JSX.Element | JSX.Element[] | string
+  children?: ReactNode
   ssx?: ThemeUIStyleObject
 }) {
   const desktop = direction?.[0];

@@ -5,7 +5,7 @@ import { BriefcaseIcon } from '@heroicons/react/24/outline'
 import { Heading, Link, Paragraph } from 'theme-ui'
 
 import Section from '@/components/section'
-import HalfBox from '@/components/section/half-box'
+import SizableBox from '@/components/section/sizable-box'
 import SectionWrapper from '@/components/section/wrapper'
 
 import Background from '@/components/background'
@@ -25,7 +25,7 @@ export default function DesignSection() {
           ssx={{ gap: "40px" }}
         >
 
-          <HalfBox>
+          <SizableBox>
             <Image
               src="/images/projects/burger-shop/all-together.png"
               alt="Buger Shop Web Design by Andrea Losavio"
@@ -33,9 +33,9 @@ export default function DesignSection() {
               width={1160}
               height={1172}
             />
-          </HalfBox>
+          </SizableBox>
 
-          <HalfBox>
+          <SizableBox>
             <Heading as="h2" variant="h2">
               Un design accattivante attira {" "}
               <HighlightText>più clienti</HighlightText>
@@ -66,7 +66,7 @@ export default function DesignSection() {
                 sx={{ color: "black", ml: 2 }} 
               />
             </Link>
-          </HalfBox>
+          </SizableBox>
 
         </SectionWrapper>
       </Section>

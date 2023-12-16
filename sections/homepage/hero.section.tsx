@@ -1,16 +1,16 @@
 import developerLottie from "@/libs/lottie/developer.json";
-import NextLink from "next/link";
 import Lottie from "react-lottie-player";
 
 import { breakpoints } from '@/shared-data/theme';
 import { ArrowDownCircleIcon } from '@heroicons/react/24/outline';
-import { Box, Heading, Link, Paragraph } from 'theme-ui';
+import { Box, Heading, Paragraph } from 'theme-ui';
 
 import Section from '@/components/section';
 import SectionWrapper from '@/components/section/wrapper';
 
 import Background from "@/components/background";
 import KeyPoint from '@/components/key-point';
+import Link from "@/components/link";
 
 export default function HeroSection() {
   return (
@@ -22,11 +22,11 @@ export default function HeroSection() {
         ssx={{
           display: "flex",
           height: "780px",
-          paddingTop: "135px",
+          pt: "135px",
           pb: 0,
           overflowY: "hidden",
-          [breakpoints.tablet]: { paddingTop: "80px" },
-          [breakpoints.mobile]: { height: "auto", paddingTop: 0, paddingBottom: "30px" }
+          [breakpoints.tablet]: { pt: "80px" },
+          [breakpoints.mobile]: { height: "auto", pt: 0, pb: "30px" }
         }}
       >
 
@@ -90,10 +90,9 @@ export default function HeroSection() {
           </Paragraph>
 
           <Link 
-            as={NextLink} 
             variant="primary" 
             href="#design" 
-            sx={{ alignSelf: "flex-start" }}
+            ssx={{ alignSelf: "flex-start" }}
           >
             SCOPRI DI PIù
 

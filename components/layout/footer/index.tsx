@@ -8,7 +8,7 @@ import NavbarItem from '../common/navbar/item';
 import SocialLinks from '../common/socials';
 import LayoutWrapper from '../common/wrapper';
 
-import { menuVoicesMap } from '@/shared-data/navbar/menu';
+import { menuVoicesMap } from '@/shared-data/constants/navbar/menu';
 import { breakpoints } from '@/shared-data/theme';
 import FooterWrapper from './wrapper';
 

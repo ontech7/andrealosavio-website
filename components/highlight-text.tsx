@@ -1,8 +1,6 @@
-import { keyframes } from '@emotion/react'
-import React from 'react'
-import { Text, type ThemeUIStyleObject } from 'theme-ui'
+import React, { type ReactNode } from 'react'
 
-const underlineAnim = keyframes({ from: { width: 0 }, to: { width: "100%" }})
+import { Text, type ThemeUIStyleObject } from 'theme-ui'
 
 export default function HighlightText({
   as,
@@ -14,7 +12,7 @@ export default function HighlightText({
   as?: React.ElementType<any>
   variant?: string
   color?: "green" | "yellow"
-  children?: JSX.Element | JSX.Element[] | string
+  children?: ReactNode
   ssx?: ThemeUIStyleObject
 }) {
   return (

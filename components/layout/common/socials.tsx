@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 import { Box, type ThemeUIStyleObject } from 'theme-ui'
 
-import { socialLinks } from '@/shared-data/navbar/socials'
+import { socialLinks } from '@/shared-data/constants/navbar/socials'
 
 export default function SocialLinks({ ssx }: {
   ssx?: ThemeUIStyleObject

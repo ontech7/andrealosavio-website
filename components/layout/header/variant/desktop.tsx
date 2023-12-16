@@ -1,15 +1,13 @@
-import NextLink from "next/link";
-
-import { Link } from 'theme-ui';
-
 import { ArrowRightCircleIcon } from "@heroicons/react/24/solid";
+
 import LayoutLogo from "../../common/logo";
 import Navbar from "../../common/navbar";
-
 import NavbarItem from "../../common/navbar/item";
 import LayoutWrapper from "../../common/wrapper";
 
-import { menuVoicesMap } from "@/shared-data/navbar/menu";
+import Link from "@/components/link";
+
+import { menuVoicesMap } from "@/shared-data/constants/navbar/menu";
 import { breakpoints } from "@/shared-data/theme";
 
 export default function HeaderDesktop() {
@@ -37,8 +35,7 @@ export default function HeaderDesktop() {
         )}
       </Navbar>
 
-      <Link 
-        as={NextLink}
+      <Link
         variant="secondary"
         href="/contattami"
       >

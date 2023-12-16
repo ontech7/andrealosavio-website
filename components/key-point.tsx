@@ -1,5 +1,6 @@
 import { keyframes } from '@emotion/react'
-import React from 'react'
+import React, { type ReactNode } from 'react'
+
 import { Text, type ThemeUIStyleObject } from 'theme-ui'
 
 const underlineAnim = keyframes({ from: { width: 0 }, to: { width: "100%" }})
@@ -16,7 +17,7 @@ export default function KeyPoint({
   variant?: string
   color?: "green" | "darkGreen"
   delay?: number
-  children?: JSX.Element | JSX.Element[] | string
+  children?: ReactNode
   ssx?: ThemeUIStyleObject
 }) {
   return (

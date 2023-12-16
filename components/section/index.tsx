@@ -1,3 +1,5 @@
+import type { ReactNode } from 'react'
+
 import { breakpoints } from '@/shared-data/theme'
 import { Box, type ThemeUICSSObject, type ThemeUIStyleObject } from 'theme-ui'
 
@@ -11,7 +13,7 @@ export default function Section({
   id: string
   bg?: ThemeUICSSObject["bg"]
   high?: boolean
-  children?: JSX.Element | JSX.Element[] | string
+  children?: ReactNode
   ssx?: ThemeUIStyleObject
 }) {
   return (

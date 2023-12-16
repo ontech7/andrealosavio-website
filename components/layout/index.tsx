@@ -1,3 +1,5 @@
+import type { ReactNode } from 'react'
+
 import Footer from './footer'
 import CustomHead from './head'
 import Header from './header'
@@ -11,7 +13,7 @@ export default function Layout({
   title: string
   description?: string
   metas?: JSX.Element | JSX.Element[]
-  children?: JSX.Element | JSX.Element[] | string
+  children?: ReactNode
 }) {
   return (
     <>

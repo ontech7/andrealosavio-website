@@ -7,7 +7,7 @@ import SectionWrapper from "@/components/section/wrapper";
 import Background from "@/components/background";
 import WorkItem from "@/components/work/item";
 
-import { worksMap } from "@/shared-data/work";
+import { worksMap } from "@/shared-data/constants/work";
 
 export default function WorkSection() {
   return (
