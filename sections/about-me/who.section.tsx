@@ -75,6 +75,7 @@ export default function WhoSection() {
               src="/images/chisono/io.webp"
               alt="Chi sono"
               title="Chi è Andrea Losavio"
+              priority
               width={1498}
               height={1880}
             />
