@@ -34,7 +34,7 @@ export default function SizableBox({
         flexDirection: "column",
         gap: "25px",
         height: "inherit", 
-        width: !desktop ? "50" : desktop,
+        width: !desktop ? "50%" : desktop,
         [breakpoints.tablet]: { width: !tablet ? "50%" : tablet },
         [breakpoints.mobile]: { width: !mobile ? "100%" : mobile },
         ...ssx,
