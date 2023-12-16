@@ -26,8 +26,8 @@ export default function ProductionSection() {
 
           <SizableBox>
             <Heading as="h2" variant="h2">
-              Un design accattivante attira {" "}
-              <HighlightText>più clienti</HighlightText>
+              Che cosa {" "}
+              <HighlightText color="yellow">produco</HighlightText>?
             </Heading>
 
             <Paragraph color='black'>
@@ -50,8 +50,8 @@ export default function ProductionSection() {
 
             <Link 
               as={NextLink} 
-              variant="primary" 
-              href="/servizi" 
+              variant="secondary" 
+              href="/contattami" 
               sx={{ alignSelf: "flex-start", mt: "25px" }}
             >
               INIZIAMO
