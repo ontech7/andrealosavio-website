@@ -11,12 +11,14 @@ export default function Link({
   variant,
   href,
   newTab,
+  rel,
   ssx
 }: {
   children?: ReactNode
   variant?: string
   href: string
   newTab?: boolean
+  rel?: string
   ssx?: ThemeUIStyleObject
 }) {
   const router = useRouter();
@@ -33,6 +35,7 @@ export default function Link({
       variant={variant}
       href={href}
       onClick={goToElement}
+      rel={rel}
       sx={ssx}
     >
 

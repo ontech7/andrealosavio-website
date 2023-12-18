@@ -1,7 +1,7 @@
 import Image from 'next/image'
-import NextLink from "next/link"
 
-import { Heading, Link, Paragraph } from 'theme-ui'
+import { ArrowRightCircleIcon } from '@heroicons/react/24/solid'
+import { Heading, Paragraph } from 'theme-ui'
 
 import Section from '@/components/section'
 import SizableBox from '@/components/section/sizable-box'
@@ -9,7 +9,7 @@ import SectionWrapper from '@/components/section/wrapper'
 
 import Background from '@/components/background'
 import HighlightText from '@/components/highlight-text'
-import { ArrowRightCircleIcon } from '@heroicons/react/24/solid'
+import Link from '@/components/link'
 
 export default function ProductionSection() {
   return (
@@ -49,10 +49,9 @@ export default function ProductionSection() {
             </Paragraph>
 
             <Link 
-              as={NextLink} 
               variant="secondary" 
               href="/contattami" 
-              sx={{ alignSelf: "flex-start", mt: "25px" }}
+              ssx={{ alignSelf: "flex-start", mt: "25px" }}
             >
               INIZIAMO
 
