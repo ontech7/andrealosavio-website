@@ -1,5 +1,7 @@
 import Layout from "@/components/layout"
 
+import ServerErrorSection from "@/sections/errors/500.sections"
+
 type ErrorProps = { statusCode: string }
 
 export default function Error(props: ErrorProps) {
@@ -11,7 +13,7 @@ export default function Error(props: ErrorProps) {
       }
     >
 
-      500
+      <ServerErrorSection />
 
     </Layout>
   )

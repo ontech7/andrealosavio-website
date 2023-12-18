@@ -1,8 +1,7 @@
 import Image from 'next/image'
-import NextLink from "next/link"
 
 import { BriefcaseIcon } from '@heroicons/react/24/outline'
-import { Heading, Link, Paragraph } from 'theme-ui'
+import { Heading, Paragraph } from 'theme-ui'
 
 import Section from '@/components/section'
 import SizableBox from '@/components/section/sizable-box'
@@ -11,6 +10,7 @@ import SectionWrapper from '@/components/section/wrapper'
 import Background from '@/components/background'
 import HighlightText from '@/components/highlight-text'
 import KeyPoint from '@/components/key-point'
+import Link from '@/components/link'
 
 export default function DesignSection() {
   return (
@@ -54,10 +54,9 @@ export default function DesignSection() {
             </Paragraph>
 
             <Link 
-              as={NextLink} 
               variant="primary" 
               href="/servizi" 
-              sx={{ alignSelf: "flex-start", mt: "25px" }}
+              ssx={{ alignSelf: "flex-start", mt: "25px" }}
             >
               SERVIZI
 
