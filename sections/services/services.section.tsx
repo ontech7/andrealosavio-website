@@ -1,4 +1,3 @@
-import { breakpoints } from "@/shared-data/theme";
 
 import Section from "@/components/section";
 import SectionWrapper from "@/components/section/wrapper";
@@ -10,14 +9,7 @@ export default function ServicesSection() {
     <Section 
       id="services" 
       bg="transparent" 
-      ssx={{ 
-        height: "80%", 
-        minHeight: 800, 
-        maxHeight: 1200,
-        mt: "-180px",
-        [breakpoints.tablet]: { minHeight: 665 },
-        [breakpoints.tablet]: { pt: "100px" }
-      }}
+      ssx={{ mt: "-180px" }}
     >
       <SectionWrapper>
 
