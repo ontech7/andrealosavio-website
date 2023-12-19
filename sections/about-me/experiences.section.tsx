@@ -34,7 +34,7 @@ export default function ExperiencesSection() {
 
           <SizableBox>
             <Heading as="h2" variant="h2" color="white">
-              Le mie <HighlightText ssx={{ color: "black" }}>esperienze</HighlightText>.
+              Le mie <HighlightText>esperienze</HighlightText>.
             </Heading>
 
             <Paragraph>

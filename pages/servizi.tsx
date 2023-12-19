@@ -1,4 +1,6 @@
 import Layout from '@/components/layout';
+import BrandSection from '@/sections/services/brand.section';
+import ServicesSection from '@/sections/services/services.section';
 
 export default function Servizi() {
   return (
@@ -6,9 +8,8 @@ export default function Servizi() {
       title="Servizi di consulenza, creazione siti web, e tanto altro"
       description="Creazione di siti web, eCommerce, consulenza, progettazione e design, insegnante on-demand e collaborazioni con Start Up e Aziende. Scopri di più"
     >
-      <main>
-        Servizi
-      </main>
+      <BrandSection />
+      <ServicesSection />
     </Layout>
   )
 }

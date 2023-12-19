@@ -27,7 +27,7 @@ export default function ProductionSection() {
           <SizableBox>
             <Heading as="h2" variant="h2">
               Che cosa {" "}
-              <HighlightText color="yellow">produco</HighlightText>?
+              <HighlightText bg="yellow">produco</HighlightText>?
             </Heading>
 
             <Paragraph color='black'>

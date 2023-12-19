@@ -12,7 +12,7 @@ export default function PrivacyPolicy() {
       title="Privacy Policy"
       description="La privacy policy di www.andrealosavio.com"
     >
-      <Section id="privacy-policy">
+      <Section id="privacy-policy" bg="lightBlue">
         <SectionWrapper 
           direction={["column", "column"]} 
           ssx={{

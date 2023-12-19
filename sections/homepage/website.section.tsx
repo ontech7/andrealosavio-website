@@ -27,7 +27,7 @@ export default function WebsiteSection() {
           <SizableBox>
             <Heading as="h2" variant="h2">
               Perché è importante avere un {" "}
-              <HighlightText color="yellow">Sito Web</HighlightText>
+              <HighlightText bg="yellow">Sito Web</HighlightText>
             </Heading>
 
             <Paragraph color='black'>

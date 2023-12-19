@@ -12,7 +12,7 @@ export default function CookiePolicy() {
       title="Cookie Policy"
       description="La cookie policy di www.andrealosavio.com"
     >
-      <Section id="cookie-policy">
+      <Section id="cookie-policy" bg="lightBlue">
         <SectionWrapper 
           direction={["column", "column"]} 
           ssx={{
@@ -121,7 +121,7 @@ export default function CookiePolicy() {
             (USA),{" "}
             <Link href="https://youradchoices.ca/understanding-online-advertising/" newTab rel="noreferrer noopener">DAAC</Link>{" "}
             (Canada),{" "}
-            <Link href="http://www.ddai.info/optout" newTab rel="noreferrer noopener">DDAI</Link>
+            <Link href="http://www.ddai.info/optout" newTab rel="noreferrer noopener">DDAI</Link>{" "}
             (Giappone) o altri servizi analoghi. Con questi servizi è possibile gestire le preferenze di tracciamento della maggior parte degli strumenti pubblicitari. Il Titolare, pertanto, consiglia
             agli Utenti di utilizzare tali risorse in aggiunta alle informazioni fornite dal presente documento.
           </Paragraph>

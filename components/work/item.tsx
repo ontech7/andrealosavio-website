@@ -1,4 +1,4 @@
-import { Work } from '@/shared-data/constants/work'
+import { Work } from '@/shared-data/constants/works'
 import { breakpoints } from '@/shared-data/theme'
 import Image from 'next/image'
 import Link from 'next/link'
