@@ -1,5 +1,6 @@
 import Layout from '@/components/layout';
 import BrandSection from '@/sections/services/brand.section';
+import InterestedSection from '@/sections/services/interested.section';
 import ServicesSection from '@/sections/services/services.section';
 
 export default function Servizi() {
@@ -10,6 +11,7 @@ export default function Servizi() {
     >
       <BrandSection />
       <ServicesSection />
+      <InterestedSection />
     </Layout>
   )
 }

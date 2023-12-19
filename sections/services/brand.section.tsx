@@ -46,8 +46,7 @@ export default function BrandSection() {
 
           <ArrowDownCircleIcon 
             width={24} 
-            color="black" 
-            sx={{ ml: 1 }} 
+            sx={{ color: "black", ml: 2 }} 
           />
         </Link>
 

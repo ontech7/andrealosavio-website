@@ -42,8 +42,8 @@ export default function HeaderDesktop() {
         CONTATTAMI
 
         <ArrowRightCircleIcon 
-          sx={{ color: "black", ml: 2 }} 
           width={24} 
+          sx={{ color: "black", ml: 2 }} 
         />
       </Link>
 

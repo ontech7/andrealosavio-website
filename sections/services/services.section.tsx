@@ -9,7 +9,7 @@ export default function ServicesSection() {
     <Section 
       id="services" 
       bg="transparent" 
-      ssx={{ mt: "-180px" }}
+      ssx={{ mt: "-180px", mb: "-30px" }}
     >
       <SectionWrapper>
 
