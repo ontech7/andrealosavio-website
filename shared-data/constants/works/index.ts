@@ -1,38 +1,28 @@
 export type Work = {
   href: string
-  src: string
+  workName: string
   alt: string
-  width: number
-  height: number
 }
 
 export const worksMap: Work[] = [
   {
     href: "https://www.digitalrecruitingweek.it/ibm-client-innovation-center-italy/", 
-    src: "/images/logos/ibm-cic.png",
-    alt: "IBM Client Innovation Center",
-    width: 841,
-    height: 200
+    workName: "ibm-cic",
+    alt: "IBM Client Innovation Center"
   },
   {
     href: "https://www2.deloitte.com/it/it.html", 
-    src: "/images/logos/deloitte.png",
-    alt: "Deloitte",
-    width: 1200,
-    height: 250
+    workName: "deloitte",
+    alt: "Deloitte"
   },
   {
     href: "https://www.capgemini.com/it-it/", 
-    src: "/images/logos/capgemini.png",
-    alt: "Capgemini",
-    width: 340,
-    height:80
+    workName: "capgemini",
+    alt: "Capgemini"
   },
   {
     href: "https://www.indracompany.com/en/", 
-    src: "/images/logos/indra.png",
-    alt: "Indra",
-    width: 2400,
-    height: 680
+    workName: "indra",
+    alt: "Indra"
   }
 ]

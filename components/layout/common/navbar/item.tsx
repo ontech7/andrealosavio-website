@@ -13,7 +13,7 @@ export default function NavbarItem({
   noHover?: boolean
 }) {
   const router = useRouter();
-  const [path] = router.asPath.split("#");
+  const [path] = router.asPath.split(/(#|\?)/g);
 
   return (
     <li>

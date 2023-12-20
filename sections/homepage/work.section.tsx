@@ -1,13 +1,11 @@
 import { breakpoints } from "@/shared-data/theme";
-import { Box, Paragraph } from "theme-ui";
+import { Paragraph } from "theme-ui";
 
 import Section from "@/components/section";
 import SectionWrapper from "@/components/section/wrapper";
 
 import Background from "@/components/background";
-import WorkItem from "@/components/work/item";
-
-import { worksMap } from "@/shared-data/constants/works";
+import WorkList from "@/components/work/list";
 
 export default function WorkSection() {
   return (
@@ -34,23 +32,7 @@ export default function WorkSection() {
             LAVORATO CON
           </Paragraph>
 
-          <Box
-            sx={{
-              display: "flex",
-              flexWrap: "wrap",
-              justifyContent: "center",
-              gap: "40px"
-            }}
-          >
-
-            {worksMap.map(item => 
-              <WorkItem 
-                key={item.href}
-                {...item} 
-              />
-            )}
-            
-          </Box>
+          <WorkList />
 
         </SectionWrapper>
       </Section>

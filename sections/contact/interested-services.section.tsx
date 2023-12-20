@@ -1,15 +1,15 @@
+import { BriefcaseIcon } from "@heroicons/react/24/outline";
+import { Heading, Paragraph } from "theme-ui";
 
-import Link from "@/components/link";
 import Section from "@/components/section";
 import SectionWrapper from "@/components/section/wrapper";
 
-import { ArrowRightCircleIcon } from "@heroicons/react/24/solid";
-import { Heading, Paragraph } from "theme-ui";
+import Link from "@/components/link";
 
-export default function InterestedSection() {
+export default function InterestedServicesSection() {
   return (
     <Section 
-      id="interested" 
+      id="interested-services" 
       bg="transparent" 
       high
     >
@@ -19,22 +19,22 @@ export default function InterestedSection() {
       >
 
         <Heading as="h2" variant="h2">
-          Sei interessato ad uno di questi servizi?
+          Vuoi approfondire i servizi che offro?
         </Heading>
 
         <Paragraph color="black">
-          Contattami ed effettuerò su misura per te un preventivo completamente gratuito.
+          Dai un’occhiata e ritorna in questa sezione quando ti senti pronto.
         </Paragraph>
 
         <Link
-          variant="secondary"
+          variant="primary"
           href="/contattami"
-          ssx={{ mt: "20px" }}
+          ssx={{ mt: "20px" }}
         >
-          CONTATTAMI
+          SERVIZI
           
-          <ArrowRightCircleIcon
-            width={24}
+          <BriefcaseIcon
+            width={24} 
             sx={{ color: "black", ml: 2 }} 
           />
         </Link>

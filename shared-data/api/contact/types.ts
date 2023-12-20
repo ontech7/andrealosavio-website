@@ -1,8 +1,9 @@
 export type ContactBody = {
-  subject: SubjectType | string | null
+  subject: SubjectType | string
   name: string
   email: string
   message: string
+  privacy: boolean
 }
 
 export type ContactResponseData = {

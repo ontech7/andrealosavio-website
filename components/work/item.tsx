@@ -5,17 +5,14 @@ import Link from 'next/link'
 
 export default function WorkItem({
   href,
-  src,
-  alt,
-  width,
-  height
+  workName,
+  alt
 }: Work) {
   return (
     <Link href={href} target="_blank" rel="noopener noreferrer">
       <Image 
-        src={src}
+        src={require(`./images/${workName}.png`)}
         alt={alt}
-        width={width} height={height} 
         sx={{ 
           height: "50px", 
           width: "auto",
