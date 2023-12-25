@@ -1,15 +1,15 @@
+import type { ThemeUIStyleObject } from '@theme-ui/core';
 import type { ReactNode } from 'react';
-import { Box, type ThemeUIStyleObject } from 'theme-ui';
 
 export default function LayoutWrapper({ 
-  children ,
+  children,
   ssx
 }: {
   children?: ReactNode
   ssx?: ThemeUIStyleObject
 }) {
   return (
-    <Box
+    <div
       sx={{
         position: "relative",
         display: "flex",
@@ -24,6 +24,6 @@ export default function LayoutWrapper({
 
       {children}
 
-    </Box>
+    </div>
   )
 }

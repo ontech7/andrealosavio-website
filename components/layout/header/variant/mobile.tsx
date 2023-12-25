@@ -1,7 +1,6 @@
 import { useState } from "react";
 
 import { ArrowRightCircleIcon } from "@heroicons/react/24/solid";
-import { Box } from 'theme-ui';
 
 import CopyrightText from "../../common/copyright";
 import LayoutLogo from "../../common/logo";
@@ -11,7 +10,7 @@ import SocialLinks from "../../common/socials";
 import LayoutWrapper from "../../common/wrapper";
 import HamburgerButton from "../hamburger";
 
-import Link from "@/components/link";
+import Link from "@/components/core/link";
 
 import { menuVoicesMap } from "@/shared-data/constants/navbar/menu";
 import { breakpoints } from "@/shared-data/theme";
@@ -27,7 +26,7 @@ export default function HeaderMobile() {
       }
 
       {/** menu mask */}
-      <Box 
+      <div 
         onClick={toggle}
         sx={{
           display: "none",
@@ -59,7 +58,7 @@ export default function HeaderMobile() {
         />
 
         {/** menu items - initially hidden */}
-        <Box
+        <div
           sx={{
             display: "flex",
             flexDirection: "column",
@@ -115,13 +114,13 @@ export default function HeaderMobile() {
             />
           </Link>
 
-          <Box sx={{ flexGrow: 1 }} />
+          <div sx={{ flexGrow: 1 }} />
 
           <CopyrightText />
 
           <SocialLinks ssx={{ alignSelf: "flex-end" }} />
 
-        </Box>
+        </div>
 
       </LayoutWrapper>
     </>

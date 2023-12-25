@@ -1,6 +1,16 @@
-import { buttonBaseProps } from "./common";
+import type { ThemeUICSSObject } from "@theme-ui/core";
 
-import type { ThemeUICSSObject } from "theme-ui";
+const buttonBaseProps: ThemeUICSSObject = {
+  display: "inline-flex",
+  alignItems: "center",
+  justifyContent: "center",
+  padding: "10px 25px",
+  fontSize: "link",
+  fontWeight: "bold",
+  textDecoration: "none",
+  textTransform: "uppercase",
+  borderRadius: "3px"
+}
 
 export const buttons: Record<string, ThemeUICSSObject> = {
   primary: {

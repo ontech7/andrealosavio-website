@@ -4,15 +4,15 @@ import type { InputProps } from './types';
 
 export default function FormInput({ 
   name,
+  required,
   type,
   adornment,
   value,
   setValue
-}: Pick<InputProps<string>, "name" | "type" | "adornment" | "value" | "setValue">) {
+}: Pick<InputProps<string>, "name" | "required" | "type" | "adornment" | "value" | "setValue">) {
 
   const img = adornment ? require(`./images/${adornment}.svg`) : null;
 
-  console.log()
   return (
     <input
       sx={{
@@ -25,9 +25,9 @@ export default function FormInput({
         borderColor: "yellow",
         boxShadow: "0px 2px 4px #3334",
         borderRadius: "10px",
-        fontWeight: 400,
-        fontSize: "16px",
-        fontFamily: "inherit",
+        fontWeight: "regular",
+        fontSize: "link",
+        fontFamily: "body",
         width: "100%",
         appearance: "none",
         lineHeight: "27px",
@@ -48,6 +48,7 @@ export default function FormInput({
       }}
       type={type}
       name={name}
+      required={required}
       value={value}
       onChange={(e: ChangeEvent<HTMLInputElement>) => {
         setValue(name, e.target.value)

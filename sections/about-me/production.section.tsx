@@ -1,15 +1,16 @@
 import Image from 'next/image'
 
 import { ArrowRightCircleIcon } from '@heroicons/react/24/solid'
-import { Heading, Paragraph } from 'theme-ui'
 
 import Section from '@/components/section'
 import SizableBox from '@/components/section/sizable-box'
 import SectionWrapper from '@/components/section/wrapper'
 
+import Link from '@/components/core/link'
+import Text from '@/components/core/text'
+
 import Background from '@/components/background'
 import HighlightText from '@/components/highlight-text'
-import Link from '@/components/link'
 
 export default function ProductionSection() {
   return (
@@ -25,28 +26,28 @@ export default function ProductionSection() {
         >
 
           <SizableBox>
-            <Heading as="h2" variant="h2">
+            <Text as="h2">
               Che cosa {" "}
               <HighlightText bg="yellow">produco</HighlightText>?
-            </Heading>
+            </Text>
 
-            <Paragraph color='black'>
+            <Text color='black'>
               Creo <b>siti web</b> su misura per il <b>cliente</b> e il <b>tipo di attività</b> che conduce.<br />
-              Scelgo <b>colori</b>, font di <b>carattere</b> ed <b>elementi</b> che più rispecchiano il business, in modo da <b>enfatizzarlo</b>, e <b>attirare l’attenzione</b> di un visitatore
-              <b>transformandolo</b> in cliente.
-            </Paragraph>
+              Scelgo <b>colori</b>, font di <b>carattere</b> ed <b>elementi</b> che più rispecchiano il business, in modo da <b>enfatizzarlo</b>, e <b>attirare l’attenzione</b> di un 
+              visitatore<b>transformandolo</b> in cliente.
+            </Text>
 
-            <Paragraph color='black'>
-              Dietro un sito web, non c’è solo codice e design, ma anche un
-              <b>insieme di studi</b>. Accennandone 
+            <Text color='black'>
+              Dietro un sito web, non c’è solo codice e design, ma anche 
+              un <b>insieme di studi</b>. Accennandone 
               qualcuno: <b>analisi di mercato</b>, <b>analisi del target cliente</b>, <b>ottimizzazione sul motore di ricerca</b>, e così via.
-            </Paragraph>
+            </Text>
 
-            <Paragraph color='black'>
+            <Text color='black'>
               Quando una persona decide voler commissionare un sito web, non sta pagando il sito web, ma 
-              sta <b>investendo</b> verso un <b>professionista</b> del settore, che sarà in grado di portarti
-              <b>nuovi clienti</b> e di costruire, crescere e rafforzare il tuo <b>brand</b>.
-            </Paragraph>
+              sta <b>investendo</b> verso un <b>professionista</b> del settore, che sarà in grado di 
+              portarti <b>nuovi clienti</b> e di costruire, crescere e rafforzare il tuo <b>brand</b>.
+            </Text>
 
             <Link 
               variant="secondary" 

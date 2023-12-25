@@ -1,10 +1,10 @@
 import { BriefcaseIcon } from "@heroicons/react/24/outline";
-import { Heading, Paragraph } from "theme-ui";
+
+import Link from "@/components/core/link";
+import Text from "@/components/core/text";
 
 import Section from "@/components/section";
 import SectionWrapper from "@/components/section/wrapper";
-
-import Link from "@/components/link";
 
 export default function InterestedServicesSection() {
   return (
@@ -15,21 +15,21 @@ export default function InterestedServicesSection() {
     >
       <SectionWrapper 
         direction={["column", "column"]} 
-        ssx={{ alignItems: "center", gap: "25px" }}
+        ssx={{ textAlign: "center", gap: "25px" }}
       >
 
-        <Heading as="h2" variant="h2">
+        <Text as="h2">
           Vuoi approfondire i servizi che offro?
-        </Heading>
+        </Text>
 
-        <Paragraph color="black">
+        <Text color="black">
           Dai un’occhiata e ritorna in questa sezione quando ti senti pronto.
-        </Paragraph>
+        </Text>
 
         <Link
           variant="primary"
           href="/contattami"
-          ssx={{ mt: "20px" }}
+          ssx={{ mt: "20px", alignSelf: "center" }}
         >
           SERVIZI
           

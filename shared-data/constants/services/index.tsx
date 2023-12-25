@@ -10,7 +10,7 @@ type ServiceName =
 
 export type Service = {
   serviceName: ServiceName
-  alt: string
+  alt?: string
   title: string | ReactNode
   description: string
 }

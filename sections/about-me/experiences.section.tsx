@@ -1,10 +1,10 @@
 import Image from 'next/image'
 
-import { Heading, Paragraph } from 'theme-ui'
-
 import Section from '@/components/section'
 import SizableBox from '@/components/section/sizable-box'
 import SectionWrapper from '@/components/section/wrapper'
+
+import Text from '@/components/core/text'
 
 import Background from '@/components/background'
 import HighlightText from '@/components/highlight-text'
@@ -33,34 +33,34 @@ export default function ExperiencesSection() {
           </SizableBox>
 
           <SizableBox>
-            <Heading as="h2" variant="h2" color="white">
+            <Text as="h2" color="white">
               Le mie <HighlightText>esperienze</HighlightText>.
-            </Heading>
+            </Text>
 
-            <Paragraph>
+            <Text>
               Programmo ormai da quando avevo <b>13 anni</b>.<br />
               Ho bazzicato in vari ambiti, tra software e web, facendo progetti su progetti, per me e miei amici.
-            </Paragraph>
+            </Text>
 
-            <Paragraph>
+            <Text>
               Ho iniziato a lavorare a fine <b>dicembre 2018</b> in un’azienda di consulenza informatica, 
               incominciando a mettere mano su <b>Cordova</b>, un framework per sviluppo applicativi cross-device.
-            </Paragraph>
+            </Text>
 
-            <Paragraph>
+            <Text>
               Successivamente, nel 2019, passai a sviluppare web con il 
               CMS <b>Adobe Experience Manager</b>.
-            </Paragraph>
+            </Text>
 
-            <Paragraph>
+            <Text>
               Queste esperienze mi hanno permesso di costruire una forte conoscenza del web, nelle sue varie sfaccettature, 
               dal <b>backend</b>, al <b>frontend</b>, dal <b>design</b> alla <b>user experience</b>, e così via.
-            </Paragraph>
+            </Text>
 
-            <Paragraph>
+            <Text>
               Così come anche la possibilità di lavorare 
               con <b>grosse aziende</b> e clienti, compresi <b>internazionali</b>.
-            </Paragraph>
+            </Text>
           </SizableBox>
 
         </SectionWrapper>

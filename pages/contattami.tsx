@@ -1,6 +1,6 @@
 import Layout from '@/components/layout';
-import ContactFormSection from '@/sections/contact/contact-form.section';
 
+import ContactFormSection from '@/sections/contact/contact-form.section';
 import InterestedServicesSection from '@/sections/contact/interested-services.section';
 import RequestSection from '@/sections/contact/request.section';
 

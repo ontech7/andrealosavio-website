@@ -7,10 +7,11 @@ import arrowDownSvg from "./images/arrow-down.svg";
 
 export default function FormSelect({ 
   name,
+  required,
   options,
   value,
   setValue
-}: Pick<InputProps<SubjectType | string>, "name" | "options" | "value" | "setValue">) {
+}: Pick<InputProps<SubjectType | string>, "name" | "required" | "options" | "value" | "setValue">) {
   return (
     <select
       sx={{
@@ -23,9 +24,9 @@ export default function FormSelect({
         borderColor: "yellow",
         boxShadow: "0px 2px 4px #3334",
         borderRadius: "10px",
-        fontWeight: 400,
-        fontSize: "16px",
-        fontFamily: "inherit",
+        fontWeight: "regular",
+        fontSize: "link",
+        fontFamily: "body",
         width: "100%",
         appearance: "none",
         lineHeight: "27px",
@@ -42,6 +43,7 @@ export default function FormSelect({
         }
       }}
       name={name}
+      required={required}
       value={value}
       onChange={(e: ChangeEvent<HTMLSelectElement>)  => {
         setValue(name, e.target.value)

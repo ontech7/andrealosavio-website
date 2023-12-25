@@ -1,20 +1,18 @@
 
-import { Box } from 'theme-ui';
-
 import CopyrightText from '../common/copyright';
 import LayoutLogo from "../common/logo";
 import Navbar from '../common/navbar';
 import NavbarItem from '../common/navbar/item';
 import SocialLinks from '../common/socials';
 import LayoutWrapper from '../common/wrapper';
+import FooterWrapper from './wrapper';
 
 import { menuVoicesMap } from '@/shared-data/constants/navbar/menu';
 import { breakpoints } from '@/shared-data/theme';
-import FooterWrapper from './wrapper';
 
 export default function Footer() {
   return (
-    <Box as="footer" bg="blue" p="40px 0">
+    <footer sx={{ bg: "blue", p: "40px 0" }}>
 
       <LayoutWrapper ssx={{ flexDirection: "column" }}>
 
@@ -52,6 +50,6 @@ export default function Footer() {
 
       </LayoutWrapper>
 
-    </Box>
+    </footer>
   )
 }

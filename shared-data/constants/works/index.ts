@@ -1,7 +1,7 @@
 export type Work = {
   href: string
   workName: string
-  alt: string
+  alt?: string
 }
 
 export const worksMap: Work[] = [

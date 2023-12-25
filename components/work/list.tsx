@@ -1,12 +1,10 @@
-import { Box } from 'theme-ui'
-
 import WorkItem from './item'
 
 import { worksMap } from '@/shared-data/constants/works'
 
 export default function WorkList() {
   return (
-    <Box
+    <div
       sx={{
         display: "flex",
         flexWrap: "wrap",
@@ -22,6 +20,6 @@ export default function WorkList() {
         />
       )}
       
-    </Box>
+    </div>
   )
 }

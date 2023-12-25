@@ -1,10 +1,10 @@
-import { servicesMap } from '@/shared-data/constants/services';
-import { Box } from 'theme-ui';
 import ServiceItem from './item';
+
+import { servicesMap } from '@/shared-data/constants/services';
 
 export default function ServiceList() {
   return (
-    <Box
+    <div
       sx={{
         display: "flex",
         flexWrap: "wrap",
@@ -22,6 +22,6 @@ export default function ServiceList() {
         />
       )}
       
-    </Box>
+    </div>
   )
 }

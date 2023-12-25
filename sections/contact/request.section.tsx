@@ -1,10 +1,11 @@
-import { Heading, Paragraph } from 'theme-ui'
-
 import Section from '@/components/section'
 import SectionWrapper from '@/components/section/wrapper'
 
+import Text from '@/components/core/text'
+
 import Background from '@/components/background'
 import KeyPoint from '@/components/key-point'
+
 
 export default function RequestSection() {
   return (
@@ -17,16 +18,16 @@ export default function RequestSection() {
       >
         <SectionWrapper 
           direction={["column", "column"]} 
-          ssx={{ alignItems: "center", gap: "25px" }}
+          ssx={{ textAlign: "center", gap: "25px" }}
         >
 
-          <Heading as="h1" variant="h1">
+          <Text as="h1">
             Fai la tua <KeyPoint>richiesta</KeyPoint>.
-          </Heading>
+          </Text>
 
-          <Paragraph>
+          <Text>
             Scegli il servizio che più fa al caso tuo, e riceverai presto un preventivo completamente gratuito.
-          </Paragraph>
+          </Text>
 
         </SectionWrapper>
       </Section>

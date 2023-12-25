@@ -1,5 +1,6 @@
 import { breakpoints } from "@/shared-data/theme";
-import { Paragraph } from "theme-ui";
+
+import Text from "@/components/core/text";
 
 import Section from "@/components/section";
 import SectionWrapper from "@/components/section/wrapper";
@@ -17,11 +18,11 @@ export default function WorkSection() {
       >
         <SectionWrapper direction={["column"]} ssx={{ py: "10px" }}>
 
-          <Paragraph 
+          <Text 
             color="blue" 
-            sx={{ 
+            ssx={{ 
               fontSize: "14px", 
-              fontWeight: 600, 
+              fontWeight: "semiBold", 
               opacity: 0.7, 
               textAlign: "center", 
               mt: "-50px",
@@ -30,7 +31,7 @@ export default function WorkSection() {
             }}
           >
             LAVORATO CON
-          </Paragraph>
+          </Text>
 
           <WorkList />
 

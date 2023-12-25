@@ -1,4 +1,4 @@
-import { ContactBody } from "@/shared-data/api/contact/types";
+import type { ContactBody } from "@/shared-data/api/contact/types";
 
 export default function FormLabel({ 
   name, 
@@ -14,9 +14,9 @@ export default function FormLabel({
         color: "black",
         display: "block",
         mb: "5px",
-        fontSize: "16px",
-        fontWeight: 500,
-        fontFamily: "inherit",
+        fontFamily: "body",
+        fontSize: "link",
+        fontWeight: "medium",
         lineHeight: "27px"
       }}
     >

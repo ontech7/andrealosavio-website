@@ -1,13 +1,13 @@
 import '@/styles/globals.css';
 import type { AppProps } from 'next/app';
 
-import { theme } from '@/shared-data/theme';
-import { ThemeUIProvider } from 'theme-ui';
+import theme from '@/shared-data/theme';
+import { ThemeProvider } from '@theme-ui/core';
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <ThemeUIProvider theme={theme}>
+    <ThemeProvider theme={theme}>
       <Component {...pageProps} />
-    </ThemeUIProvider>
+    </ThemeProvider>
   )
 }

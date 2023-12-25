@@ -1,14 +1,15 @@
 import Image from 'next/image'
 
 import { BriefcaseIcon, HomeIcon } from '@heroicons/react/24/outline'
-import { Box, Heading, Paragraph } from 'theme-ui'
 
 import Section from '@/components/section'
 import SizableBox from '@/components/section/sizable-box'
 import SectionWrapper from '@/components/section/wrapper'
 
+import Link from '@/components/core/link'
+import Text from '@/components/core/text'
+
 import Background from '@/components/background'
-import Link from '@/components/link'
 
 import notFoundImg from "@/public/images/404.svg"
 
@@ -38,16 +39,16 @@ export default function NotFoundSection() {
             />
           </SizableBox>
 
-          <Heading as="h1" variant="h1" color="black">
+          <Text as="h1" color="black">
             Qualcosa è andato storto.
-          </Heading>
+          </Text>
 
-          <Paragraph color="black" sx={{ textAlign: "center", mt: "-20px" }}>
+          <Text color="black" ssx={{ textAlign: "center", mt: "-20px" }}>
             La pagina su cui volevi atterrare, non esiste.<br />
             Se hai bisogno di un servizio o vuoi tornare alla Homepage, clicca qui sotto:
-          </Paragraph>
+          </Text>
 
-          <Box>
+          <div>
 
             <Link 
               variant="primary" 
@@ -75,7 +76,7 @@ export default function NotFoundSection() {
               />
             </Link>
 
-          </Box>
+          </div>
 
         </SectionWrapper>
       </Section>

@@ -1,7 +1,7 @@
+import Image from "next/image";
 import { useState, type FormEvent } from "react";
 
 import { PaperAirplaneIcon } from "@heroicons/react/24/outline";
-import { Box, Button, Heading, Paragraph } from "theme-ui";
 
 import FormCheckbox from "./elements/checkbox";
 import FormInput from "./elements/input";
@@ -10,12 +10,13 @@ import FormTextarea from "./elements/textarea";
 import FormFieldset from "./fieldset";
 import FormLabel from "./label";
 
-import Link from "../link";
+import Button from "../core/button";
+import Link from "../core/link";
+import Text from "../core/text";
 
 import { subjectMap } from "@/shared-data/api/contact";
 import type { ContactBody, ContactResponseData } from "@/shared-data/api/contact/types";
 
-import Image from "next/image";
 import successSvg from "./elements/images/success.svg";
 
 export default function ContactForm() {
@@ -46,8 +47,6 @@ export default function ContactForm() {
 
     const data: ContactResponseData = await response.json();
 
-    console.log(data)
-
     setSuccess(data.success)
   }
 
@@ -65,9 +64,9 @@ export default function ContactForm() {
             mx: "auto"
           }}
         >
-          <Heading as="h3" variant="h3" sx={{ textAlign: "center" }}>
+          <Text as="h3" ssx={{ textAlign: "center" }}>
             Contattami oggi.
-          </Heading>
+          </Text>
 
           <FormFieldset>
             <FormLabel 
@@ -76,6 +75,7 @@ export default function ContactForm() {
             />
             <FormSelect 
               name="subject" 
+              required
               options={Object.entries(subjectMap)}
               value={formValues.subject} 
               setValue={setValue} 
@@ -88,7 +88,8 @@ export default function ContactForm() {
               text="Nome *" 
             />
             <FormInput 
-              name="name" 
+              name="name"
+              required 
               type="text"
               adornment="user"
               value={formValues.name} 
@@ -103,6 +104,7 @@ export default function ContactForm() {
             />
             <FormInput 
               name="email" 
+              required
               type="email"
               adornment="mail"
               value={formValues.email} 
@@ -117,6 +119,7 @@ export default function ContactForm() {
             />
             <FormTextarea 
               name="message" 
+              required
               value={formValues.message} 
               setValue={setValue} 
             />
@@ -128,10 +131,11 @@ export default function ContactForm() {
                 <>
                   Acconsento al trattamento dei miei dati personali al fine di 
                   ricevere una risposta al mio messaggio, come indicato 
-                  nella <Link newTab href="/privacy-policy">Privacy Policy</Link>. *
+                  nella <Link target="_blank" href="/privacy-policy">Privacy Policy</Link>. *
                 </>
               }
               name="privacy"
+              required
               value={String(formValues.privacy)}
               setValue={setValue}
             />
@@ -154,7 +158,7 @@ export default function ContactForm() {
       }
 
       {isSuccess == true &&
-        <Box
+        <div
           sx={{
             display: "flex",
             textAlign: "center",
@@ -167,20 +171,20 @@ export default function ContactForm() {
             alt="Messaggio inviato correttamente" 
             sx={{ height: "30px", mb: "20px" }}
           />
-          <Paragraph color="black">
+          <Text color="black">
             <b>Messaggio inviato correttamente!</b>
-          </Paragraph>
-          <Paragraph color="black">
+          </Text>
+          <Text color="black">
             Riceverai al più presto una risposta alla tua richiesta.
-          </Paragraph>
-          <Paragraph color="black">
+          </Text>
+          <Text color="black">
             Ricordati di tenere d'occhio la casella "<b>Spam</b>".
-          </Paragraph>
-        </Box>
+          </Text>
+        </div>
       }
 
       {isSuccess == false &&
-        <Box
+        <div
           sx={{
             display: "flex",
             textAlign: "center",
@@ -193,13 +197,13 @@ export default function ContactForm() {
             alt="Messaggio non inviato"
             sx={{ height: "30px", mb: "20px", filter: "grayscale(1)" }}
           />
-          <Paragraph color="black">
+          <Text color="black">
             <b>Messaggio non inviato :(</b>
-          </Paragraph>
-          <Paragraph color="black">
+          </Text>
+          <Text color="black">
             Ricarica la pagina o riprova più tardi.
-          </Paragraph>
-        </Box>
+          </Text>
+        </div>
       }
 
     </>

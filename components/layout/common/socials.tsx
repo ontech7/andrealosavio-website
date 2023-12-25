@@ -1,6 +1,6 @@
-import Link from 'next/link'
+import NextLink from 'next/link'
 
-import { Box, type ThemeUIStyleObject } from 'theme-ui'
+import type { ThemeUIStyleObject } from '@theme-ui/core'
 
 import { socialLinks } from '@/shared-data/constants/navbar/socials'
 
@@ -8,7 +8,7 @@ export default function SocialLinks({ ssx }: {
   ssx?: ThemeUIStyleObject
 }) {
   return (
-    <Box
+    <div
       sx={{
         display: "flex",
         gap: "8px",
@@ -17,7 +17,7 @@ export default function SocialLinks({ ssx }: {
     >
 
       {socialLinks.map(([href, imgSrc, alt]) =>
-        <Link 
+        <NextLink 
           key={alt}
           target="_blank" 
           href={href}
@@ -27,10 +27,10 @@ export default function SocialLinks({ ssx }: {
             src={imgSrc} 
             alt={alt} 
           />
-        </Link>
+        </NextLink>
       )}
 
-    </Box>
+    </div>
   )
 }
 

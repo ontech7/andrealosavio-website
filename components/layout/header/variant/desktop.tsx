@@ -5,7 +5,7 @@ import Navbar from "../../common/navbar";
 import NavbarItem from "../../common/navbar/item";
 import LayoutWrapper from "../../common/wrapper";
 
-import Link from "@/components/link";
+import Link from "@/components/core/link";
 
 import { menuVoicesMap } from "@/shared-data/constants/navbar/menu";
 import { breakpoints } from "@/shared-data/theme";

@@ -1,10 +1,10 @@
 import { ArrowRightCircleIcon } from "@heroicons/react/24/solid";
-import { Heading, Paragraph } from "theme-ui";
+
+import Link from "@/components/core/link";
+import Text from "@/components/core/text";
 
 import Section from "@/components/section";
 import SectionWrapper from "@/components/section/wrapper";
-
-import Link from "@/components/link";
 
 export default function InterestedContactSection() {
   return (
@@ -15,21 +15,21 @@ export default function InterestedContactSection() {
     >
       <SectionWrapper 
         direction={["column", "column"]} 
-        ssx={{ alignItems: "center", gap: "25px" }}
+        ssx={{ textAlign: "center", gap: "25px" }}
       >
 
-        <Heading as="h2" variant="h2">
+        <Text as="h2">
           Sei interessato ad uno di questi servizi?
-        </Heading>
+        </Text>
 
-        <Paragraph color="black">
+        <Text color="black">
           Contattami ed effettuerò su misura per te un preventivo completamente gratuito.
-        </Paragraph>
+        </Text>
 
         <Link
           variant="secondary"
           href="/contattami"
-          ssx={{ mt: "20px" }}
+          ssx={{ mt: "20px", alignSelf: "center" }}
         >
           CONTATTAMI
           

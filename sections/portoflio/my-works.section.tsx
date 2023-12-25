@@ -1,7 +1,7 @@
-import { Heading } from 'theme-ui'
-
 import Section from '@/components/section'
 import SectionWrapper from '@/components/section/wrapper'
+
+import Text from '@/components/core/text'
 
 import HighlightText from '@/components/highlight-text'
 
@@ -14,12 +14,12 @@ export default function MyWorksSection() {
     >
       <SectionWrapper 
         direction={["column", "column"]} 
-        ssx={{ alignItems: "center", gap: "25px" }}
+        ssx={{ textAlign: "center", gap: "25px" }}
       >
 
-        <Heading as="h1" variant="h1">
+        <Text as="h1">
           Il mio <HighlightText>portfolio</HighlightText>.
-        </Heading>
+        </Text>
 
       </SectionWrapper>
     </Section>

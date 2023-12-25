@@ -4,9 +4,10 @@ import type { InputProps } from './types'
 
 export default function FormTextarea({ 
   name,
+  required,
   value,
   setValue
-}: Pick<InputProps<string>, "name" | "value" | "setValue">) {
+}: Pick<InputProps<string>, "name" | "required" | "value" | "setValue">) {
   return (
     <textarea
       rows={3}
@@ -20,9 +21,9 @@ export default function FormTextarea({
         borderColor: "yellow",
         boxShadow: "0px 2px 4px #3334",
         borderRadius: "10px",
-        fontWeight: 400,
-        fontSize: "16px",
-        fontFamily: "inherit",
+        fontWeight: "regular",
+        fontSize: "link",
+        fontFamily: "body",
         width: "100%",
         appearance: "none",
         lineHeight: "27px",
@@ -36,6 +37,7 @@ export default function FormTextarea({
         }
       }}
       name={name}
+      required={required}
       value={value}
       onChange={(e: ChangeEvent<HTMLTextAreaElement>)  => {
         setValue(name, e.target.value)

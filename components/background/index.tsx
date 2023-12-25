@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-import type { ThemeUIStyleObject } from 'theme-ui'
+import type { ThemeUIStyleObject } from '@theme-ui/core'
 
 import type { BackgroundName } from './types'
 

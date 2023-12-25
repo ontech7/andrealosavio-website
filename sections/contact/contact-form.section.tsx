@@ -1,5 +1,3 @@
-import { Box } from 'theme-ui'
-
 import Section from '@/components/section'
 import SectionWrapper from '@/components/section/wrapper'
 
@@ -13,7 +11,7 @@ export default function ContactFormSection() {
       ssx={{ mt: "-15%" }}
     >
       <SectionWrapper>
-        <Box
+        <div
           sx={{
             maxWidth: "800px",
             width: "100%",
@@ -27,7 +25,7 @@ export default function ContactFormSection() {
 
           <ContactForm />
           
-        </Box>
+        </div>
       </SectionWrapper>
     </Section>
   )

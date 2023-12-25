@@ -3,14 +3,15 @@ import Lottie from "react-lottie-player";
 
 import { breakpoints } from '@/shared-data/theme';
 import { ArrowDownCircleIcon } from '@heroicons/react/24/outline';
-import { Box, Heading, Paragraph } from 'theme-ui';
 
 import Section from '@/components/section';
 import SectionWrapper from '@/components/section/wrapper';
 
+import Link from "@/components/core/link";
+import Text from "@/components/core/text";
+
 import Background from "@/components/background";
 import KeyPoint from '@/components/key-point';
-import Link from "@/components/link";
 
 export default function HeroSection() {
   return (
@@ -32,7 +33,7 @@ export default function HeroSection() {
 
         <SectionWrapper direction={["column"]}>
 
-          <Box
+          <div
             sx={{
               zIndex: 0,
               display: "flex",
@@ -52,8 +53,7 @@ export default function HeroSection() {
                 alignSelf: "center", 
                 width: "90vw", 
                 height: "90vw",
-                mt: "-120px",
-                mb: "-60px"
+                my: "-25px"
               }
             }}
           >
@@ -70,14 +70,14 @@ export default function HeroSection() {
                 height: "auto" 
               }}
             />
-          </Box>
+          </div>
 
-          <Heading as="h1" variant="h1" sx={{ mb: "32px" }}>
+          <Text as="h1" ssx={{ mb: "32px" }}>
             Vuoi elevare il tuo business a un livello completamente nuovo?
-          </Heading>
+          </Text>
 
-          <Paragraph 
-            sx={{ 
+          <Text 
+            ssx={{ 
               mb: "70px", 
               maxWidth: "45%", 
               [breakpoints.mobile]: { maxWidth: "100%" } 
@@ -87,7 +87,7 @@ export default function HeroSection() {
             <KeyPoint as="b">chiaro</KeyPoint>, {" "}
             <KeyPoint as="b" delay={250}>semplice</KeyPoint> e {" "}
             <KeyPoint as="b" delay={500}>preciso</KeyPoint> i tuoi clienti?
-          </Paragraph>
+          </Text>
 
           <Link 
             variant="primary" 

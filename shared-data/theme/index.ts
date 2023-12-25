@@ -1,10 +1,10 @@
-import type { Theme } from "theme-ui";
+import type { Theme } from "@theme-ui/core";
 
 import { buttons } from "./css-properties/buttons";
 import { colors } from "./css-properties/colors";
-import { fontSizes } from "./css-properties/font-sizes";
+import { fontSizes } from "./css-properties/fontSizes";
+import { fontWeights } from "./css-properties/fontWeights";
 import { fonts } from "./css-properties/fonts";
-import { links } from "./css-properties/links";
 import { text } from "./css-properties/text";
 
 export const breakpoints = {
@@ -12,11 +12,13 @@ export const breakpoints = {
   mobile: "@media (max-width: 768px)"
 }
 
-export const theme: Theme = {
+const theme: Theme = {
   fonts: fonts,
   fontSizes: fontSizes,
+  fontWeights: fontWeights,
   text: text,
   colors: colors,
-  links: links,
   buttons: buttons
 }
+
+export default theme;

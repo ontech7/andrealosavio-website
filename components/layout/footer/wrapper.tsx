@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react'
 
 import { breakpoints } from '@/shared-data/theme'
-import { Box, type ThemeUIStyleObject } from 'theme-ui'
+import type { ThemeUIStyleObject } from '@theme-ui/core'
 
 export default function FooterWrapper({
   children,
@@ -11,7 +11,7 @@ export default function FooterWrapper({
   ssx?: ThemeUIStyleObject
 }) {
   return (
-    <Box
+    <div
       sx={{
         display: "flex",
         justifyContent: "space-between",
@@ -28,6 +28,6 @@ export default function FooterWrapper({
 
       {children}
 
-    </Box>
+    </div>
   )
 }

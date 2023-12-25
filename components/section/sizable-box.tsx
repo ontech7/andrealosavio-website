@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react'
 
 import { breakpoints } from '@/shared-data/theme'
-import { Box, ThemeUICSSObject, type ThemeUIStyleObject } from 'theme-ui'
+import type { ThemeUICSSObject, ThemeUIStyleObject } from '@theme-ui/core'
 
 /**
  * [0] Desktop
@@ -28,7 +28,7 @@ export default function SizableBox({
   const mobile = width?.[2];
 
   return (
-    <Box 
+    <div 
       sx={{ 
         display: "flex",
         flexDirection: "column",
@@ -43,6 +43,6 @@ export default function SizableBox({
 
       {children}
 
-    </Box>
+    </div>
   )
 }

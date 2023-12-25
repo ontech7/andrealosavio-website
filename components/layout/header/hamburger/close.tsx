@@ -1,8 +1,6 @@
-import { Box } from "theme-ui";
-
 export default function HamburgerCloseIcon({ isOpen }: { isOpen: boolean }) {
   return (
-    <Box 
+    <div 
       aria-hidden={!isOpen ? "true" : "false"}
       sx={{
         zIndex: 1001,
@@ -40,6 +38,6 @@ export default function HamburgerCloseIcon({ isOpen }: { isOpen: boolean }) {
       }}
     >
       <div /><div />
-    </Box>
+    </div>
   )
 }

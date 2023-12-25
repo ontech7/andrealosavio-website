@@ -1,19 +1,14 @@
 import Image from 'next/image'
-import Link from 'next/link'
+import NextLink from 'next/link'
 
-import { Heading, Paragraph } from 'theme-ui'
+import Text from '../core/text'
 
 import type { Service } from '@/shared-data/constants/services'
 
-export default function ServiceItem({
-  serviceName,
-  alt,
-  title,
-  description
-}: Service) {
+export default function ServiceItem(props: Service) {
   return (
-    <Link
-      href={`/contattami?s=${serviceName}`}
+    <NextLink
+      href={`/contattami?s=${props.serviceName}`}
       sx={{
         textDecoration: "none",
         maxWidth: "320px",
@@ -28,19 +23,19 @@ export default function ServiceItem({
     >
 
       <Image 
-        src={require(`./images/${serviceName}.svg`)}
-        alt={alt}
+        src={require(`./images/${props.serviceName}.svg`)}
+        alt={props.alt ?? ""}
         sx={{ height: "60px", mb: "20px" }}
       />
 
-      <Heading as="h3" variant="h3" sx={{ mb: "25px" }}>
-        {title}
-      </Heading>
+      <Text as="h3" ssx={{ mb: "25px" }}>
+        {props.title}
+      </Text>
 
-      <Paragraph color="black">
-        {description}
-      </Paragraph>
+      <Text color="black">
+        {props.description}
+      </Text>
 
-    </Link>
+    </NextLink>
   )
 }

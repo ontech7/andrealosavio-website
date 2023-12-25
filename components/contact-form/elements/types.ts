@@ -13,6 +13,7 @@ export type InputOption = {
 export type InputProps<T> = {
   text: string | ReactNode
   name: keyof ContactBody
+  required?: boolean
   type: InputHTMLAttributes<HTMLInputElement>["type"]
   adornment?: InputAdornment
   options?: [string, string][]

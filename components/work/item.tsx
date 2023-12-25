@@ -1,18 +1,15 @@
-import { Work } from '@/shared-data/constants/works'
-import { breakpoints } from '@/shared-data/theme'
 import Image from 'next/image'
-import Link from 'next/link'
+import NextLink from 'next/link'
 
-export default function WorkItem({
-  href,
-  workName,
-  alt
-}: Work) {
+import type { Work } from '@/shared-data/constants/works'
+import { breakpoints } from '@/shared-data/theme'
+
+export default function WorkItem(props: Work) {
   return (
-    <Link href={href} target="_blank" rel="noopener noreferrer">
+    <NextLink href={props.href} target="_blank" rel="noopener noreferrer">
       <Image 
-        src={require(`./images/${workName}.png`)}
-        alt={alt}
+        src={require(`./images/${props.workName}.png`)}
+        alt={props.alt ?? ""}
         sx={{ 
           height: "50px", 
           width: "auto",
@@ -22,6 +19,6 @@ export default function WorkItem({
           "&:hover": { opacity: 0.6 } 
         }}
       />
-    </Link>
+    </NextLink>
   )
 }

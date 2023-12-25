@@ -1,38 +1,37 @@
-import { Box, Paragraph } from 'theme-ui';
-
-import Link from "@/components/link";
+import Link from '@/components/core/link';
+import Text from '@/components/core/text';
 
 export default function CopyrightText() {
   return (
-    <Box
+    <div
       sx={{
         "& p": { fontSize: 16 },
-        "& a": { color: "green", fontWeight: 400 }
+        "& a": { color: "green", fontWeight: "regular" }
       }}
     >
 
-      <Paragraph>
+      <Text>
         © Copyright 2023 | Andrea Losavio
-      </Paragraph>
+      </Text>
 
-      <Paragraph>
+      <Text>
 
-        <Link newTab href="/privacy-policy">
+        <Link target="_blank" href="/privacy-policy">
           Privacy Policy
         </Link>
 
         {" - "}
 
-        <Link newTab href="/cookie-policy">
+        <Link target="_blank" href="/cookie-policy">
           Cookie Policy
         </Link>
 
-      </Paragraph>
+      </Text>
 
-      <Paragraph>
+      <Text>
         P.I. 12705460967
-      </Paragraph>
+      </Text>
 
-    </Box>
+    </div>
   )
 }

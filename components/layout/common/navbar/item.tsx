@@ -1,7 +1,7 @@
 
 import { useRouter } from "next/router";
 
-import Link from "@/components/link";
+import Link from "@/components/core/link";
 
 export default function NavbarItem({ 
   label, 
@@ -21,9 +21,26 @@ export default function NavbarItem({
         variant="navlink" 
         href={href}
         ssx={{ 
+          position: "relative",
+          display: "inline-block",
+          textDecoration: "none",
+          color: "white",
+          fontWeight: "medium",
           "&::after": {
-            ...path == href ? { transform: "scale(1)" } : {},
-            ...noHover ? { bg: "transparent", transition: "none" } : {}
+            content: '""',
+            position: "absolute",
+            bottom: 0,
+            left: 0,
+            width: "100%",
+            height: "3px",
+            mb: "-5px",
+            backgroundColor: noHover ? "none" : "green",
+            transform: path == href ? "scale(1)" : "scale(0)",
+            transition: noHover ? "none" : "transform 0.3s ease-in-out"
+          },
+          "&:hover::after": {
+            transformOrigin: "center",
+            transform: "scale(1)"
           }
         }}
       >

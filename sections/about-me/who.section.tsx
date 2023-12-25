@@ -1,13 +1,14 @@
+import Image from 'next/image';
 
 import { breakpoints } from '@/shared-data/theme';
 
 import Section from '@/components/section';
 import SectionWrapper from '@/components/section/wrapper';
 
+import Text from '@/components/core/text';
+
 import Background from "@/components/background";
 import SizableBox from '@/components/section/sizable-box';
-import Image from 'next/image';
-import { Box, Heading, Paragraph } from 'theme-ui';
 
 export default function WhoSection() {
   return (
@@ -36,11 +37,11 @@ export default function WhoSection() {
         >
 
           <SizableBox width={["65%"]} ssx={{ mb: "60px" }}>
-            <Heading as="h1" variant="h1" color="black">
+            <Text as="h1" color="black">
               Chi sono.
-            </Heading>
+            </Text>
 
-            <Box
+            <div
               sx={{
                 borderLeftWidth: "3px",
                 borderLeftStyle: "solid",
@@ -49,17 +50,17 @@ export default function WhoSection() {
               }}
             >
 
-              <Heading as="h2" variant="h2_special" sx={{ mb: "32px" }}>
+              <Text as="h2" variant="h2_special" ssx={{ mb: "32px" }}>
                 Progetto siti web & app, collaboro con Start Up e Aziende del settore, faccio consulenza.
-              </Heading>
+              </Text>
 
-              <Paragraph color="black">
+              <Text color="black">
                 Sono <b>Andrea Losavio</b>, sviluppatore web e consulente residente a <b>Milano</b>.<br />
                 Laureato in Ingegneria Informatica al <b>Politecnico di Milano</b>.<br />
                 Appassionato di programmazione sin dal lontano 2009.
-              </Paragraph>
+              </Text>
 
-            </Box>
+            </div>
             
           </SizableBox>
 

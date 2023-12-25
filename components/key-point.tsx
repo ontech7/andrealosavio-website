@@ -1,7 +1,9 @@
 import { keyframes } from '@emotion/react'
-import React, { type ReactNode } from 'react'
+import { type ReactNode } from 'react'
 
-import { Text, type ThemeUIStyleObject } from 'theme-ui'
+import Text from './core/text'
+
+import type { ThemeUIStyleObject } from '@theme-ui/core'
 
 const underlineAnim = keyframes({ from: { width: 0 }, to: { width: "100%" }})
 
@@ -13,7 +15,7 @@ export default function KeyPoint({
   children,
   ssx
 }: {
-  as?: React.ElementType<any>
+  as?: string
   variant?: string
   color?: "green" | "darkGreen"
   delay?: number
@@ -22,9 +24,9 @@ export default function KeyPoint({
 }) {
   return (
     <Text
-      {...as ? { as } : {}}
-      {...variant ? { variant } : {}}
-      sx={{
+      as={as ?? "span"}
+      variant={variant}
+      ssx={{
         position: "relative",
         display: "inline-block",
 

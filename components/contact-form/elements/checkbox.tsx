@@ -1,22 +1,24 @@
-
 import type { ChangeEvent } from 'react'
 
 import type { InputProps } from './types'
+
+import Text from '@/components/core/text'
 
 import checkedSvg from "./images/checkmark.svg"
 
 export default function FormCheckbox({ 
   text,
+  required,
   name,
   value,
   setValue
-}: Pick<InputProps<string>, "text" | "name" | "value" | "setValue">) {
+}: Pick<InputProps<string>, "text" | "required" | "name" | "value" | "setValue">) {
   return (
     <label
       sx={{
         color: "black",
-        fontSize: "16px",
-        fontWeight: 400,
+        fontSize: "link",
+        fontWeight: "regular",
         display: "flex",
         cursor: "pointer",
         lineHeight: "27px"
@@ -39,6 +41,7 @@ export default function FormCheckbox({
           boxShadow: "0px 2px 4px #3334",
           appearance: "none",
           cursor: "pointer",
+          fontFamily: "body",
 
           "&:checked": {
             backgroundImage: `url(${checkedSvg.src})`,
@@ -50,19 +53,18 @@ export default function FormCheckbox({
         }}
         type="checkbox"
         name={name}
+        required={required}
         value={value}
         onChange={(e: ChangeEvent<HTMLInputElement>) => {
           setValue(name, value)
         }}
       />
 
-      <span 
-        sx={{ 
-          "& a": { color: "darkGreen", fontWeight: 500 }
-        }}
-      >
+      <Text as="span" ssx={{ 
+        "& a": { color: "darkGreen", fontWeight: "medium" }
+      }}>
         {text}
-      </span>
+      </Text>
 
     </label>
   )

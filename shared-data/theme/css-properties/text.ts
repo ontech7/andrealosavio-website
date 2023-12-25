@@ -1,9 +1,30 @@
-import type { ThemeUICSSObject } from "theme-ui";
+import type { ThemeUICSSObject } from "@theme-ui/core";
 
 export const text: Record<string, ThemeUICSSObject> = {
-  h1: { fontSize: "60px", fontWeight: 700, color: "yellow"},
-  h2: { fontSize: "45px", fontWeight: 600, color: "black" },
-  h2_special: { fontSize: "40px", fontWeight: 500, color: "grey"},
-  h3: { fontSize: "30px", fontWeight: 600, color: "black" },
-  paragraph: { fontSize: "18px", fontWeight: 400, lineHeight: "27px", color: "white" }
+  h1: { 
+    fontSize: "h1", 
+    fontWeight: "bold", 
+    color: "yellow"
+  },
+  h2: { 
+    fontSize: "h2", 
+    fontWeight: "semiBold", 
+    color: "black" 
+  },
+  h2_special: { 
+    fontSize: "h2_special", 
+    fontWeight: "medium", 
+    color: "grey"
+  },
+  h3: { 
+    fontSize: "h3", 
+    fontWeight: "semiBold", 
+    color: "black" 
+  },
+  p: { 
+    fontSize: "body", 
+    fontWeight: "regular", 
+    lineHeight: "27px", 
+    color: "white" 
+  }
 }

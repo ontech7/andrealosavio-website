@@ -1,6 +1,8 @@
-import React, { type ReactNode } from 'react'
+import { type ReactNode } from 'react'
 
-import { Text, ThemeUICSSObject, type ThemeUIStyleObject } from 'theme-ui'
+import type { ThemeUIStyleObject } from '@theme-ui/core'
+
+import Text from '../core/text'
 
 import customHighlightSvg from "./images/custom-highlight-green.svg"
 
@@ -12,9 +14,9 @@ export default function HighlightText({
   children,
   ssx
 }: {
-  as?: React.ElementType<any>
+  as?: string
   variant?: string
-  color?: ThemeUICSSObject["color"]
+  color?: string
   bg?: "green" | "yellow" | "custom"
   children?: ReactNode
   ssx?: ThemeUIStyleObject
@@ -23,11 +25,10 @@ export default function HighlightText({
 
   return (
     <Text
-      {...as && { as }}
-      {...variant && { variant }}
-      sx={{
-        color: color ?? "black",
-
+      as={as ?? "span"}
+      variant={variant}
+      color={color ?? "black"}
+      ssx={{
         ...!isCustom ? {
           bg: bg ?? "green",
           padding: "0 3px"

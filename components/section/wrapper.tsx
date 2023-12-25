@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react'
 
 import { breakpoints } from '@/shared-data/theme'
-import { Box, ThemeUICSSObject, type ThemeUIStyleObject } from 'theme-ui'
+import type { ThemeUICSSObject, ThemeUIStyleObject } from '@theme-ui/core'
 
 /**
  * [0] Desktop
@@ -25,7 +25,7 @@ export default function SectionWrapper({
   const mobile = direction?.[1];
 
   return (
-    <Box
+    <div
       sx={{
         display: "flex",
         position: "relative",
@@ -41,6 +41,6 @@ export default function SectionWrapper({
 
       {children}
 
-    </Box>
+    </div>
   )
 }
