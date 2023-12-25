@@ -1,6 +1,7 @@
 import Layout from '@/components/layout';
 
 import ExperiencesSection from '@/sections/about-me/experiences.section';
+import MyCareerSection from '@/sections/about-me/my-career.section';
 import ProductionSection from '@/sections/about-me/production.section';
 import WhoSection from '@/sections/about-me/who.section';
 
@@ -13,6 +14,7 @@ export default function ChiSono() {
       <WhoSection />
       <ExperiencesSection />
       <ProductionSection />
+      <MyCareerSection />
     </Layout>
   )
 }
