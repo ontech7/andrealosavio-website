@@ -43,8 +43,9 @@ export default function MyCareerSection() {
           <Image
             src="/images/chisono/curriculum.png"
             alt="Il mio curriculum"
-            width={1038}
-            height={266}
+            priority
+            width={519}
+            height={168}
             sx={{ 
               filter: "blur(6px)",
               [breakpoints.mobile]: { filter: "blur(4px)" }
