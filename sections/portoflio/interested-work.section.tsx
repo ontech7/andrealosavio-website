@@ -6,12 +6,13 @@ import Text from "@/components/core/text";
 import Section from "@/components/section";
 import SectionWrapper from "@/components/section/wrapper";
 
-export default function InterestedContactSection() {
+export default function InterestedWorkSection() {
   return (
     <Section 
-      id="interested-contact" 
-      bg="transparent" 
+      id="interested-work" 
+      bg="lightBlue" 
       high
+      ssx={{ mt: "-40px" }}
     >
       <SectionWrapper 
         direction={["column", "column"]} 
@@ -19,7 +20,7 @@ export default function InterestedContactSection() {
       >
 
         <Text as="h2">
-          Sei interessato ad uno di questi servizi?
+          Vuoi anche tu un sito web o un altro servizio?
         </Text>
 
         <Text color="black">

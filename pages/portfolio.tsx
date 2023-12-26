@@ -1,4 +1,5 @@
 import Layout from '@/components/layout';
+import InterestedWorkSection from '@/sections/portoflio/interested-work.section';
 
 import MyWorksSection from '@/sections/portoflio/my-works.section';
 import PortfolioSection from '@/sections/portoflio/portfolio.section';
@@ -11,6 +12,7 @@ export default function Portfolio() {
     >
       <MyWorksSection />
       <PortfolioSection />
+      <InterestedWorkSection />
     </Layout>
   )
 }
