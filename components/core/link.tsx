@@ -25,7 +25,7 @@ export default function Link(props: LinkAttributes) {
   const goToElement = useCallback((e: SyntheticEvent<HTMLAnchorElement>) => {
     e.preventDefault();
     const [path, anchor] = props.href?.split("#")
-    if (path) { (props.target ?? "_self") ? router.push(path) : window.open(props.href, "_blank") }
+    if (path) { (props.target ?? "_self") == "_self" ? router.push(path) : window.open(props.href, "_blank") }
     if (anchor) { setTimeout(() => scrollToId(anchor), 50) } //debounce
   }, [props.href])
 
