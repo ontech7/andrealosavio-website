@@ -10,6 +10,8 @@ export default function ServiceItem(props: Service) {
     <NextLink
       href={`/contattami?s=${props.serviceName}`}
       sx={{
+        ...props.disabled && { filter: "grayscale(1)", pointerEvents: "none" },
+        position: "relative",
         textDecoration: "none",
         maxWidth: "320px",
         height: "324px",
@@ -21,6 +23,24 @@ export default function ServiceItem(props: Service) {
         textAlign: "center"
       }}
     >
+
+      {props.disabled &&
+        <Text 
+          color="black" 
+          ssx={{ 
+            position: "absolute", 
+            bg: "green",
+            borderRadius: "32px",
+            p: "1px 8px",
+            top: "8px", 
+            right: "8px", 
+            fontSize: "14px",
+            fontWeight: "medium"
+          }}
+        >
+          Non disponibile
+        </Text>
+      }
 
       <Image 
         src={require(`./images/${props.serviceName}.svg`)}

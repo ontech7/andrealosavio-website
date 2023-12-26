@@ -13,6 +13,7 @@ export type Service = {
   alt?: string
   title: string | ReactNode
   description: string
+  disabled?: boolean
 }
 
 export const servicesMap: Service[] = [
@@ -50,6 +51,7 @@ export const servicesMap: Service[] = [
     serviceName: "teach",
     alt: "Insegnante on-demand",
     title: <>Insegnante<br />on-demand</>,
-    description: "Disponibile a insegnare in corsi di programmazione web per tutte le fasce."
+    description: "Disponibile a insegnare in corsi di programmazione web per tutte le fasce.",
+    disabled: true
   },
 ]

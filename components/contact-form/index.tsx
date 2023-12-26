@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { useState, type FormEvent } from "react";
+import { useEffect, useState, type FormEvent } from "react";
 
 import { PaperAirplaneIcon } from "@heroicons/react/24/outline";
 
@@ -17,9 +17,12 @@ import Text from "../core/text";
 import { subjectMap } from "@/shared-data/api/contact";
 import type { ContactBody, ContactResponseData } from "@/shared-data/api/contact/types";
 
+import { useRouter } from "next/router";
 import successSvg from "./elements/images/success.svg";
 
 export default function ContactForm() {
+  const { query } = useRouter();
+
   const [formValues, setFormValues] = useState<ContactBody>({
     subject: "website",
     name: "",
@@ -27,6 +30,10 @@ export default function ContactForm() {
     message: "",
     privacy: false
   });
+
+  useEffect(() => {
+    setValue("subject", query.s as string)
+  }, [query.s])
 
   const setValue = (name: string, value: string) => {
     setFormValues(prevValues => ({ 

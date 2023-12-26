@@ -66,10 +66,10 @@ export const portfolioMap: Portfolio[] = [
     tag: "DEMO",
     title: "Pokémon Teamfight",
     description: <>
-      Studio Bargiggia è uno studio di amministrazione condominiale che unisce competenza, disponibilità e passione per gestire al meglio il vostro condominio.<br/><br/>
+      Pokémon Teamfight è stato un <Link target="_blank" href="https://github.com/ontech7/pokemonfight-nextjs">code test</Link> da svolgere entro una settimana.
+      Il gioco consiste nel formare un team da 6 pokémon e farli combattere con un team auto-generato. Vince il team con la somma di exp più alta.<br/><br/>
       Per il design è stato utilizzato <b>Figma</b>, mentre per lo sviluppo <b>React 18</b> e <b>Next.js 13</b>.<br/>
-      Infine, è stato utilizato un headless CMS on-premise "<b>Strapi</b>" per la gestione del contenuto autonomo.<br/><br/>
-      Per visionare il sito sul tuo dispositivo, <Link target="_blank" href="https://www.studiobargiggia.it">clicca qui</Link>.
+      Per visionare il sito sul tuo dispositivo, <Link target="_blank" href="https://pokemonfight-nextjs.netlify.app/">clicca qui</Link>.
     </>,
     imgSrc: "/images/projects/pokemon-teamfight/preview.png",
     link: "https://pokemonfight-nextjs.netlify.app/"
