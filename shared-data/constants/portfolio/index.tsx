@@ -30,8 +30,7 @@ export const portfolioMap: Portfolio[] = [
     tag: "APP",
     title: "Fast Memo",
     description: <>
-      Un applicazione per prendere note che cerca di condensare tutto ciò che serve per l'organizzazione, sicurezza e affidabilità.<br/><br/>
-      L'idea porta con sé la totale trasparenza dei dati, autogestiti, senza passare per servizi terzi.<br/><br/>
+      Un applicazione per prendere note che cerca di condensare tutto ciò che serve per l'organizzazione, sicurezza e affidabilità, con la totale trasparenza dei dati, autogestiti, senza passare per servizi terzi.<br/><br/>
       Sviluppata con <b>React Native</b> utilizzando <b>Expo SDK 48</b><br/><br/>
       Puoi scaricare l'applicazione 
       dal <Link target="_blank" href="https://play.google.com/store/apps/details?id=com.ontech7.FastMemoApp">Play Store</Link>{" "}
@@ -44,8 +43,8 @@ export const portfolioMap: Portfolio[] = [
     tag: "COLLAB",
     title: "Recrowd",
     description: <>
-      Recrowd è una piattaforma di crowdfunding immobiliare che ti permette di investire in modo alternativo i tuoi risparmi, anche se non disponi di grandi capitali.      Per il design è stato utilizzato <b>Figma</b>, mentre per lo sviluppo <b>React 18</b> e <b>Next.js 13</b>.<br/>
-
+      Recrowd è una piattaforma di crowdfunding immobiliare che ti permette di investire in modo alternativo i tuoi risparmi, anche se non disponi di grandi capitali.<br/><br/>
+      Per il design è stato utilizzato <b>Figma</b>, mentre per lo sviluppo <b>React 18</b> e <b>Next.js 13</b>.<br/><br/>
       Per visionare il sito sul tuo dispositivo, <Link target="_blank" href="https://www.recrowd.com">clicca qui</Link>.
     </>,
     imgSrc: "/images/projects/recrowd/preview.png",
