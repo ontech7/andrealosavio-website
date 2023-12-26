@@ -13,7 +13,7 @@ import { breakpoints } from '@/shared-data/theme'
 export default function MyCareerSection() {
   return (
     <Section 
-      id="my-skills"
+      id="my-career"
     >
       <SectionWrapper 
         direction={["column", "column"]} 
