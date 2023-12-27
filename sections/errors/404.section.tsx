@@ -84,6 +84,7 @@ export default function NotFoundSection() {
       <Background 
         bgImg="blue" 
         placement="top" 
+        ssx={{ mb: "-1px" }}
       />
 
     </>

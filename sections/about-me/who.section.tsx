@@ -90,6 +90,7 @@ export default function WhoSection() {
       <Background 
         bgImg="blue" 
         placement="top" 
+        ssx={{ mb: "-1px" }}
       />
 
     </>
