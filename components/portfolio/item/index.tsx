@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import Image from "@/components/core/image"
 import { useState } from 'react'
 
 import PortfolioDescription from './description'

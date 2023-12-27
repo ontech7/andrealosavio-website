@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "@/components/core/image";
 import { useEffect, useState, type FormEvent } from "react";
 
 import { PaperAirplaneIcon } from "@heroicons/react/24/outline";

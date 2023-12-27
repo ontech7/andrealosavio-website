@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import NextImage from "next/image"
 
 import type { ThemeUIStyleObject } from '@theme-ui/core'
 
@@ -14,7 +14,7 @@ export default function Background({
   ssx?: ThemeUIStyleObject
 }) {
   return (
-    <Image
+    <NextImage
       src={require(`./images/${bgImg}.svg`)}
       alt=""
       sx={{

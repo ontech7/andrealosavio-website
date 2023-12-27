@@ -12,8 +12,12 @@ import Text from "@/components/core/text";
 
 import Background from "@/components/background";
 import KeyPoint from '@/components/key-point';
+import { useState } from "react";
 
 export default function HeroSection() {
+  const [isLottieLoaded, setLottieLoaded] = useState(false);
+  const loaded = () => setLottieLoaded(true);
+
   return (
     <>
 
@@ -61,7 +65,10 @@ export default function HeroSection() {
               loop
               animationData={developerLottie}
               play
+              onLoad={loaded}
               sx={{ 
+                opacity: !isLottieLoaded ? 0 : 1,
+                transition: "opacity 0.5s ease",
                 position: "absolute",
                 top: "50%",
                 transform: "translateY(-50%)",

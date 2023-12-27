@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import Image from "@/components/core/image"
 
 import Section from '@/components/section'
 import SizableBox from '@/components/section/sizable-box'
