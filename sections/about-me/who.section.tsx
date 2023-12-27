@@ -85,12 +85,12 @@ export default function WhoSection() {
 
         </SectionWrapper>
 
-        <Background
-          bgImg="blue"
-          placement="top"
-        />
-
       </Section>
+
+      <Background 
+        bgImg="blue" 
+        placement="top" 
+      />
 
     </>
   )

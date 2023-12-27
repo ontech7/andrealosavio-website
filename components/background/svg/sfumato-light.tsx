@@ -6,8 +6,8 @@ export default function Bg_SfumatoLight({ ssx }: { ssx: ThemeUIStyleObject}) {
       <rect width="1920" height="121" fill="url(#paint0_linear_269_644)"/>
       <defs>
       <linearGradient id="paint0_linear_269_644" x1="960" y1="0" x2="960" y2="121" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#D8EBFF"/>
-      <stop offset="1" stop-color="#D8EBFF" stop-opacity="0"/>
+      <stop stopColor="#D8EBFF"/>
+      <stop offset="1" stopColor="#D8EBFF" stop-opacity="0"/>
       </linearGradient>
       </defs>
     </svg>

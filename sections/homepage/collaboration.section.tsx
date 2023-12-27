@@ -25,7 +25,7 @@ export default function CollaborationSection() {
       <Background
         bgImg="collaborazioni"
         placement="bottom"
-        ssx={{ zIndex: 2, mb: "-1px" }}
+        ssx={{ mb: "-1px" }}
       />
 
       <Image

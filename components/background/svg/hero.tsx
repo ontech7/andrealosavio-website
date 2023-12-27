@@ -8,9 +8,9 @@ export default function Bg_Hero({ ssx }: { ssx: ThemeUIStyleObject}) {
       <path d="M0 0H1920L0 204V0Z" fill="#05386B"/>
       <defs>
       <linearGradient id="paint0_linear_163_152" x1="533.065" y1="107.146" x2="1735.95" y2="-392.723" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#0B559E"/>
-      <stop offset="0.506811" stop-color="#426C97"/>
-      <stop offset="1" stop-color="#6B95BF"/>
+      <stop stopColor="#0B559E"/>
+      <stop offset="0.506811" stopColor="#426C97"/>
+      <stop offset="1" stopColor="#6B95BF"/>
       </linearGradient>
       </defs>
     </svg>

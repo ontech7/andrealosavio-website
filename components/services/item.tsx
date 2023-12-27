@@ -45,7 +45,7 @@ export default function ServiceItem(props: Service) {
       <Image 
         src={require(`./images/${props.serviceName}.svg`)}
         alt={props.alt ?? ""}
-        sx={{ height: "60px", mb: "20px" }}
+        sx={{ width: "auto", height: "60px", mb: "20px", mx: "auto" }}
       />
 
       <Text as="h3" ssx={{ mb: "25px" }}>
