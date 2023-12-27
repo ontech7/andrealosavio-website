@@ -74,6 +74,7 @@ export default function DesignSection() {
       <Background 
         bgImg="light-short" 
         placement="top" 
+        ssx={{ mb: "-1px" }}
       />
 
     </>

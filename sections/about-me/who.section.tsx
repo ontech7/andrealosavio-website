@@ -85,13 +85,13 @@ export default function WhoSection() {
 
         </SectionWrapper>
 
-      </Section>
+        <Background 
+          bgImg="blue" 
+          placement="top" 
+          ssx={{ mb: "-1px" }}
+        />
 
-      <Background 
-        bgImg="blue" 
-        placement="top" 
-        ssx={{ mb: "-1px" }}
-      />
+      </Section>
 
     </>
   )

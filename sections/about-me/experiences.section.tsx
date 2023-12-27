@@ -69,6 +69,7 @@ export default function ExperiencesSection() {
       <Background 
         bgImg="blue-and-light" 
         placement="bottom" 
+        ssx={{ mb: "-1px" }}
       />
 
     </>
