@@ -16,6 +16,7 @@ export default function CollaborationSection() {
   return (
     <div
       sx={{
+        zIndex: 0,
         position: "relative",
         overflow: "hidden"
       }}
@@ -24,7 +25,7 @@ export default function CollaborationSection() {
       <Background
         bgImg="collaborazioni"
         placement="bottom"
-        ssx={{ zIndex: 2 }}
+        ssx={{ zIndex: 2, mb: "-1px" }}
       />
 
       <Image
@@ -32,7 +33,7 @@ export default function CollaborationSection() {
         alt="La mia postazione di lavoro"
         fill
         priority
-        sx={{ objectFit: "cover" }}
+        sx={{ objectFit: "cover", zIndex: -1 }}
       />
     
       <Section 

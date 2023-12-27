@@ -1,25 +1,27 @@
-import NextImage from "next/image"
 
 import type { ThemeUIStyleObject } from '@theme-ui/core'
 
-import type { BackgroundName } from './types'
+import type { BgName } from './types'
+import { backgroundMap } from './utils'
 
 export default function Background({
   bgImg,
   placement,
   ssx
 }: {
-  bgImg: BackgroundName
+  bgImg: BgName
   placement: "top" | "bottom"
   ssx?: ThemeUIStyleObject
 }) {
+  const BgComponent = backgroundMap[bgImg];
+
   return (
-    <NextImage
-      src={require(`./images/${bgImg}.svg`)}
-      alt=""
-      sx={{
+    <BgComponent
+      ssx={{
+        display: "block",
         transform: `rotate(${placement == "bottom" ? "0deg" : "180deg"})`,
-        mt: "-1px", mb: "-1px",
+        width: "100%",
+        height: "100%",
         ...ssx
       }}
     />

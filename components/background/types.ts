@@ -1,4 +1,6 @@
-export type BackgroundName =
+import type { ThemeUIStyleObject } from "@theme-ui/core"
+
+export type BgName =
   | "blue"
   | "blue-and-light"
   | "hero"
@@ -7,3 +9,5 @@ export type BackgroundName =
   | "sfumato-light"
   | "triangle-blue"
   | "collaborazioni"
+
+export type BgComponent =  ({ ssx }: { ssx: ThemeUIStyleObject }) => JSX.Element
