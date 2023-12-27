@@ -22,7 +22,8 @@ export default function PortfolioHeader({
         display: "flex",
         justifyContent: "space-between",
         p: "10px 25px",
-        bg: "white" 
+        bg: "white",
+        boxShadow: "0 -4px 16px #3332"
       }}
     >
       <Text 
