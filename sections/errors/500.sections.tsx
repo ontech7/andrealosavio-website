@@ -28,10 +28,10 @@ export default function ServerErrorSection() {
       >
         <SectionWrapper 
           direction={["column", "column"]}
-          ssx={{ gap: "40px", py: "20px", alignItems: "center", justifyContent: "center" }}
+          ssx={{ gap: "40px", py: "20px", textAlign: "center" }}
         >
 
-          <SizableBox>
+          <SizableBox ssx={{ mx: "auto" }}>
             <Image
               src={serverErrorImg}
               alt="Errore 404"
