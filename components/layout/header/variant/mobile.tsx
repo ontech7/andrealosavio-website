@@ -62,7 +62,7 @@ export default function HeaderMobile() {
           sx={{
             display: "flex",
             flexDirection: "column",
-            width: 320,
+            width: 335,
             gap: "30px",
             top: 0,
             right: "-350px",
