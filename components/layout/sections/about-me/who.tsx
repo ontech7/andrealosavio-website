@@ -4,11 +4,11 @@ import { breakpoints } from '@/shared-data/theme';
 import Section from '@/components/ui/common/section';
 import SectionWrapper from '@/components/ui/common/section/wrapper';
 
+import Image from '@/components/ui/core/image';
 import Text from '@/components/ui/core/text';
 
 import Background from "@/components/background";
 import SizableBox from '@/components/ui/common/section/sizable-box';
-import Image from 'next/image';
 
 export default function WhoSection() {
   return (
