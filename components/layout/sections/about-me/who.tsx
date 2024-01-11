@@ -1,4 +1,3 @@
-import Image from "@/components/ui/core/image";
 
 import { breakpoints } from '@/shared-data/theme';
 
@@ -9,6 +8,7 @@ import Text from '@/components/ui/core/text';
 
 import Background from "@/components/background";
 import SizableBox from '@/components/ui/common/section/sizable-box';
+import Image from 'next/image';
 
 export default function WhoSection() {
   return (
@@ -31,8 +31,8 @@ export default function WhoSection() {
         <SectionWrapper 
           direction={[,"column-reverse"]}
           ssx={{ 
-            pt: "100px", my: "20px",
-            [breakpoints.tablet]: { pt: "50px", mt: 0 },
+            pt: "50px", my: "20px", gap: "40px",
+            [breakpoints.tablet]: { mt: 0 },
           }}
         >
 
@@ -66,32 +66,40 @@ export default function WhoSection() {
 
           <SizableBox 
             width={["35%"]} 
-            ssx={{ 
-              position: "absolute", right: 0, bottom: "-60px", justifyContent: "flex-end",
-              [breakpoints.mobile]: { position: "unset", mb: "20px", width: "100%" }
-            }}
+            ssx={{ position :"relative", zIndex: 0 }}
           >
 
-            <Image
-              src="/images/chisono/io.webp"
-              alt="Chi sono"
-              title="Chi è Andrea Losavio"
-              priority
-              width={1498}
-              height={1880}
-            />
+            <div
+              sx={{
+                borderRadius: "100%",
+                overflow: "hidden",
+                height: "300px",
+                width: "300px",
+                mx: "auto",
+                boxShadow: "0px 9px 30px #00274eB0"
+              }}
+            >
+              <Image
+                src="/images/chisono/io.webp"
+                alt="Chi sono"
+                title="Chi è Andrea Losavio"
+                priority
+                width={1498}
+                height={1880}
+              />
+            </div>
             
           </SizableBox>
 
         </SectionWrapper>
 
-        <Background 
-          bgImg="blue" 
-          placement="top" 
-          ssx={{ mb: "-1px" }}
-        />
-
       </Section>
+
+      <Background 
+        bgImg="blue" 
+        placement="top" 
+        ssx={{ mb: "-1px" }}
+      />
 
     </>
   )
