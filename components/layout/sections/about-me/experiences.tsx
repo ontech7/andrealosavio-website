@@ -1,8 +1,8 @@
 import Image from "@/components/ui/core/image"
 
-import Section from '@/components/ui/section'
-import SizableBox from '@/components/ui/section/sizable-box'
-import SectionWrapper from '@/components/ui/section/wrapper'
+import Section from '@/components/ui/common/section'
+import SizableBox from '@/components/ui/common/section/sizable-box'
+import SectionWrapper from '@/components/ui/common/section/wrapper'
 
 import Text from '@/components/ui/core/text'
 

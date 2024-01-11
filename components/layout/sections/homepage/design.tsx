@@ -2,9 +2,9 @@ import Image from "@/components/ui/core/image"
 
 import { BriefcaseIcon } from '@heroicons/react/24/outline'
 
-import Section from '@/components/ui/section'
-import SizableBox from '@/components/ui/section/sizable-box'
-import SectionWrapper from '@/components/ui/section/wrapper'
+import Section from '@/components/ui/common/section'
+import SizableBox from '@/components/ui/common/section/sizable-box'
+import SectionWrapper from '@/components/ui/common/section/wrapper'
 
 import Link from '@/components/ui/core/link'
 import Text from '@/components/ui/core/text'

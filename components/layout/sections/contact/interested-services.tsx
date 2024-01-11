@@ -3,8 +3,8 @@ import { BriefcaseIcon } from "@heroicons/react/24/outline";
 import Link from "@/components/ui/core/link";
 import Text from "@/components/ui/core/text";
 
-import Section from "@/components/ui/section";
-import SectionWrapper from "@/components/ui/section/wrapper";
+import Section from "@/components/ui/common/section";
+import SectionWrapper from "@/components/ui/common/section/wrapper";
 
 export default function InterestedServicesSection() {
   return (

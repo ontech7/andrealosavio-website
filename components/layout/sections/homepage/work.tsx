@@ -2,8 +2,8 @@ import { breakpoints } from "@/shared-data/theme";
 
 import Text from "@/components/ui/core/text";
 
-import Section from "@/components/ui/section";
-import SectionWrapper from "@/components/ui/section/wrapper";
+import Section from "@/components/ui/common/section";
+import SectionWrapper from "@/components/ui/common/section/wrapper";
 
 import Background from "@/components/background";
 import WorkList from "@/components/work/list";

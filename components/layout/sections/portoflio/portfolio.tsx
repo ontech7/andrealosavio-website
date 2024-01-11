@@ -1,6 +1,6 @@
 
-import Section from '@/components/ui/section'
-import SectionWrapper from '@/components/ui/section/wrapper'
+import Section from '@/components/ui/common/section'
+import SectionWrapper from '@/components/ui/common/section/wrapper'
 
 import PortfolioList from '@/components/portfolio/list'
 
