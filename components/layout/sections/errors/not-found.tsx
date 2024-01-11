@@ -65,7 +65,7 @@ export default function NotFoundSection() {
 
             <Link 
               variant="secondary" 
-              href="/servizi" 
+              href="/" 
               ssx={{ ml: "18px" }}
             >
               HOMEPAGE

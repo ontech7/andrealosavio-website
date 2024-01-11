@@ -2,6 +2,8 @@ import Link from '@/components/ui/core/link';
 import Text from '@/components/ui/core/text';
 
 export default function CopyrightText() {
+  const currentYear = new Date().getFullYear();
+  
   return (
     <div
       sx={{
@@ -11,7 +13,7 @@ export default function CopyrightText() {
     >
 
       <Text>
-        © Copyright 2023 | Andrea Losavio
+        © Copyright {currentYear} | Andrea Losavio
       </Text>
 
       <Text>
