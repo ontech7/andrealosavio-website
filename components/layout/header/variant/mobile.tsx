@@ -10,7 +10,7 @@ import SocialLinks from "../../common/socials";
 import LayoutWrapper from "../../common/wrapper";
 import HamburgerButton from "../hamburger";
 
-import Link from "@/components/core/link";
+import Link from "@/components/ui/core/link";
 
 import { menuVoicesMap } from "@/shared-data/constants/navbar/menu";
 import { breakpoints } from "@/shared-data/theme";

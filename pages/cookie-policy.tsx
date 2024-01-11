@@ -1,9 +1,9 @@
-import Link from '@/components/core/link';
-import Text from '@/components/core/text';
+import Link from '@/components/ui/core/link';
+import Text from '@/components/ui/core/text';
 
 import Layout from '@/components/layout';
-import Section from '@/components/section';
-import SectionWrapper from '@/components/section/wrapper';
+import Section from '@/components/ui/section';
+import SectionWrapper from '@/components/ui/section/wrapper';
 
 export default function CookiePolicy() {
   return (

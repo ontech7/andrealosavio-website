@@ -1,10 +1,10 @@
 import Layout from '@/components/layout';
 
-import CollaborationSection from '@/sections/homepage/collaboration.section';
-import DesignSection from "@/sections/homepage/design.section";
-import HeroSection from "@/sections/homepage/hero.section";
-import WebsiteSection from '@/sections/homepage/website.section';
-import WorkSection from "@/sections/homepage/work.section";
+import CollaborationSection from '@/components/layout/sections/homepage/collaboration';
+import DesignSection from "@/components/layout/sections/homepage/design";
+import HeroSection from "@/components/layout/sections/homepage/hero";
+import WebsiteSection from '@/components/layout/sections/homepage/website';
+import WorkSection from "@/components/layout/sections/homepage/work";
 
 export default function Homepage() {
   return (

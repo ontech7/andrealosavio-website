@@ -1,24 +1,24 @@
-import Image from "@/components/core/image";
+import Image from "@/components/ui/core/image";
 import { useEffect, useState, type FormEvent } from "react";
 
 import { PaperAirplaneIcon } from "@heroicons/react/24/outline";
 
-import FormCheckbox from "./elements/checkbox";
-import FormInput from "./elements/input";
-import FormSelect from "./elements/select";
-import FormTextarea from "./elements/textarea";
+import Button from "@/components/ui/core/button";
+import Link from "@/components/ui/core/link";
+import Text from "@/components/ui/core/text";
+
 import FormFieldset from "./fieldset";
 import FormLabel from "./label";
-
-import Button from "../core/button";
-import Link from "../core/link";
-import Text from "../core/text";
+import FormCheckbox from "./ui/checkbox";
+import FormInput from "./ui/input";
+import FormSelect from "./ui/select";
+import FormTextarea from "./ui/textarea";
 
 import { subjectMap } from "@/shared-data/api/contact";
 import type { ContactBody, ContactResponseData } from "@/shared-data/api/contact/types";
 
 import { useRouter } from "next/router";
-import successSvg from "./elements/images/success.svg";
+import successSvg from "./ui/images/success.svg";
 
 export default function ContactForm() {
   const { query } = useRouter();

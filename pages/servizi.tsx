@@ -1,8 +1,8 @@
 import Layout from '@/components/layout';
 
-import BrandSection from '@/sections/services/brand.section';
-import InterestedContactSection from '@/sections/services/interested-contact.section';
-import ServicesSection from '@/sections/services/services.section';
+import BrandSection from '@/components/layout/sections/services/brand';
+import InterestedContactSection from '@/components/layout/sections/services/interested-contact';
+import ServicesSection from '@/components/layout/sections/services/services';
 
 export default function Servizi() {
   return (

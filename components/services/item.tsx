@@ -1,7 +1,7 @@
-import Image from "@/components/core/image"
+import Image from "@/components/ui/core/image"
 import NextLink from 'next/link'
 
-import Text from '../core/text'
+import Text from '../ui/core/text'
 
 import type { Service } from '@/shared-data/constants/services'
 

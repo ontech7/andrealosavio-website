@@ -1,4 +1,4 @@
-import Text from "@/components/core/text";
+import Text from "@/components/ui/core/text";
 
 export default function PortfolioTag({ name }: {
   name: string

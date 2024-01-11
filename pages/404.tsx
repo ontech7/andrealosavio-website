@@ -1,6 +1,6 @@
 import Layout from "@/components/layout";
 
-import NotFoundSection from "@/sections/errors/404.section";
+import NotFoundSection from "@/components/layout/sections/errors/not-found";
 
 export default function Custom404() {
   return (

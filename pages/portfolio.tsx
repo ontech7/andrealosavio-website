@@ -1,8 +1,8 @@
 import Layout from '@/components/layout';
-import InterestedWorkSection from '@/sections/portoflio/interested-work.section';
+import InterestedWorkSection from '@/components/layout/sections/portoflio/interested-work';
 
-import MyWorksSection from '@/sections/portoflio/my-works.section';
-import PortfolioSection from '@/sections/portoflio/portfolio.section';
+import MyWorksSection from '@/components/layout/sections/portoflio/my-works';
+import PortfolioSection from '@/components/layout/sections/portoflio/portfolio';
 
 export default function Portfolio() {
   return (

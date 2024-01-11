@@ -1,6 +1,6 @@
 import Layout from "@/components/layout"
 
-import ServerErrorSection from "@/sections/errors/500.sections"
+import ServerErrorSection from "@/components/layout/sections/errors/server-error"
 
 type ErrorProps = { statusCode: string }
 

@@ -1,0 +1,20 @@
+import Section from "@/components/ui/section";
+import SectionWrapper from "@/components/ui/section/wrapper";
+
+import ServiceList from "@/components/services/list";
+
+export default function ServicesSection() {
+  return (
+    <Section 
+      id="services" 
+      bg="transparent" 
+      ssx={{ mt: "-180px", mb: "-30px" }}
+    >
+      <SectionWrapper>
+
+        <ServiceList />
+
+      </SectionWrapper>
+    </Section>
+  )
+}

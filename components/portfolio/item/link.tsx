@@ -1,6 +1,6 @@
 import { LinkIcon, MagnifyingGlassPlusIcon } from '@heroicons/react/24/outline'
 
-import Link from '@/components/core/link'
+import Link from '@/components/ui/core/link'
 
 export default function PortfolioLink({
   type,

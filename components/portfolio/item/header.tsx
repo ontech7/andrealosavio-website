@@ -1,7 +1,7 @@
 import { ChevronDownIcon, ChevronUpIcon } from "@heroicons/react/24/outline";
 
-import Button from "@/components/core/button";
-import Text from "@/components/core/text";
+import Button from "@/components/ui/core/button";
+import Text from "@/components/ui/core/text";
 
 export default function PortfolioHeader({
   title,

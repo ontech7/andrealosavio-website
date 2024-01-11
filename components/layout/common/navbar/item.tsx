@@ -1,7 +1,7 @@
 
 import { useRouter } from "next/router";
 
-import Link from "@/components/core/link";
+import Link from "@/components/ui/core/link";
 
 export default function NavbarItem({ 
   label, 

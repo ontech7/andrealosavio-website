@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 
-import Link from "@/components/core/link";
+import Link from "@/components/ui/core/link";
 
 export const PORTFOLIO_TYPES = {
   WEBSITE: "Sito Web",

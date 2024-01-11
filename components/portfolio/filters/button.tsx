@@ -1,6 +1,6 @@
 import type { Dispatch, SetStateAction } from 'react'
 
-import Button from '@/components/core/button'
+import Button from '@/components/ui/core/button'
 
 import { PORTFOLIO_TYPES, type PortfolioTagType } from '@/shared-data/constants/portfolio'
 

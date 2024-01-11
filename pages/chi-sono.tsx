@@ -1,9 +1,9 @@
 import Layout from '@/components/layout';
 
-import ExperiencesSection from '@/sections/about-me/experiences.section';
-import MyCareerSection from '@/sections/about-me/my-career.section';
-import ProductionSection from '@/sections/about-me/production.section';
-import WhoSection from '@/sections/about-me/who.section';
+import ExperiencesSection from '@/components/layout/sections/about-me/experiences';
+import MyCareerSection from '@/components/layout/sections/about-me/my-career';
+import ProductionSection from '@/components/layout/sections/about-me/production';
+import WhoSection from '@/components/layout/sections/about-me/who';
 
 export default function ChiSono() {
   return (

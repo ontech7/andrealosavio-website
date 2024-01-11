@@ -1,5 +1,5 @@
-import Link from '@/components/core/link';
-import Text from '@/components/core/text';
+import Link from '@/components/ui/core/link';
+import Text from '@/components/ui/core/text';
 
 export default function CopyrightText() {
   return (

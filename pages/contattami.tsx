@@ -1,8 +1,8 @@
 import Layout from '@/components/layout';
 
-import ContactFormSection from '@/sections/contact/contact-form.section';
-import InterestedServicesSection from '@/sections/contact/interested-services.section';
-import RequestSection from '@/sections/contact/request.section';
+import ContactFormSection from '@/components/layout/sections/contact/contact-form';
+import InterestedServicesSection from '@/components/layout/sections/contact/interested-services';
+import RequestSection from '@/components/layout/sections/contact/request';
 
 export default function Contattami() {
   return (
