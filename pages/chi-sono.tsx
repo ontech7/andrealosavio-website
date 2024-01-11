@@ -1,3 +1,5 @@
+import type { NextPage } from 'next';
+
 import Layout from '@/components/layout';
 
 import ExperiencesSection from '@/components/layout/sections/about-me/experiences';
@@ -5,7 +7,7 @@ import MyCareerSection from '@/components/layout/sections/about-me/my-career';
 import ProductionSection from '@/components/layout/sections/about-me/production';
 import WhoSection from '@/components/layout/sections/about-me/who';
 
-export default function ChiSono() {
+const ChiSonoPage: NextPage = () => {
   return (
     <Layout
       title="Chi sono e cosa faccio"
@@ -18,3 +20,5 @@ export default function ChiSono() {
     </Layout>
   )
 }
+
+export default ChiSonoPage;

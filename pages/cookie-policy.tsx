@@ -1,3 +1,5 @@
+import type { NextPage } from 'next';
+
 import Link from '@/components/ui/core/link';
 import Text from '@/components/ui/core/text';
 
@@ -5,7 +7,7 @@ import Layout from '@/components/layout';
 import Section from '@/components/ui/common/section';
 import SectionWrapper from '@/components/ui/common/section/wrapper';
 
-export default function CookiePolicy() {
+const CookiePolicyPage: NextPage = () => {
   return (
     <Layout
       title="Cookie Policy"
@@ -186,3 +188,5 @@ export default function CookiePolicy() {
     </Layout>
   )
 }
+
+export default CookiePolicyPage;

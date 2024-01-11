@@ -46,7 +46,7 @@ function generateSiteMap() {
     </urlset>`;
 }
 
-function SiteMap() { }
+const SiteMap = () => { }
 
 export async function getServerSideProps({ res }) {
   const sitemap = generateSiteMap();

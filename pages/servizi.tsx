@@ -1,10 +1,12 @@
+import type { NextPage } from 'next';
+
 import Layout from '@/components/layout';
 
 import BrandSection from '@/components/layout/sections/services/brand';
 import InterestedContactSection from '@/components/layout/sections/services/interested-contact';
 import ServicesSection from '@/components/layout/sections/services/services';
 
-export default function Servizi() {
+const ServiziPage: NextPage = () => {
   return (
     <Layout
       title="Servizi di consulenza, creazione siti web, e tanto altro"
@@ -16,3 +18,5 @@ export default function Servizi() {
     </Layout>
   )
 }
+
+export default ServiziPage;

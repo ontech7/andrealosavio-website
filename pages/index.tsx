@@ -1,3 +1,5 @@
+import type { NextPage } from 'next';
+
 import Layout from '@/components/layout';
 
 import CollaborationSection from '@/components/layout/sections/homepage/collaboration';
@@ -6,7 +8,7 @@ import HeroSection from "@/components/layout/sections/homepage/hero";
 import WebsiteSection from '@/components/layout/sections/homepage/website';
 import WorkSection from "@/components/layout/sections/homepage/work";
 
-export default function Homepage() {
+const HomePage: NextPage = () => {
   return (
     <Layout
       title="Sviluppo siti Web, Consulenza, Collaborazioni, ..."
@@ -20,3 +22,5 @@ export default function Homepage() {
     </Layout>
   )
 }
+
+export default HomePage;

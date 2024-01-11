@@ -1,8 +1,10 @@
+import type { NextPage } from 'next';
+
 import Layout from "@/components/layout";
 
 import NotFoundSection from "@/components/layout/sections/errors/not-found";
 
-export default function Custom404() {
+const Custom404Page: NextPage = () => {
   return (
     <Layout
       title="Pagina non trovata"
@@ -16,3 +18,5 @@ export default function Custom404() {
     </Layout>
   )
 }
+
+export default Custom404Page;

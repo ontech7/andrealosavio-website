@@ -1,10 +1,12 @@
+import type { NextPage } from 'next';
+
 import Layout from '@/components/layout';
 
 import ContactFormSection from '@/components/layout/sections/contact/contact-form';
 import InterestedServicesSection from '@/components/layout/sections/contact/interested-services';
 import RequestSection from '@/components/layout/sections/contact/request';
 
-export default function Contattami() {
+const ContattamiPage: NextPage = () => {
   return (
     <Layout
       title="Contattami per un sito web, consulenza, ed altro"
@@ -16,3 +18,5 @@ export default function Contattami() {
     </Layout>
   )
 }
+
+export default ContattamiPage;
