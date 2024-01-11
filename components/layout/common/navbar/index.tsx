@@ -1,11 +1,13 @@
-import type { ReactNode } from "react"
+import type { FC, ReactNode } from "react"
 
 import type { ThemeUIStyleObject } from "@theme-ui/core"
 
-export default function Navbar({ children, ssx }: {
+interface INavbarProps {
   children?: ReactNode
   ssx?: ThemeUIStyleObject
-}) {
+}
+
+const Navbar: FC<INavbarProps> = ({ children, ssx }) => {
   return (
     <ul
       sx={{
@@ -23,3 +25,5 @@ export default function Navbar({ children, ssx }: {
     </ul> 
   )
 }
+
+export default Navbar;

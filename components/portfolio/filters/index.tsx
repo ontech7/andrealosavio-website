@@ -1,14 +1,16 @@
-import { PORTFOLIO_TYPES, PortfolioTagType } from '@/shared-data/constants/portfolio'
-import { Dispatch, SetStateAction } from 'react'
+import { Dispatch, FC, SetStateAction } from 'react'
+
+import { portfolioTypesMap } from '@/shared-data/constants/portfolio'
+import type { PortfolioTagType } from '@/shared-data/constants/portfolio/types'
+
 import FilterButton from './button'
 
-export default function PortfolioFilters({
-  filter,
-  setFilter
-}: {
+interface IPortfolioFiltersProps {
   filter: PortfolioTagType | null
   setFilter: Dispatch<SetStateAction<PortfolioTagType | null>>
-}) {
+}
+
+const PortfolioFilters: FC<IPortfolioFiltersProps> = ({ filter, setFilter }) => {
   return (
     <div
       sx={{
@@ -36,7 +38,7 @@ export default function PortfolioFilters({
       />
 
       {/** others */}
-      {Object.keys(PORTFOLIO_TYPES).map(filterType => 
+      {Object.keys(portfolioTypesMap).map(filterType => 
         <FilterButton 
           key={filterType}
           filterType={filterType as PortfolioTagType} 
@@ -48,3 +50,5 @@ export default function PortfolioFilters({
     </div>
   )
 }
+
+export default PortfolioFilters;

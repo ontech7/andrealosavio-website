@@ -1,10 +1,10 @@
 import { useState } from 'react';
 
-
 import PortfolioFilters from './filters';
 import PortfolioItem from './item';
 
-import { portfolioMap, type PortfolioTagType } from '@/shared-data/constants/portfolio';
+import { portfolioMap } from '@/shared-data/constants/portfolio';
+import type { PortfolioTagType } from '@/shared-data/constants/portfolio/types';
 
 export default function PortfolioList() {
   const [filter, setFilter] = useState<PortfolioTagType | null>(null);

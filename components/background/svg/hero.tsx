@@ -1,6 +1,7 @@
-import { ThemeUIStyleObject } from "@theme-ui/core";
+import type { FC } from "react";
+import type { IBgSvg } from "../types";
 
-export default function Bg_Hero({ ssx }: { ssx: ThemeUIStyleObject}) {
+const Bg_Hero: FC<IBgSvg> = ({ ssx }) => {
   return (
     <svg width="1920" height="204" viewBox="0 0 1920 204" fill="none" xmlns="http://www.w3.org/2000/svg" sx={ssx}>
       <path d="M1920 204L728 126.506L0 204H1920Z" fill="#D8EBFF"/>
@@ -16,3 +17,5 @@ export default function Bg_Hero({ ssx }: { ssx: ThemeUIStyleObject}) {
     </svg>
   )
 }
+
+export default Bg_Hero;

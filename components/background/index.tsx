@@ -1,18 +1,17 @@
 
 import type { ThemeUIStyleObject } from '@theme-ui/core'
 
+import { FC } from 'react'
 import type { BgName } from './types'
 import { backgroundMap } from './utils'
 
-export default function Background({
-  bgImg,
-  placement,
-  ssx
-}: {
+interface IBackgroundProps {
   bgImg: BgName
   placement: "top" | "bottom"
   ssx?: ThemeUIStyleObject
-}) {
+}
+
+const Background: FC<IBackgroundProps> = ({ bgImg, placement, ssx }) => {
   const BgComponent = backgroundMap[bgImg];
 
   return (
@@ -27,3 +26,5 @@ export default function Background({
     />
   )
 }
+
+export default Background;

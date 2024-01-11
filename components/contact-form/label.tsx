@@ -1,12 +1,12 @@
 import type { ContactBody } from "@/shared-data/api/contact/types";
+import type { FC } from "react";
 
-export default function FormLabel({ 
-  name, 
-  text 
-}: { 
-  name: keyof ContactBody, 
+interface IFormLabelProps {
+  name: keyof ContactBody
   text: string 
-}) {
+}
+
+const FormLabel: FC<IFormLabelProps> = ({ name, text }) => {
   return (
     <label
       htmlFor={name}
@@ -26,3 +26,5 @@ export default function FormLabel({
     </label>
   )
 }
+
+export default FormLabel;

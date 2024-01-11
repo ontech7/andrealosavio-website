@@ -1,5 +1,13 @@
 import type { ThemeUIStyleObject } from "@theme-ui/core"
 
+// interfaces
+
+export interface IBgSvg { 
+  ssx: ThemeUIStyleObject
+}
+
+// common
+
 export type BgName =
   | "blue"
   | "blue-and-light"
@@ -9,5 +17,3 @@ export type BgName =
   | "sfumato-light"
   | "triangle-blue"
   | "collaborazioni"
-
-export type BgComponent =  ({ ssx }: { ssx: ThemeUIStyleObject }) => JSX.Element

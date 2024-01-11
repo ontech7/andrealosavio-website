@@ -1,5 +1,5 @@
 import type { ThemeUIStyleObject } from "@theme-ui/core"
-import type { ReactNode } from "react"
+import type { FC, ReactNode } from "react"
 
 type TextType = 
   | "h1" | "h2" | "h3" | "h4" | "h5" | "h6" 
@@ -14,7 +14,7 @@ type TextType =
   | "legend"
   | "code"
 
-interface CustomTextProps { 
+interface ITextProps { 
   as?: TextType | string
   variant?: string
   color?: string
@@ -22,7 +22,7 @@ interface CustomTextProps {
   children?: ReactNode
 }
 
-export default function Text(props: CustomTextProps) {
+const Text: FC<ITextProps> = (props) => {
   const TextComponent = `${props.as ?? "p"}` as keyof JSX.IntrinsicElements;
 
   return (
@@ -41,3 +41,5 @@ export default function Text(props: CustomTextProps) {
     </TextComponent>
   )
 }
+
+export default Text;

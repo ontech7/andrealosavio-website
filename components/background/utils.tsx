@@ -1,4 +1,6 @@
-import type { BgComponent, BgName } from './types'
+import type { FC } from 'react'
+
+import type { BgName, IBgSvg } from './types'
 
 import Bg_Blue from './svg/blue'
 import Bg_BlueAndLight from "./svg/blue-and-light"
@@ -9,7 +11,7 @@ import Bg_LightShort from './svg/light-short'
 import Bg_SfumatoLight from './svg/sfumato-light'
 import Bg_TriangleBlue from './svg/triangle-blue'
 
-export const backgroundMap: Record<BgName, BgComponent> = {
+export const backgroundMap: Record<BgName, FC<IBgSvg>> = {
   "blue-and-light": Bg_BlueAndLight,
   "blue": Bg_Blue,
   "collaborazioni": Bg_Collaborazioni,

@@ -1,36 +1,30 @@
-import { type ReactNode } from 'react'
-
 import type { ThemeUIStyleObject } from '@theme-ui/core'
+import type { FC, ReactNode } from 'react'
 
 import Text from '../../core/text'
 
 import customHighlightSvg from "./images/custom-highlight-green.svg"
 
-export default function HighlightText({
-  as,
-  variant,
-  color,
-  bg,
-  children,
-  ssx
-}: {
+interface IHighlightTextProps {
   as?: string
   variant?: string
   color?: string
   bg?: "green" | "yellow" | "custom"
   children?: ReactNode
   ssx?: ThemeUIStyleObject
-}) {
-  const isCustom = bg == "custom";
+}
+
+const HighlightText: FC<IHighlightTextProps> = (props) => {
+  const isCustom = props.bg == "custom";
 
   return (
     <Text
-      as={as ?? "span"}
-      variant={variant}
-      color={color ?? "black"}
+      as={props.as ?? "span"}
+      variant={props.variant}
+      color={props.color ?? "black"}
       ssx={{
         ...!isCustom ? {
-          bg: bg ?? "green",
+          bg: props.bg ?? "green",
           padding: "0 3px"
         } : {
           backgroundImage: `url(${customHighlightSvg.src})`,
@@ -40,12 +34,14 @@ export default function HighlightText({
           padding: "10px"
         },
 
-        ...ssx
+        ...props.ssx
       }}
     >
     
-      {children}
+      {props.children}
 
     </Text>
   )
 }
+
+export default HighlightText;

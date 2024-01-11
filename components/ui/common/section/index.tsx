@@ -1,34 +1,31 @@
-import type { ReactNode } from 'react'
-
 import type { ThemeUICSSObject, ThemeUIStyleObject } from '@theme-ui/core'
+import type { FC, ReactNode } from 'react'
 
-export default function Section({
-  id,
-  bg,
-  high,
-  children,
-  ssx
-}: {
+interface ISectionProps {
   id: string
   bg?: ThemeUICSSObject["bg"]
   high?: boolean
   children?: ReactNode
   ssx?: ThemeUIStyleObject
-}) {
+}
+
+const Section: FC<ISectionProps> = (props) => {
   return (
     <section
-      id={id}
+      id={props.id}
       sx={{
-        ...bg ? { background: bg } : {},
+        ...props.bg ? { background: props.bg } : {},
         position: "relative",
-        padding: !high ? "40px 0" : "80px 0",
+        padding: !props.high ? "40px 0" : "80px 0",
         overflowX: "hidden",
-        ...ssx
+        ...props.ssx
       }}
     >
 
-      {children}
+      {props.children}
 
     </section>
   )
 }
+
+export default Section;

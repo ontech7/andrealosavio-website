@@ -2,16 +2,15 @@ import { ChevronDownIcon, ChevronUpIcon } from "@heroicons/react/24/outline";
 
 import Button from "@/components/ui/core/button";
 import Text from "@/components/ui/core/text";
+import { FC } from "react";
 
-export default function PortfolioHeader({
-  title,
-  active,
-  toggle
-}: {
+interface IPortfolioHeaderProps {
   title: string
   active: boolean
   toggle: () => void
-}) {
+}
+
+const PortfolioHeader: FC<IPortfolioHeaderProps> = ({ title, active, toggle }) => {
   const ChevronIcon = !active 
     ? ChevronUpIcon : ChevronDownIcon
 
@@ -85,3 +84,5 @@ export default function PortfolioHeader({
     </div>
   )
 }
+
+export default PortfolioHeader;

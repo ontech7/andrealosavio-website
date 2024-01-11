@@ -1,12 +1,15 @@
 import NextLink from 'next/link'
+import type { FC } from 'react'
 
 import type { ThemeUIStyleObject } from '@theme-ui/core'
 
 import { socialLinks } from '@/shared-data/constants/navbar/socials'
 
-export default function SocialLinks({ ssx }: {
+interface ISocialLinksProps {
   ssx?: ThemeUIStyleObject
-}) {
+}
+
+const SocialLinks: FC<ISocialLinksProps> = ({ ssx }) => {
   return (
     <div
       sx={{
@@ -34,3 +37,4 @@ export default function SocialLinks({ ssx }: {
   )
 }
 
+export default SocialLinks;

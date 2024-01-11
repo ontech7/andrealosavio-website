@@ -1,10 +1,14 @@
+import type { NextPage, NextPageContext } from "next"
+
 import Layout from "@/components/layout"
 
 import ServerErrorSection from "@/components/layout/sections/errors/server-error"
 
-type ErrorProps = { statusCode: string }
+interface IErrorProps { 
+  statusCode?: number 
+}
 
-export default function Error(props: ErrorProps) {
+const Error: NextPage<IErrorProps> = ({ statusCode }) => {
   return (
     <Layout
       title="Si è verificato un errore"
@@ -19,7 +23,10 @@ export default function Error(props: ErrorProps) {
   )
 }
 
-Error.getInitialProps = ({ res, err }: any) => {
+Error.getInitialProps = ({ res, err }: NextPageContext) => {
   const statusCode = res ? res.statusCode : err ? err.statusCode : 404
   return { statusCode }
 }
+
+export default Error;
+

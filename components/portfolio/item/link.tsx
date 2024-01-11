@@ -1,14 +1,15 @@
+import type { FC } from 'react'
+
 import { LinkIcon, MagnifyingGlassPlusIcon } from '@heroicons/react/24/outline'
 
 import Link from '@/components/ui/core/link'
 
-export default function PortfolioLink({
-  type,
-  href
-}: {
+interface IPortfolioLinkProps {
   type: "link" | "zoom"
   href: string
-}) {
+}
+
+const PortfolioLink: FC<IPortfolioLinkProps> = ({ type, href }) => {
   const Icon = type == "link"
     ? LinkIcon
     : MagnifyingGlassPlusIcon
@@ -35,3 +36,5 @@ export default function PortfolioLink({
     </Link>
   )
 }
+
+export default PortfolioLink;

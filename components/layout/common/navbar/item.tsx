@@ -1,17 +1,15 @@
-
 import { useRouter } from "next/router";
+import type { FC } from "react";
 
 import Link from "@/components/ui/core/link";
 
-export default function NavbarItem({ 
-  label, 
-  href, 
-  noHover 
-}: {
+interface INavbarItemProps {
   label: string
   href: string
   noHover?: boolean
-}) {
+}
+
+const NavbarItem: FC<INavbarItemProps> = ({ label, href, noHover }) => {
   const router = useRouter();
   const [path] = router.asPath.split(/(#|\?)/g);
 
@@ -51,3 +49,5 @@ export default function NavbarItem({
     </li>
   )
 }
+
+export default NavbarItem;

@@ -1,7 +1,7 @@
+import { useRouter } from "next/router";
 import { useEffect, useState, type FormEvent } from "react";
 
 import Image from "@/components/ui/core/image";
-import { useRouter } from "next/router";
 
 import { PaperAirplaneIcon } from "@heroicons/react/24/outline";
 

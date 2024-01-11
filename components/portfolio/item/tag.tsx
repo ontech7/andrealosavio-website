@@ -1,8 +1,12 @@
+import type { FC } from "react";
+
 import Text from "@/components/ui/core/text";
 
-export default function PortfolioTag({ name }: {
+export interface IPortfolioTagProps {
   name: string
-}) {
+}
+
+const PortfolioTag: FC<IPortfolioTagProps> = ({ name }) => {
   return (
     <Text
       color="black"
@@ -21,3 +25,5 @@ export default function PortfolioTag({ name }: {
     </Text>
   )
 }
+
+export default PortfolioTag;

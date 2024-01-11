@@ -1,18 +1,17 @@
-import type { ChangeEvent } from 'react'
+import type { ChangeEvent, FC } from 'react';
 
-import type { InputProps } from './types'
+import type { InputProps } from './types';
 
-import Text from '@/components/ui/core/text'
+import Text from '@/components/ui/core/text';
 
-import checkedSvg from "./images/checkmark.svg"
+import checkedSvg from "./images/checkmark.svg";
 
-export default function FormCheckbox({ 
-  text,
-  required,
-  name,
-  value,
-  setValue
-}: Pick<InputProps<string>, "text" | "required" | "name" | "value" | "setValue">) {
+interface IFormCheckboxProps extends Pick<
+  InputProps<string>, 
+  "text" | "required" | "name" | "value" | "setValue"
+> {};
+
+const FormCheckbox: FC<IFormCheckboxProps> = ({ text, required, name, value, setValue }) => {
   return (
     <label
       sx={{
@@ -69,3 +68,5 @@ export default function FormCheckbox({
     </label>
   )
 }
+
+export default FormCheckbox;

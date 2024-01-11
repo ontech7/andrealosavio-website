@@ -1,10 +1,14 @@
-import Image from "@/components/ui/core/image"
 import NextLink from 'next/link'
+import type { FC } from "react"
+
+import Image from "@/components/ui/core/image"
 
 import type { Work } from '@/shared-data/constants/works'
 import { breakpoints } from '@/shared-data/theme'
 
-export default function WorkItem(props: Work) {
+interface IWorkItemsProps extends Work {}
+
+const WorkItem: FC<IWorkItemsProps> = (props) => {
   return (
     <NextLink href={props.href} target="_blank" rel="noopener noreferrer">
       <Image 
@@ -22,3 +26,5 @@ export default function WorkItem(props: Work) {
     </NextLink>
   )
 }
+
+export default WorkItem;

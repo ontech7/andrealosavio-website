@@ -1,7 +1,10 @@
-import { ReactNode } from 'react'
+import { FC, ReactNode } from 'react';
 
+interface IFormFieldsetProps {
+  children?: ReactNode
+}
 
-export default function FormFieldset({ children }: { children?: ReactNode }) {
+const FormFieldset: FC<IFormFieldsetProps> = ({ children }) => {
   return (
     <fieldset sx={{ m: 0, p: 0, border: 0 }}>
 
@@ -10,3 +13,5 @@ export default function FormFieldset({ children }: { children?: ReactNode }) {
     </fieldset>
   )
 }
+
+export default FormFieldset;

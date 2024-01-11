@@ -1,5 +1,5 @@
 import Image from "@/components/ui/core/image"
-import { useState } from 'react'
+import { useState, type FC } from 'react'
 
 import PortfolioDescription from './description'
 import PortfolioHeader from './header'
@@ -7,21 +7,22 @@ import PortfolioLink from './link'
 import PortfolioOverlay from './overlay'
 import PortfolioTag from './tag'
 
-import {
-  PORTFOLIO_TYPES,
-  isFilteredOrAll,
-  type Portfolio,
-  type PortfolioTagType
-} from '@/shared-data/constants/portfolio'
+import { portfolioTypesMap } from "@/shared-data/constants/portfolio"
+import type { Portfolio, PortfolioTagType } from "@/shared-data/constants/portfolio/types"
+import { isFilteredOrAll } from "@/shared-data/constants/portfolio/utils"
 
-export default function PortfolioItem(props: Portfolio & { currFilter: PortfolioTagType | null }) {
+interface IPortfolioItemProps extends Portfolio {
+  currFilter: PortfolioTagType | null
+}
+
+const PortfolioItem: FC<IPortfolioItemProps> = (props) => {
   const [isReadMore, setReadMore] = useState(false);
   const toggle = () => setReadMore(p => !p);
 
   const [source, ext] = props.imgSrc.split(".");
   const previewFull = source + "-full." + ext;
 
-  const portofolioTag = PORTFOLIO_TYPES[props.tag];
+  const portofolioTag = portfolioTypesMap[props.tag];
 
   return (
     <div 
@@ -91,3 +92,5 @@ export default function PortfolioItem(props: Portfolio & { currFilter: Portfolio
     </div>
   )
 }
+
+export default PortfolioItem;

@@ -1,17 +1,16 @@
-import type { ChangeEvent } from 'react';
+import type { ChangeEvent, FC } from 'react';
 
 import type { SubjectType } from '@/shared-data/api/contact/types';
 import type { InputProps } from './types';
 
 import arrowDownSvg from "./images/arrow-down.svg";
 
-export default function FormSelect({ 
-  name,
-  required,
-  options,
-  value,
-  setValue
-}: Pick<InputProps<SubjectType | string>, "name" | "required" | "options" | "value" | "setValue">) {
+interface IFormSelectProps extends Pick<
+  InputProps<SubjectType | string>, 
+  "name" | "required" | "options" | "value" | "setValue"
+> {};
+
+const FormSelect: FC<IFormSelectProps> = ({ name, required, options, value, setValue }) => {
   return (
     <select
       sx={{
@@ -63,3 +62,5 @@ export default function FormSelect({
     </select>
   )
 }
+
+export default FormSelect;

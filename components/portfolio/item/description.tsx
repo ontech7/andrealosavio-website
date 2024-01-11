@@ -1,13 +1,13 @@
-import Text from "@/components/ui/core/text";
-import { ReactNode } from "react";
+import type { FC, ReactNode } from "react";
 
-export default function PortfolioDescription({
-  description,
-  active
-}: {
+import Text from "@/components/ui/core/text";
+
+interface IPortfolioDescriptionProps {
   description: ReactNode | string
   active: boolean
-}) {
+}
+
+const PortfolioDescription: FC<IPortfolioDescriptionProps> = ({ description, active }) => {
   return (
     <div
       sx={{ 
@@ -38,3 +38,5 @@ export default function PortfolioDescription({
     </div>
   )
 }
+
+export default PortfolioDescription;

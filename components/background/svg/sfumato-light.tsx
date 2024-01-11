@@ -1,6 +1,7 @@
-import { ThemeUIStyleObject } from "@theme-ui/core";
+import type { FC } from "react";
+import type { IBgSvg } from "../types";
 
-export default function Bg_SfumatoLight({ ssx }: { ssx: ThemeUIStyleObject}) {
+const Bg_SfumatoLight: FC<IBgSvg> = ({ ssx }) => {
   return (
     <svg width="1920" height="121" viewBox="0 0 1920 121" fill="none" xmlns="http://www.w3.org/2000/svg" sx={ssx}>
       <rect width="1920" height="121" fill="url(#paint0_linear_269_644)"/>
@@ -13,3 +14,5 @@ export default function Bg_SfumatoLight({ ssx }: { ssx: ThemeUIStyleObject}) {
     </svg>
   )
 }
+
+export default Bg_SfumatoLight;

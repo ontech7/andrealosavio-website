@@ -1,11 +1,15 @@
-import Image from "@/components/ui/core/image"
+import type { FC } from "react"
+
 import NextLink from 'next/link'
 
-import Text from '../ui/core/text'
+import Image from "@/components/ui/core/image"
+import Text from '@/components/ui/core/text'
 
 import type { Service } from '@/shared-data/constants/services'
 
-export default function ServiceItem(props: Service) {
+interface IServiceItemProps extends Service {}
+
+const ServiceItem: FC<IServiceItemProps> = (props: Service) => {
   return (
     <NextLink
       href={`/contattami?s=${props.serviceName}`}
@@ -59,3 +63,5 @@ export default function ServiceItem(props: Service) {
     </NextLink>
   )
 }
+
+export default ServiceItem;

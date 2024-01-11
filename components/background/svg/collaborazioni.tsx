@@ -1,6 +1,7 @@
-import { ThemeUIStyleObject } from "@theme-ui/core";
+import type { FC } from "react";
+import type { IBgSvg } from "../types";
 
-export default function Bg_Collaborazioni({ ssx }: { ssx: ThemeUIStyleObject}) {
+const Bg_Collaborazioni: FC<IBgSvg> = ({ ssx }) => {
   return (
     <svg width="1920" height="171" viewBox="0 0 1920 171" fill="none" xmlns="http://www.w3.org/2000/svg" sx={ssx}>
       <path d="M822 97.79L1920 171L0 171L822 97.79Z" fill="#3DE99E" fillOpacity="0.3"/>
@@ -20,3 +21,5 @@ export default function Bg_Collaborazioni({ ssx }: { ssx: ThemeUIStyleObject}) {
     </svg>
   )
 }
+
+export default Bg_Collaborazioni;

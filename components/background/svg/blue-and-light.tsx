@@ -1,6 +1,7 @@
-import { ThemeUIStyleObject } from "@theme-ui/core";
+import type { FC } from "react";
+import type { IBgSvg } from "../types";
 
-export default function Bg_BlueAndLight({ ssx }: { ssx: ThemeUIStyleObject}) {
+const Bg_BlueAndLight: FC<IBgSvg> = ({ ssx }) => {
   return (
     <svg width="1920" height="87" viewBox="0 0 1920 87" fill="none" xmlns="http://www.w3.org/2000/svg" sx={ssx}>
       <path fillRule="evenodd" clipRule="evenodd" d="M0 0V87L1920 0H0Z" fill="#05386B"/>
@@ -8,3 +9,5 @@ export default function Bg_BlueAndLight({ ssx }: { ssx: ThemeUIStyleObject}) {
     </svg>
   )
 }
+
+export default Bg_BlueAndLight

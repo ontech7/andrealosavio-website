@@ -1,15 +1,13 @@
-import type { ChangeEvent } from 'react';
+import type { ChangeEvent, FC } from 'react';
 
 import type { InputProps } from './types';
 
-export default function FormInput({ 
-  name,
-  required,
-  type,
-  adornment,
-  value,
-  setValue
-}: Pick<InputProps<string>, "name" | "required" | "type" | "adornment" | "value" | "setValue">) {
+interface IFormInputProps extends Pick<
+  InputProps<string>, 
+  "name" | "required" | "type" | "adornment" | "value" | "setValue"
+> {};
+
+const FormInput: FC<IFormInputProps> = ({ name, required, type, adornment, value, setValue }) => {
 
   const img = adornment ? require(`./images/${adornment}.svg`) : null;
 
@@ -56,3 +54,5 @@ export default function FormInput({
     />
   )
 }
+
+export default FormInput;

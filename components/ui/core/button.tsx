@@ -1,5 +1,5 @@
 import type { ThemeUIStyleObject } from '@theme-ui/core'
-import type { ButtonHTMLAttributes, ClassAttributes } from 'react'
+import type { ButtonHTMLAttributes, ClassAttributes, FC } from 'react'
 
 interface CustomButtonProps { 
   variant?: string
@@ -11,7 +11,9 @@ type ButtonAttributes =
   ButtonHTMLAttributes<HTMLButtonElement> & 
   CustomButtonProps
 
-export default function Button(props: ButtonAttributes) {
+interface IButtonProps extends ButtonAttributes {}
+
+const Button: FC<IButtonProps> = (props) => {
   return (
     <button 
       {...props}
@@ -30,3 +32,5 @@ export default function Button(props: ButtonAttributes) {
     </button>
   )
 }
+
+export default Button;

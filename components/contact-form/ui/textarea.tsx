@@ -1,13 +1,13 @@
-import type { ChangeEvent } from 'react'
+import type { ChangeEvent, FC } from 'react';
 
-import type { InputProps } from './types'
+import type { InputProps } from './types';
 
-export default function FormTextarea({ 
-  name,
-  required,
-  value,
-  setValue
-}: Pick<InputProps<string>, "name" | "required" | "value" | "setValue">) {
+interface IFormTextareaProps extends Pick<
+  InputProps<string>, 
+  "name" | "required" | "value" | "setValue"
+> {};
+
+const FormTextarea: FC<IFormTextareaProps> = ({ name, required, value, setValue }) =>  {
   return (
     <textarea
       rows={3}
@@ -45,3 +45,5 @@ export default function FormTextarea({
     />
   )
 }
+
+export default FormTextarea;

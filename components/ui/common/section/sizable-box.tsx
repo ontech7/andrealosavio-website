@@ -1,7 +1,7 @@
-import type { ReactNode } from 'react'
+import type { ThemeUICSSObject, ThemeUIStyleObject } from '@theme-ui/core'
+import type { FC, ReactNode } from 'react'
 
 import { breakpoints } from '@/shared-data/theme'
-import type { ThemeUICSSObject, ThemeUIStyleObject } from '@theme-ui/core'
 
 /**
  * [0] Desktop
@@ -14,15 +14,13 @@ type WidthDevice = [
   ThemeUICSSObject["width"]?
 ]
 
-export default function SizableBox({
-  width,
-  children,
-  ssx
-}: {
+interface ISizableBoxProps {
   width?: WidthDevice
   children?: ReactNode
   ssx?: ThemeUIStyleObject
-}) {
+}
+
+const SizableBox: FC<ISizableBoxProps> = ({ width, children, ssx }) => {
   const desktop = width?.[0];
   const tablet = width?.[1];
   const mobile = width?.[2];
@@ -46,3 +44,5 @@ export default function SizableBox({
     </div>
   )
 }
+
+export default SizableBox;

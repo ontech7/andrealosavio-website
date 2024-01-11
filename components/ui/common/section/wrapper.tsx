@@ -1,7 +1,7 @@
-import type { ReactNode } from 'react'
+import type { ThemeUICSSObject, ThemeUIStyleObject } from '@theme-ui/core'
+import type { FC, ReactNode } from 'react'
 
 import { breakpoints } from '@/shared-data/theme'
-import type { ThemeUICSSObject, ThemeUIStyleObject } from '@theme-ui/core'
 
 /**
  * [0] Desktop
@@ -12,15 +12,13 @@ type FlexDirectionDevice = [
   ThemeUICSSObject["flexDirection"]?
 ]
 
-export default function SectionWrapper({
-  direction,
-  children,
-  ssx
-}: {
+interface ISectionWrapperProps {
   direction?: FlexDirectionDevice
   children?: ReactNode
   ssx?: ThemeUIStyleObject
-}) {
+}
+
+const SectionWrapper: FC<ISectionWrapperProps> = ({ direction, children, ssx }) => {
   const desktop = direction?.[0];
   const mobile = direction?.[1];
 
@@ -44,3 +42,5 @@ export default function SectionWrapper({
     </div>
   )
 }
+
+export default SectionWrapper;

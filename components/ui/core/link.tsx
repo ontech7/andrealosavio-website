@@ -1,10 +1,8 @@
+import type { ThemeUIStyleObject } from "@theme-ui/core";
 import NextLink, { type LinkProps } from "next/link";
 import { useRouter } from "next/router";
-
-import type { AnchorHTMLAttributes, SyntheticEvent } from "react";
+import type { AnchorHTMLAttributes, FC, SyntheticEvent } from "react";
 import { useCallback } from "react";
-
-import type { ThemeUIStyleObject } from "@theme-ui/core";
 
 import { scrollToId } from "@/shared-data/utils/link";
 
@@ -19,7 +17,9 @@ type LinkAttributes =
   AnchorHTMLAttributes<HTMLAnchorElement> &
   CustomLinkProps
 
-export default function Link(props: LinkAttributes) {
+interface ILinkProps extends LinkAttributes {}
+
+const Link: FC<ILinkProps> = (props) => {
   const router = useRouter();
 
   const goToElement = useCallback((e: SyntheticEvent<HTMLAnchorElement>) => {
@@ -45,3 +45,5 @@ export default function Link(props: LinkAttributes) {
     </NextLink>
   )
 }
+
+export default Link;

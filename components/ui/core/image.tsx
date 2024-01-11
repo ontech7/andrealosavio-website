@@ -1,7 +1,9 @@
 import NextImage, { type ImageProps } from 'next/image';
-import { useState } from 'react';
+import { FC, useState } from 'react';
 
-export default function Image(props: ImageProps) {
+interface IImageProps extends ImageProps {}
+
+const Image: FC<IImageProps> = (props) => {
   const [isLoaded, setLoaded] = useState(false);
   const loaded = () => setLoaded(true);
 
@@ -13,3 +15,5 @@ export default function Image(props: ImageProps) {
     />
   )
 }
+
+export default Image;

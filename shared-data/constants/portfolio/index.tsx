@@ -1,29 +1,14 @@
-import type { ReactNode } from "react";
-
 import Link from "@/components/ui/core/link";
 
-export const PORTFOLIO_TYPES = {
+import type { Portfolio } from "./types";
+
+export const portfolioTypesMap = {
   WEBSITE: "Sito Web",
   COLLAB: "Collab",
   APP: "Mobile App",
   DESIGN: "Design",
   DEMO: "Demo"
 }
-
-export type PortfolioTagType = keyof typeof PORTFOLIO_TYPES;
-
-export type Portfolio = {
-  tag: PortfolioTagType
-  title: string
-  description: ReactNode | string
-  imgSrc: string
-  link?: string
-}
-
-export const isFilteredOrAll = (
-  currFilter: PortfolioTagType | null,
-  selectedFilter: PortfolioTagType | null
-) => currFilter == selectedFilter || currFilter == null;
 
 export const portfolioMap: Portfolio[] = [
   {

@@ -1,13 +1,12 @@
 import type { ThemeUIStyleObject } from '@theme-ui/core';
-import type { ReactNode } from 'react';
+import type { FC, ReactNode } from 'react';
 
-export default function LayoutWrapper({ 
-  children,
-  ssx
-}: {
+interface ILayoutWrapperProps {
   children?: ReactNode
   ssx?: ThemeUIStyleObject
-}) {
+}
+
+const LayoutWrapper: FC<ILayoutWrapperProps> = ({ children, ssx }) => {
   return (
     <div
       sx={{
@@ -27,3 +26,5 @@ export default function LayoutWrapper({
     </div>
   )
 }
+
+export default LayoutWrapper;
