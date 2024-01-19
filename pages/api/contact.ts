@@ -14,10 +14,10 @@ export default async function (
     return;
   }
 
-  const { subject, name, email, message } = JSON.parse(req.body) as Partial<ContactBody>;
+  const { subject = "website", name, email, message } = JSON.parse(req.body) as Partial<ContactBody>;
 
-  if (subject == "" || subject == null || subjectMap[subject] == null) {
-    res.status(500).send({ success: false, message: "Oggetto nullo" });
+  if (subjectMap[subject] == null) {
+    res.status(500).send({ success: false, message: "Oggetto non valido" });
     return;
   }
 
