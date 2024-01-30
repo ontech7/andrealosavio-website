@@ -12,6 +12,17 @@ export const portfolioTypesMap = {
 
 export const portfolioMap: Portfolio[] = [
   {
+    tag: "COLLAB",
+    title: "Brainplatform",
+    description: <>
+      Brain SRL trasforma il tuo sito web in una potente arma di marketing, unendo design accattivante e alte prestazioni, comunicando i valori del tuo brand in maniera autorevole per stare al passo con la concorrenza.<br /><br />
+      Ormai da anni nel settore, esperti in un ampio campo di tecnologie adatte per ogni tipo di cliente.<br /><br />
+      Per visionare il sito sul tuo dispositivo, <Link target="_blank" href="https://www.brainplatform.it">clicca qui</Link>.
+    </>,
+    imgSrc: "/images/projects/brainplatform/preview.png",
+    link: "https://www.brainplatform.it/"
+  },
+  {
     tag: "APP",
     title: "Fast Memo",
     description: <>
