@@ -15,9 +15,9 @@ export const portfolioMap: Portfolio[] = [
     tag: "COLLAB",
     title: "Brainplatform",
     description: <>
-      Brain SRL trasforma il tuo sito web in una potente arma di marketing, unendo design accattivante e alte prestazioni, comunicando i valori del tuo brand in maniera autorevole per stare al passo con la concorrenza.<br /><br />
+      <Link target="_blank" href="https://www.brainplatform.it">Brain S.R.L.</Link> trasforma il tuo sito web in una potente arma di marketing, unendo design accattivante e alte prestazioni, comunicando i valori del tuo brand in maniera autorevole per stare al passo con la concorrenza.<br /><br />
       Ormai da anni nel settore, esperti in un ampio campo di tecnologie adatte per ogni tipo di cliente.<br /><br />
-      Per visionare il sito sul tuo dispositivo, <Link target="_blank" href="https://www.brainplatform.it">clicca qui</Link>.
+      La mia collaborazione si appresta pressoché per lo sviluppo web in <b>React</b> e <b>Next.js 14</b>.
     </>,
     imgSrc: "/images/projects/brainplatform/preview.png",
     link: "https://www.brainplatform.it/"
@@ -27,7 +27,7 @@ export const portfolioMap: Portfolio[] = [
     title: "Fast Memo",
     description: <>
       Un applicazione per prendere note che cerca di condensare tutto ciò che serve per l'organizzazione, sicurezza e affidabilità, con la totale trasparenza dei dati, autogestiti, senza passare per servizi terzi.<br/><br/>
-      Sviluppata con <b>React Native</b> utilizzando <b>Expo SDK 48</b><br/><br/>
+      Sviluppata con <b>React Native</b> utilizzando <b>Expo SDK 49</b><br/><br/>
       Puoi scaricare l'applicazione 
       dal <Link target="_blank" href="https://play.google.com/store/apps/details?id=com.ontech7.FastMemoApp">Play Store</Link>{" "}
       oppure <Link target="_blank" href="https://apps.apple.com/us/app/fast-memo-notes-in-one-click/id6450381916">App Store</Link>.
@@ -39,9 +39,8 @@ export const portfolioMap: Portfolio[] = [
     tag: "COLLAB",
     title: "Recrowd",
     description: <>
-      Recrowd è una piattaforma di crowdfunding immobiliare che ti permette di investire in modo alternativo i tuoi risparmi, anche se non disponi di grandi capitali.<br/><br/>
-      Per il design è stato utilizzato <b>Figma</b>, mentre per lo sviluppo <b>React 18</b> e <b>Next.js 13</b>.<br/><br/>
-      Per visionare il sito sul tuo dispositivo, <Link target="_blank" href="https://www.recrowd.com">clicca qui</Link>.
+      <Link target="_blank" href="https://www.recrowd.com">Recrowd</Link> è una piattaforma di crowdfunding immobiliare che ti permette di investire in modo alternativo i tuoi risparmi, anche se non disponi di grandi capitali.<br/><br/>
+      La mia collaborazione si appresta pressoché per lo sviluppo web in <b>React</b> e <b>Next.js 13</b>, e UI&UX con <b>Figma</b>.
     </>,
     imgSrc: "/images/projects/recrowd/preview.png",
     link: "https://www.recrowd.com/"
