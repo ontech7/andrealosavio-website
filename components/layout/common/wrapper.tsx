@@ -1,12 +1,12 @@
-import type { ThemeUIStyleObject } from '@theme-ui/core';
-import type { FC, ReactNode } from 'react';
+import type { ThemeUIStyleObject } from "@theme-ui/core";
+import type { ReactNode } from "react";
 
-interface ILayoutWrapperProps {
-  children?: ReactNode
-  ssx?: ThemeUIStyleObject
+interface LayoutWrapperProps {
+  children?: ReactNode;
+  ssx?: ThemeUIStyleObject;
 }
 
-const LayoutWrapper: FC<ILayoutWrapperProps> = ({ children, ssx }) => {
+export default function LayoutWrapper({ children, ssx }: LayoutWrapperProps) {
   return (
     <div
       sx={{
@@ -17,14 +17,10 @@ const LayoutWrapper: FC<ILayoutWrapperProps> = ({ children, ssx }) => {
         maxWidth: "90%",
         width: 1200,
         margin: "0 auto",
-        ...ssx
+        ...ssx,
       }}
     >
-
       {children}
-
     </div>
-  )
+  );
 }
-
-export default LayoutWrapper;

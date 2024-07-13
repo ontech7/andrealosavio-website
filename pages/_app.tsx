@@ -1,17 +1,14 @@
-import '@/styles/globals.css';
+import "@/styles/globals.css";
 
-import type { NextPage } from 'next';
-import type { AppProps } from 'next/app';
+import type { AppProps } from "next/app";
 
-import theme from '@/shared-data/theme';
-import { ThemeProvider } from '@theme-ui/core';
+import theme from "@/shared-data/theme";
+import { ThemeProvider } from "@theme-ui/core";
 
-const App: NextPage<AppProps> = ({ Component, pageProps }) => {
+export default function App({ Component, pageProps }: AppProps) {
   return (
     <ThemeProvider theme={theme}>
       <Component {...pageProps} />
     </ThemeProvider>
-  )
+  );
 }
-
-export default App;

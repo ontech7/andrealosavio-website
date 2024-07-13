@@ -1,17 +1,16 @@
-import type { ChangeEvent, FC } from 'react';
+import type { InputProps } from "./types";
 
-import type { InputProps } from './types';
-
-import Text from '@/components/ui/core/text';
+import Text from "@/components/ui/core/text";
 
 import checkedSvg from "./images/checkmark.svg";
 
-interface IFormCheckboxProps extends Pick<
-  InputProps<string>, 
-  "text" | "required" | "name" | "value" | "setValue"
-> {};
+interface FormCheckboxProps
+  extends Pick<
+    InputProps<string>,
+    "text" | "required" | "name" | "value" | "setValue"
+  > {}
 
-const FormCheckbox: FC<IFormCheckboxProps> = ({ text, required, name, value, setValue }) => {
+export default function FormCheckbox(props: FormCheckboxProps) {
   return (
     <label
       sx={{
@@ -20,7 +19,7 @@ const FormCheckbox: FC<IFormCheckboxProps> = ({ text, required, name, value, set
         fontWeight: "regular",
         display: "flex",
         cursor: "pointer",
-        lineHeight: "27px"
+        lineHeight: "27px",
       }}
     >
       <input
@@ -47,26 +46,24 @@ const FormCheckbox: FC<IFormCheckboxProps> = ({ text, required, name, value, set
             backgroundSize: "15px 11px",
             backgroundRepeat: "no-repeat",
             backgroundPositionX: "2px",
-            backgroundPositionY: "4px"
-          }
+            backgroundPositionY: "4px",
+          },
         }}
         type="checkbox"
-        name={name}
-        required={required}
-        value={value}
-        onChange={(e: ChangeEvent<HTMLInputElement>) => {
-          setValue(name, value)
+        {...props}
+        onChange={(e) => {
+          props.setValue(props.name, e.target.value);
         }}
       />
 
-      <Text as="span" ssx={{ 
-        "& a": { color: "darkGreen", fontWeight: "medium" }
-      }}>
-        {text}
+      <Text
+        as="span"
+        ssx={{
+          "& a": { color: "darkGreen", fontWeight: "medium" },
+        }}
+      >
+        {props.text}
       </Text>
-
     </label>
-  )
+  );
 }
-
-export default FormCheckbox;

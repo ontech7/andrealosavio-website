@@ -1,26 +1,25 @@
-import type { ReactNode } from 'react'
+import type { ReactNode } from "react";
 
-import Footer from './footer'
-import CustomHead from './head'
-import Header from './header'
+import Footer from "./footer";
+import CustomHead from "./head";
+import Header from "./header";
 
 export default function Layout({
   title,
   description,
   metas,
-  children
+  children,
 }: {
-  title: string
-  description?: string
-  metas?: JSX.Element | JSX.Element[]
-  children?: ReactNode
+  title: string;
+  description?: string;
+  metas?: JSX.Element | JSX.Element[];
+  children?: ReactNode;
 }) {
   return (
     <>
-    
-      <CustomHead 
-        pageTitle={title} 
-        pageDescription={description ?? ""} 
+      <CustomHead
+        pageTitle={title}
+        pageDescription={description ?? ""}
         metas={metas}
       />
 
@@ -29,7 +28,6 @@ export default function Layout({
       {children}
 
       <Footer />
-
     </>
-  )
+  );
 }

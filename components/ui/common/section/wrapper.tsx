@@ -1,24 +1,28 @@
-import type { ThemeUICSSObject, ThemeUIStyleObject } from '@theme-ui/core'
-import type { FC, ReactNode } from 'react'
+import type { ThemeUICSSObject, ThemeUIStyleObject } from "@theme-ui/core";
+import type { ReactNode } from "react";
 
-import { breakpoints } from '@/shared-data/theme'
+import { breakpoints } from "@/shared-data/theme";
 
 /**
  * [0] Desktop
  * [1] Mobile (max-width: 768px)
-*/
+ */
 type FlexDirectionDevice = [
   ThemeUICSSObject["flexDirection"]?,
   ThemeUICSSObject["flexDirection"]?
-]
+];
 
-interface ISectionWrapperProps {
-  direction?: FlexDirectionDevice
-  children?: ReactNode
-  ssx?: ThemeUIStyleObject
+interface SectionWrapperProps {
+  direction?: FlexDirectionDevice;
+  children?: ReactNode;
+  ssx?: ThemeUIStyleObject;
 }
 
-const SectionWrapper: FC<ISectionWrapperProps> = ({ direction, children, ssx }) => {
+export default function SectionWrapper({
+  direction,
+  children,
+  ssx,
+}: SectionWrapperProps) {
   const desktop = direction?.[0];
   const mobile = direction?.[1];
 
@@ -31,16 +35,12 @@ const SectionWrapper: FC<ISectionWrapperProps> = ({ direction, children, ssx }) 
         width: 1200,
         margin: "0 auto",
         height: "100%",
-        ...desktop && { flexDirection: desktop },
-        ...mobile && { [breakpoints.mobile]: { flexDirection: mobile } },
-        ...ssx
+        ...(desktop && { flexDirection: desktop }),
+        ...(mobile && { [breakpoints.mobile]: { flexDirection: mobile } }),
+        ...ssx,
       }}
     >
-
       {children}
-
     </div>
-  )
+  );
 }
-
-export default SectionWrapper;

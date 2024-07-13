@@ -1,10 +1,10 @@
-import type { FC, ReactNode } from 'react';
+import type { ReactNode } from "react";
 
-interface IPortfolioOverlayProps {
-  children?: ReactNode
+interface PortfolioOverlayProps {
+  children?: ReactNode;
 }
 
-const PortfolioOverlay: FC<IPortfolioOverlayProps> = ({ children }) => {
+export default function PortfolioOverlay({ children }: PortfolioOverlayProps) {
   return (
     <div
       sx={{
@@ -23,15 +23,11 @@ const PortfolioOverlay: FC<IPortfolioOverlayProps> = ({ children }) => {
         opacity: 0,
         transition: "opacity 0.3s ease",
         "&:hover": {
-          opacity: 1
-        }
+          opacity: 1,
+        },
       }}
     >
-
       {children}
-
     </div>
-  )
+  );
 }
-
-export default PortfolioOverlay;

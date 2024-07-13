@@ -5,9 +5,9 @@ import type { ContactBody } from "@/shared-data/api/contact/types";
 export type InputAdornment = "mail" | "user"
 
 export type InputOption = {
-  value: string
-  selected: boolean
-  disabled: boolean
+  value: string;
+  selected: boolean;
+  disabled: boolean;
 }
 
 export type InputProps<T> = {

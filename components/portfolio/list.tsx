@@ -1,21 +1,17 @@
-import { useState } from 'react';
+import { useState } from "react";
 
-import PortfolioFilters from './filters';
-import PortfolioItem from './item';
+import PortfolioFilters from "./filters";
+import PortfolioItem from "./item";
 
-import { portfolioMap } from '@/shared-data/constants/portfolio';
-import type { PortfolioTagType } from '@/shared-data/constants/portfolio/types';
+import { portfolioMap } from "@/shared-data/constants/portfolio";
+import type { PortfolioTagType } from "@/shared-data/constants/portfolio/types";
 
 export default function PortfolioList() {
   const [filter, setFilter] = useState<PortfolioTagType | null>(null);
 
   return (
     <>
-
-      <PortfolioFilters 
-        filter={filter} 
-        setFilter={setFilter} 
-      />
+      <PortfolioFilters filter={filter} setFilter={setFilter} />
 
       <div
         sx={{
@@ -27,17 +23,10 @@ export default function PortfolioList() {
           "@media (max-width: 991px)": { "& > *": { width: "100%" } },
         }}
       >
-
-        {portfolioMap.map(item => 
-          <PortfolioItem
-            key={item.title}
-            currFilter={filter}
-            {...item}
-          />
-        )}
-
+        {portfolioMap.map((item) => (
+          <PortfolioItem key={item.title} currFilter={filter} {...item} />
+        ))}
       </div>
-
     </>
-  )
+  );
 }

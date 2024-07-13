@@ -2,36 +2,35 @@ import { ChevronDownIcon, ChevronUpIcon } from "@heroicons/react/24/outline";
 
 import Button from "@/components/ui/core/button";
 import Text from "@/components/ui/core/text";
-import { FC } from "react";
 
-interface IPortfolioHeaderProps {
-  title: string
-  active: boolean
-  toggle: () => void
+interface PortfolioHeaderProps {
+  title: string;
+  active: boolean;
+  toggle: () => void;
 }
 
-const PortfolioHeader: FC<IPortfolioHeaderProps> = ({ title, active, toggle }) => {
-  const ChevronIcon = !active 
-    ? ChevronUpIcon : ChevronDownIcon
+export default function PortfolioHeader({
+  title,
+  active,
+  toggle,
+}: PortfolioHeaderProps) {
+  const ChevronIcon = !active ? ChevronUpIcon : ChevronDownIcon;
 
   return (
-    <div 
-      sx={{ 
+    <div
+      sx={{
         mt: "auto",
         display: "flex",
         justifyContent: "space-between",
         p: "10px 25px",
         bg: "white",
-        boxShadow: "0 -4px 16px #3332"
+        boxShadow: "0 -4px 16px #3332",
       }}
     >
-      <Text 
-        color="darkBlue" 
-        ssx={{ fontWeight: "semiBold"}}
-      >
+      <Text color="darkBlue" ssx={{ fontWeight: "semiBold" }}>
         {title}
       </Text>
-      
+
       <Button
         onClick={toggle}
         sx={{
@@ -48,9 +47,9 @@ const PortfolioHeader: FC<IPortfolioHeaderProps> = ({ title, active, toggle }) =
           fontWeight: "medium",
           color: !active ? "darkBlue" : "white",
           transition: "color 0.3s ease",
-          "& svg": { 
+          "& svg": {
             color: !active ? "black" : "white",
-            transition: "color 0.3s ease" 
+            transition: "color 0.3s ease",
           },
           "&::after": {
             content: '""',
@@ -62,27 +61,18 @@ const PortfolioHeader: FC<IPortfolioHeaderProps> = ({ title, active, toggle }) =
             height: !active ? "3px" : "30px",
             mb: "-2px",
             backgroundColor: "darkGreen",
-            transition: "height 0.3s ease"
+            transition: "height 0.3s ease",
           },
           "&:hover": {
             color: "white",
             "& svg": { color: "white" },
-            "&::after": { height: "30px" }
+            "&::after": { height: "30px" },
           },
         }}
       >
-        {!active 
-          ? "Leggi di più" 
-          : "Leggi di meno"
-        }
-
-        <ChevronIcon
-          width={16}
-          sx={{ ml: 1 }}
-        />
+        {!active ? "Leggi di più" : "Leggi di meno"}
+        <ChevronIcon width={16} sx={{ ml: 1 }} />
       </Button>
     </div>
-  )
+  );
 }
-
-export default PortfolioHeader;

@@ -1,30 +1,27 @@
-import NextLink from 'next/link'
-import type { FC } from "react"
+import NextLink from "next/link";
 
-import Image from "@/components/ui/core/image"
+import Image from "@/components/ui/core/image";
 
-import type { Work } from '@/shared-data/constants/works'
-import { breakpoints } from '@/shared-data/theme'
+import type { Work } from "@/shared-data/constants/works";
+import { breakpoints } from "@/shared-data/theme";
 
-interface IWorkItemsProps extends Work {}
+interface WorkItemProps extends Work {}
 
-const WorkItem: FC<IWorkItemsProps> = (props) => {
+export default function WorkItem(props: WorkItemProps) {
   return (
     <NextLink href={props.href} target="_blank" rel="noopener noreferrer">
-      <Image 
+      <Image
         src={require(`./images/${props.workName}.png`)}
         alt={props.alt ?? ""}
-        sx={{ 
-          height: "50px", 
+        sx={{
+          height: "50px",
           width: "auto",
           opacity: 0.3,
           transition: "opacity 0.5s ease-in-out",
           [breakpoints.tablet]: { height: "30px" },
-          "&:hover": { opacity: 0.6 } 
+          "&:hover": { opacity: 0.6 },
         }}
       />
     </NextLink>
-  )
+  );
 }
-
-export default WorkItem;

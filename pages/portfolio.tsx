@@ -1,12 +1,10 @@
-import type { NextPage } from 'next';
+import Layout from "@/components/layout";
+import InterestedWorkSection from "@/components/layout/sections/portoflio/interested-work";
 
-import Layout from '@/components/layout';
-import InterestedWorkSection from '@/components/layout/sections/portoflio/interested-work';
+import MyWorksSection from "@/components/layout/sections/portoflio/my-works";
+import PortfolioSection from "@/components/layout/sections/portoflio/portfolio";
 
-import MyWorksSection from '@/components/layout/sections/portoflio/my-works';
-import PortfolioSection from '@/components/layout/sections/portoflio/portfolio';
-
-const PortfolioPage: NextPage = () => {
+export default function PortfolioPage() {
   return (
     <Layout
       title="Il mio portfolio"
@@ -16,7 +14,5 @@ const PortfolioPage: NextPage = () => {
       <PortfolioSection />
       <InterestedWorkSection />
     </Layout>
-  )
+  );
 }
-
-export default PortfolioPage;

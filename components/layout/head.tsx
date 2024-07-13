@@ -1,15 +1,15 @@
 import Head from "next/head";
 
-export default function CustomHead({ 
-  pageTitle, 
+export default function CustomHead({
+  pageTitle,
   pageDescription,
-  metas
+  metas,
 }: {
-  pageTitle: string
-  pageDescription: string
-  metas?: JSX.Element | JSX.Element[]
+  pageTitle: string;
+  pageDescription: string;
+  metas?: JSX.Element | JSX.Element[];
 }) {
-  const titleOutput = `Andrea Losavio | ${pageTitle}`
+  const titleOutput = `Andrea Losavio | ${pageTitle}`;
 
   return (
     <Head>
@@ -22,7 +22,7 @@ export default function CustomHead({
 
       <link rel="icon" href="/images/favicon.png" type="image/png" />
       <link rel="shortcut icon" href="/favicon.ico" />
-    
+
       <meta property="og:title" content={titleOutput} />
       <meta property="og:description" content={pageDescription} />
       <meta property="og:type" content="website" />
@@ -36,5 +36,5 @@ export default function CustomHead({
 
       {metas}
     </Head>
-  )
+  );
 }

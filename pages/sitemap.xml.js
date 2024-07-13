@@ -1,4 +1,4 @@
-const HOST_ANDREALOSAVIO_FE = 'https://www.andrealosavio.com';
+const HOST_ANDREALOSAVIO_FE = "https://www.andrealosavio.com";
 
 function generateSiteMap() {
   return `<?xml version="1.0" encoding="UTF-8"?>
@@ -46,12 +46,12 @@ function generateSiteMap() {
     </urlset>`;
 }
 
-const SiteMap = () => { }
+const SiteMap = () => {};
 
 export async function getServerSideProps({ res }) {
   const sitemap = generateSiteMap();
 
-  res.setHeader('Content-Type', 'text/xml');
+  res.setHeader("Content-Type", "text/xml");
   res.write(sitemap);
   res.end();
 

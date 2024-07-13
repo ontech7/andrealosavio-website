@@ -1,9 +1,9 @@
-import NextImage, { type ImageProps } from 'next/image';
-import { FC, useState } from 'react';
+import NextImage, { type ImageProps as NextImageProps } from "next/image";
+import { useState } from "react";
 
-interface IImageProps extends ImageProps {}
+interface ImageProps extends NextImageProps {}
 
-const Image: FC<IImageProps> = (props) => {
+export default function Image(props: ImageProps) {
   const [isLoaded, setLoaded] = useState(false);
   const loaded = () => setLoaded(true);
 
@@ -13,7 +13,5 @@ const Image: FC<IImageProps> = (props) => {
       sx={{ opacity: !isLoaded ? 0 : 1, transition: "opacity 0.5s ease" }}
       onLoad={loaded}
     />
-  )
+  );
 }
-
-export default Image;

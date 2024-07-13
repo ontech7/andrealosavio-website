@@ -1,21 +1,21 @@
-import { keyframes } from '@emotion/react'
-import type { ThemeUIStyleObject } from '@theme-ui/core'
-import type { FC, ReactNode } from 'react'
+import { keyframes } from "@emotion/react";
+import type { ThemeUIStyleObject } from "@theme-ui/core";
+import type { ReactNode } from "react";
 
-import Text from '../core/text'
+import Text from "../core/text";
 
-const underlineAnim = keyframes({ from: { width: 0 }, to: { width: "100%" }})
+const underlineAnim = keyframes({ from: { width: 0 }, to: { width: "100%" } });
 
-interface IKeyPointProps {
-  as?: string
-  variant?: string
-  color?: "green" | "darkGreen"
-  delay?: number
-  children?: ReactNode
-  ssx?: ThemeUIStyleObject
+interface KeyPointProps {
+  as?: string;
+  variant?: string;
+  color?: "green" | "darkGreen";
+  delay?: number;
+  children?: ReactNode;
+  ssx?: ThemeUIStyleObject;
 }
 
-const KeyPoint: FC<IKeyPointProps> = (props) => {
+export default function KeyPoint(props: KeyPointProps) {
   return (
     <Text
       as={props.as ?? "span"}
@@ -34,17 +34,13 @@ const KeyPoint: FC<IKeyPointProps> = (props) => {
           backgroundColor: props.color ?? "green",
           transition: "width 300ms",
           animation: `${underlineAnim} 1s forwards ease-in-out`,
-          ...props.delay ? { animationDelay: `${props.delay}ms` } : {}
+          ...(props.delay ? { animationDelay: `${props.delay}ms` } : {}),
         },
 
-        ...props.ssx
+        ...props.ssx,
       }}
     >
-    
       {props.children}
-
     </Text>
-  )
+  );
 }
-
-export default KeyPoint;

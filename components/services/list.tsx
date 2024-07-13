@@ -1,6 +1,6 @@
-import ServiceItem from './item';
+import ServiceItem from "./item";
 
-import { servicesMap } from '@/shared-data/constants/services';
+import { servicesMap } from "@/shared-data/constants/services";
 
 export default function ServiceList() {
   return (
@@ -11,17 +11,12 @@ export default function ServiceList() {
         justifyContent: "center",
         position: "relative",
         zIndex: 2,
-        padding: "20px 10px"
+        padding: "20px 10px",
       }}
     >
-
-      {servicesMap.map(service =>
-        <ServiceItem 
-          key={service.alt} 
-          {...service} 
-        />
-      )}
-      
+      {servicesMap.map((service) => (
+        <ServiceItem key={service.alt} {...service} />
+      ))}
     </div>
-  )
+  );
 }

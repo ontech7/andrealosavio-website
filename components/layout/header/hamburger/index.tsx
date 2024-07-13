@@ -1,20 +1,19 @@
-import HamburgerCloseIcon from './close'
-import HamburgerOpenIcon from './open'
+import HamburgerCloseIcon from "./close";
+import HamburgerOpenIcon from "./open";
 
 export default function HamburgerButton({
   isOpen,
-  toggle
+  toggle,
 }: {
-  isOpen: boolean,
-  toggle: () => void
+  isOpen: boolean;
+  toggle: () => void;
 }) {
   return (
     <>
-
-      <input 
-        aria-label="Menu" 
-        aria-expanded={isOpen ? "true" : "false"} 
-        type="checkbox" 
+      <input
+        aria-label="Menu"
+        aria-expanded={isOpen ? "true" : "false"}
+        type="checkbox"
         onChange={toggle}
         sx={{
           display: "block",
@@ -25,14 +24,13 @@ export default function HamburgerButton({
           width: "26px",
           right: 0,
           opacity: 0,
-          margin: 0
+          margin: 0,
         }}
       />
 
       {/** both included for animations */}
       <HamburgerOpenIcon isOpen={isOpen} />
       <HamburgerCloseIcon isOpen={isOpen} />
-    
     </>
-  )
+  );
 }

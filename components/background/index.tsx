@@ -1,17 +1,15 @@
+import type { ThemeUIStyleObject } from "@theme-ui/core";
 
-import type { ThemeUIStyleObject } from '@theme-ui/core'
+import type { BgName } from "./types";
+import { backgroundMap } from "./utils";
 
-import { FC } from 'react'
-import type { BgName } from './types'
-import { backgroundMap } from './utils'
-
-interface IBackgroundProps {
-  bgImg: BgName
-  placement: "top" | "bottom"
-  ssx?: ThemeUIStyleObject
+interface BackgroundProps {
+  bgImg: BgName;
+  placement: "top" | "bottom";
+  ssx?: ThemeUIStyleObject;
 }
 
-const Background: FC<IBackgroundProps> = ({ bgImg, placement, ssx }) => {
+export default function Background({ bgImg, placement, ssx }: BackgroundProps) {
   const BgComponent = backgroundMap[bgImg];
 
   return (
@@ -21,10 +19,8 @@ const Background: FC<IBackgroundProps> = ({ bgImg, placement, ssx }) => {
         transform: `rotate(${placement == "bottom" ? "0deg" : "180deg"})`,
         width: "100%",
         height: "100%",
-        ...ssx
+        ...ssx,
       }}
     />
-  )
+  );
 }
-
-export default Background;

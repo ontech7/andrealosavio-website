@@ -8,19 +8,12 @@ import SectionWrapper from "@/components/ui/common/section/wrapper";
 
 export default function InterestedServicesSection() {
   return (
-    <Section 
-      id="interested-services" 
-      bg="transparent" 
-      high
-    >
-      <SectionWrapper 
-        direction={["column", "column"]} 
+    <Section id="interested-services" bg="transparent" high>
+      <SectionWrapper
+        direction={["column", "column"]}
         ssx={{ textAlign: "center", gap: "25px" }}
       >
-
-        <Text as="h2">
-          Vuoi approfondire i servizi che offro?
-        </Text>
+        <Text as="h2">Vuoi approfondire i servizi che offro?</Text>
 
         <Text color="black">
           Dai un’occhiata e ritorna in questa sezione quando ti senti pronto.
@@ -32,14 +25,9 @@ export default function InterestedServicesSection() {
           ssx={{ mt: "20px", alignSelf: "center" }}
         >
           SERVIZI
-          
-          <BriefcaseIcon
-            width={24} 
-            sx={{ color: "black", ml: 2 }} 
-          />
+          <BriefcaseIcon width={24} sx={{ color: "black", ml: 2 }} />
         </Link>
-
       </SectionWrapper>
     </Section>
-  )
+  );
 }

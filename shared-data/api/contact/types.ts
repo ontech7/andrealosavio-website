@@ -1,5 +1,6 @@
+
 export type ContactBody = {
-  subject: SubjectType | string
+  subject: string
   name: string
   email: string
   message: string

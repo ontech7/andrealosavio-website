@@ -4,19 +4,19 @@ import type { NextApiRequest, NextApiResponse } from "next";
 import { subjectMap } from "@/shared-data/api/contact";
 
 export default async function (
-  req: NextApiRequest, 
+  req: NextApiRequest,
   res: NextApiResponse<ContactResponseData>
 ) {
   const nodemailer = require("nodemailer");
 
   if (req.method != "POST") {
-    res.status(404).json({ success: false, message: "Metodo non consentito"});
+    res.status(404).json({ success: false, message: "Metodo non consentito" });
     return;
   }
 
   const { subject = "website", name, email, message } = JSON.parse(req.body) as Partial<ContactBody>;
 
-  if (subjectMap[subject] == null) {
+  if (subjectMap[subject] === null || subjectMap[subject] === undefined) {
     res.status(500).send({ success: false, message: "Oggetto non valido" });
     return;
   }
@@ -38,7 +38,7 @@ export default async function (
     html: `<b>${name}</b> - ${email}<br><br>
     ${message}`,
   };
-  
+
   const mailOkRicezione = {
     from: `No-Reply <no-reply@andrealosavio.com>`,
     to: email,

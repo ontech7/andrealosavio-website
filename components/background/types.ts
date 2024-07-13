@@ -2,7 +2,7 @@ import type { ThemeUIStyleObject } from "@theme-ui/core"
 
 // interfaces
 
-export interface IBgSvg { 
+export interface BgSvgProps {
   ssx: ThemeUIStyleObject
 }
 

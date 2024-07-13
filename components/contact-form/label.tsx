@@ -1,12 +1,11 @@
 import type { ContactBody } from "@/shared-data/api/contact/types";
-import type { FC } from "react";
 
-interface IFormLabelProps {
-  name: keyof ContactBody
-  text: string 
+interface FormLabelProps {
+  name: keyof ContactBody;
+  text: string;
 }
 
-const FormLabel: FC<IFormLabelProps> = ({ name, text }) => {
+export default function FormLabel({ name, text }: FormLabelProps) {
   return (
     <label
       htmlFor={name}
@@ -17,14 +16,10 @@ const FormLabel: FC<IFormLabelProps> = ({ name, text }) => {
         fontFamily: "body",
         fontSize: "link",
         fontWeight: "medium",
-        lineHeight: "27px"
+        lineHeight: "27px",
       }}
     >
-
       {text}
-
     </label>
-  )
+  );
 }
-
-export default FormLabel;

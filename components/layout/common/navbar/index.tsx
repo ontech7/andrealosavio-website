@@ -1,13 +1,13 @@
-import type { FC, ReactNode } from "react"
+import type { ReactNode } from "react";
 
-import type { ThemeUIStyleObject } from "@theme-ui/core"
+import type { ThemeUIStyleObject } from "@theme-ui/core";
 
-interface INavbarProps {
-  children?: ReactNode
-  ssx?: ThemeUIStyleObject
+interface NavbarProps {
+  children?: ReactNode;
+  ssx?: ThemeUIStyleObject;
 }
 
-const Navbar: FC<INavbarProps> = ({ children, ssx }) => {
+export default function Navbar({ children, ssx }: NavbarProps) {
   return (
     <ul
       sx={{
@@ -16,14 +16,10 @@ const Navbar: FC<INavbarProps> = ({ children, ssx }) => {
         padding: 0,
         display: "flex",
         gap: "40px",
-        ...ssx
+        ...ssx,
       }}
     >
-
       {children}
-
-    </ul> 
-  )
+    </ul>
+  );
 }
-
-export default Navbar;

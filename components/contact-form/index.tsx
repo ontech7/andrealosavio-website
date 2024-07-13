@@ -17,7 +17,11 @@ import FormSelect from "./ui/select";
 import FormTextarea from "./ui/textarea";
 
 import { subjectMap } from "@/shared-data/api/contact";
-import type { ContactBody, ContactResponseData } from "@/shared-data/api/contact/types";
+import type {
+  ContactBody,
+  ContactResponseData,
+  SubjectType,
+} from "@/shared-data/api/contact/types";
 
 import successSvg from "./ui/images/success.svg";
 
@@ -29,19 +33,19 @@ export default function ContactForm() {
     name: "",
     email: "",
     message: "",
-    privacy: false
+    privacy: false,
   });
 
   useEffect(() => {
-    setValue("subject", query.s as string)
-  }, [query.s])
+    setValue("subject", query.s as SubjectType);
+  }, [query.s]);
 
   const setValue = (name: string, value: string) => {
-    setFormValues(prevValues => ({ 
-      ...prevValues, 
-      [name]: value 
-    }))
-  }
+    setFormValues((prevValues) => ({
+      ...prevValues,
+      [name]: value,
+    }));
+  };
 
   const [isSuccess, setSuccess] = useState<boolean | undefined>();
 
@@ -50,18 +54,17 @@ export default function ContactForm() {
 
     const response = await fetch("/api/contact", {
       method: "POST",
-      body: JSON.stringify(formValues)
-    })
+      body: JSON.stringify(formValues),
+    });
 
     const data: ContactResponseData = await response.json();
 
-    setSuccess(data.success)
-  }
+    setSuccess(data.success);
+  };
 
   return (
     <>
-
-      {isSuccess == undefined &&
+      {isSuccess == undefined && (
         <form
           onSubmit={submitContactForm}
           sx={{
@@ -69,7 +72,7 @@ export default function ContactForm() {
             display: "flex",
             flexDirection: "column",
             gap: "20px",
-            mx: "auto"
+            mx: "auto",
           }}
         >
           <Text as="h3" ssx={{ textAlign: "center" }}>
@@ -77,59 +80,47 @@ export default function ContactForm() {
           </Text>
 
           <FormFieldset>
-            <FormLabel 
-              name="subject" 
-              text="Oggetto *" 
-            />
-            <FormSelect 
-              name="subject" 
+            <FormLabel name="subject" text="Oggetto *" />
+            <FormSelect
+              name="subject"
               required
               options={Object.entries(subjectMap)}
-              value={formValues.subject} 
-              setValue={setValue} 
+              value={formValues.subject}
+              setValue={setValue}
             />
           </FormFieldset>
 
           <FormFieldset>
-            <FormLabel 
-              name="name" 
-              text="Nome *" 
-            />
-            <FormInput 
+            <FormLabel name="name" text="Nome *" />
+            <FormInput
               name="name"
-              required 
+              required
               type="text"
               adornment="user"
-              value={formValues.name} 
-              setValue={setValue} 
+              value={formValues.name}
+              setValue={setValue}
             />
           </FormFieldset>
 
           <FormFieldset>
-            <FormLabel 
-              name="email" 
-              text="Email *" 
-            />
-            <FormInput 
-              name="email" 
+            <FormLabel name="email" text="Email *" />
+            <FormInput
+              name="email"
               required
               type="email"
               adornment="mail"
-              value={formValues.email} 
-              setValue={setValue} 
+              value={formValues.email}
+              setValue={setValue}
             />
           </FormFieldset>
 
           <FormFieldset>
-            <FormLabel 
-              name="message" 
-              text="Messaggio *" 
-            />
-            <FormTextarea 
-              name="message" 
+            <FormLabel name="message" text="Messaggio *" />
+            <FormTextarea
+              name="message"
               required
-              value={formValues.message} 
-              setValue={setValue} 
+              value={formValues.message}
+              setValue={setValue}
             />
           </FormFieldset>
 
@@ -137,9 +128,12 @@ export default function ContactForm() {
             <FormCheckbox
               text={
                 <>
-                  Acconsento al trattamento dei miei dati personali al fine di 
-                  ricevere una risposta al mio messaggio, come indicato 
-                  nella <Link target="_blank" href="/privacy-policy">Privacy Policy</Link>. *
+                  Acconsento al trattamento dei miei dati personali al fine di
+                  ricevere una risposta al mio messaggio, come indicato nella{" "}
+                  <Link target="_blank" href="/privacy-policy">
+                    Privacy Policy
+                  </Link>
+                  . *
                 </>
               }
               name="privacy"
@@ -155,28 +149,23 @@ export default function ContactForm() {
             sx={{ alignSelf: "flex-end", mt: "10px" }}
           >
             INVIA
-
-            <PaperAirplaneIcon 
-              width={24}
-              sx={{ color: "black", ml: 2 }}
-            />
+            <PaperAirplaneIcon width={24} sx={{ color: "black", ml: 2 }} />
           </Button>
-
         </form>
-      }
+      )}
 
-      {isSuccess == true &&
+      {isSuccess == true && (
         <div
           sx={{
             display: "flex",
             textAlign: "center",
             flexDirection: "column",
-            gap: "10px"
+            gap: "10px",
           }}
         >
-          <Image 
-            src={successSvg} 
-            alt="Messaggio inviato correttamente" 
+          <Image
+            src={successSvg}
+            alt="Messaggio inviato correttamente"
             sx={{ height: "30px", mb: "20px" }}
           />
           <Text color="black">
@@ -189,31 +178,28 @@ export default function ContactForm() {
             Ricordati di tenere d'occhio la casella "<b>Spam</b>".
           </Text>
         </div>
-      }
+      )}
 
-      {isSuccess == false &&
+      {isSuccess == false && (
         <div
           sx={{
             display: "flex",
             textAlign: "center",
             flexDirection: "column",
-            gap: "10px"
+            gap: "10px",
           }}
         >
-          <Image 
-            src={successSvg} 
+          <Image
+            src={successSvg}
             alt="Messaggio non inviato"
             sx={{ height: "30px", mb: "20px", filter: "grayscale(1)" }}
           />
           <Text color="black">
             <b>Messaggio non inviato :(</b>
           </Text>
-          <Text color="black">
-            Ricarica la pagina o riprova più tardi.
-          </Text>
+          <Text color="black">Ricarica la pagina o riprova più tardi.</Text>
         </div>
-      }
-
+      )}
     </>
-  )
+  );
 }

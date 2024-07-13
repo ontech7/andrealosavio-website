@@ -1,16 +1,19 @@
-import type { FC, ReactNode } from "react";
+import type { ReactNode } from "react";
 
 import Text from "@/components/ui/core/text";
 
-interface IPortfolioDescriptionProps {
-  description: ReactNode | string
-  active: boolean
+interface PortfolioDescriptionProps {
+  description: ReactNode | string;
+  active: boolean;
 }
 
-const PortfolioDescription: FC<IPortfolioDescriptionProps> = ({ description, active }) => {
+export default function PortfolioDescription({
+  description,
+  active,
+}: PortfolioDescriptionProps) {
   return (
     <div
-      sx={{ 
+      sx={{
         textAlign: "left",
         bg: "white",
         height: !active ? 0 : "270px",
@@ -18,8 +21,7 @@ const PortfolioDescription: FC<IPortfolioDescriptionProps> = ({ description, act
         transition: "height 0.3s ease",
       }}
     >
-
-      <Text 
+      <Text
         color="black"
         ssx={{
           px: "25px",
@@ -27,16 +29,15 @@ const PortfolioDescription: FC<IPortfolioDescriptionProps> = ({ description, act
           pb: "15px",
           fontSize: "14px",
           lineHeight: "20px",
-          "& a": { textDecoration: "none", fontWeight: "semiBold", color: "darkGreen" }
+          "& a": {
+            textDecoration: "none",
+            fontWeight: "semiBold",
+            color: "darkGreen",
+          },
         }}
       >
-
         {description}
-
       </Text>
-
     </div>
-  )
+  );
 }
-
-export default PortfolioDescription;

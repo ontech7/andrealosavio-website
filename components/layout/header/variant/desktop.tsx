@@ -18,35 +18,18 @@ export default function HeaderDesktop() {
         [breakpoints.tablet]: { display: "none" },
       }}
     >
-
       <LayoutLogo />
 
       <Navbar>
-        {menuVoicesMap
-          .slice(0, -1)
-          .map(([label, href]) =>
-
-          <NavbarItem 
-            key={label} 
-            label={label} 
-            href={href} 
-          />
-
-        )}
+        {menuVoicesMap.slice(0, -1).map(([label, href]) => (
+          <NavbarItem key={label} label={label} href={href} />
+        ))}
       </Navbar>
 
-      <Link
-        variant="secondary"
-        href="/contattami"
-      >
+      <Link variant="secondary" href="/contattami">
         CONTATTAMI
-
-        <ArrowRightCircleIcon 
-          width={24} 
-          sx={{ color: "black", ml: 2 }} 
-        />
+        <ArrowRightCircleIcon width={24} sx={{ color: "black", ml: 2 }} />
       </Link>
-
     </LayoutWrapper>
-  )
+  );
 }

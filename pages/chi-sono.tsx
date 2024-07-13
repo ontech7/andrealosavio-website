@@ -1,13 +1,11 @@
-import type { NextPage } from 'next';
+import Layout from "@/components/layout";
 
-import Layout from '@/components/layout';
+import ExperiencesSection from "@/components/layout/sections/about-me/experiences";
+import MyCareerSection from "@/components/layout/sections/about-me/my-career";
+import ProductionSection from "@/components/layout/sections/about-me/production";
+import WhoSection from "@/components/layout/sections/about-me/who";
 
-import ExperiencesSection from '@/components/layout/sections/about-me/experiences';
-import MyCareerSection from '@/components/layout/sections/about-me/my-career';
-import ProductionSection from '@/components/layout/sections/about-me/production';
-import WhoSection from '@/components/layout/sections/about-me/who';
-
-const ChiSonoPage: NextPage = () => {
+export default function ChiSonoPage() {
   return (
     <Layout
       title="Chi sono e cosa faccio"
@@ -18,7 +16,5 @@ const ChiSonoPage: NextPage = () => {
       <ProductionSection />
       <MyCareerSection />
     </Layout>
-  )
+  );
 }
-
-export default ChiSonoPage;

@@ -1,14 +1,14 @@
-import type { ReactNode } from 'react'
+import type { ReactNode } from "react";
 
-import { breakpoints } from '@/shared-data/theme'
-import type { ThemeUIStyleObject } from '@theme-ui/core'
+import { breakpoints } from "@/shared-data/theme";
+import type { ThemeUIStyleObject } from "@theme-ui/core";
 
 export default function FooterWrapper({
   children,
-  ssx
+  ssx,
 }: {
-  children?: ReactNode
-  ssx?: ThemeUIStyleObject
+  children?: ReactNode;
+  ssx?: ThemeUIStyleObject;
 }) {
   return (
     <div
@@ -20,14 +20,12 @@ export default function FooterWrapper({
         columnGap: "20px",
         [breakpoints.tablet]: {
           flexDirection: "column",
-          alignItems: "flex-start"
+          alignItems: "flex-start",
         },
-        ...ssx
+        ...ssx,
       }}
     >
-
       {children}
-
     </div>
-  )
+  );
 }

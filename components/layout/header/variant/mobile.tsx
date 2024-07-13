@@ -17,16 +17,14 @@ import { breakpoints } from "@/shared-data/theme";
 
 export default function HeaderMobile() {
   const [isOpen, setOpen] = useState(false);
-  const toggle = () => setOpen(p => !p);
+  const toggle = () => setOpen((p) => !p);
 
   return (
     <>
-      {isOpen && 
-        <style>{`body{overflow-y:hidden;}`}</style>
-      }
+      {isOpen && <style>{`body{overflow-y:hidden;}`}</style>}
 
       {/** menu mask */}
-      <div 
+      <div
         onClick={toggle}
         sx={{
           display: "none",
@@ -39,23 +37,19 @@ export default function HeaderMobile() {
           backgroundColor: !isOpen ? "rgb(0,0,0,0)" : "rgb(0,0,0,0.5)",
           pointerEvents: !isOpen ? "none" : "all",
           transition: "background-color .5s ease-in-out",
-          [breakpoints.tablet]: { display: "block" }
+          [breakpoints.tablet]: { display: "block" },
         }}
       />
 
       <LayoutWrapper
         ssx={{
           display: "none",
-          [breakpoints.tablet]: { display: "flex" }
+          [breakpoints.tablet]: { display: "flex" },
         }}
       >
-
         <LayoutLogo />
 
-        <HamburgerButton
-          isOpen={isOpen}
-          toggle={toggle}
-        />
+        <HamburgerButton isOpen={isOpen} toggle={toggle} />
 
         {/** menu items - initially hidden */}
         <div
@@ -73,32 +67,22 @@ export default function HeaderMobile() {
             boxShadow: "-2px 0px 10px rgb(0 0 0 / 25%)",
             height: "100%",
             transform: `translateX(${!isOpen ? 0 : "-350px"})`,
-            transition: "transform 0.5s ease-in-out"
+            transition: "transform 0.5s ease-in-out",
           }}
         >
-
           <Navbar
             ssx={{
               flexDirection: "column",
               gap: "20px",
               "& a": {
                 width: "50%",
-                padding: "10px 0"
-              }
+                padding: "10px 0",
+              },
             }}
           >
-            {menuVoicesMap
-              .slice(0, -1)
-              .map(([label, href]) =>
-
-              <NavbarItem 
-                key={label} 
-                label={label} 
-                href={href} 
-                noHover
-              />
-
-            )}
+            {menuVoicesMap.slice(0, -1).map(([label, href]) => (
+              <NavbarItem key={label} label={label} href={href} noHover />
+            ))}
           </Navbar>
 
           <Link
@@ -107,11 +91,7 @@ export default function HeaderMobile() {
             ssx={{ alignSelf: "start" }}
           >
             CONTATTAMI
-
-            <ArrowRightCircleIcon 
-              width={24} 
-              sx={{ color: "black", ml: 2 }} 
-            />
+            <ArrowRightCircleIcon width={24} sx={{ color: "black", ml: 2 }} />
           </Link>
 
           <div sx={{ flexGrow: 1 }} />
@@ -119,10 +99,8 @@ export default function HeaderMobile() {
           <CopyrightText />
 
           <SocialLinks ssx={{ alignSelf: "flex-end" }} />
-
         </div>
-
       </LayoutWrapper>
     </>
-  )
+  );
 }

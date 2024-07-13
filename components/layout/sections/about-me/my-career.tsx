@@ -1,35 +1,32 @@
-import Image from "@/components/ui/core/image"
+import Image from "@/components/ui/core/image";
 
-import { CursorArrowRaysIcon } from '@heroicons/react/24/outline'
+import { CursorArrowRaysIcon } from "@heroicons/react/24/outline";
 
-import Link from '@/components/ui/core/link'
-import Text from '@/components/ui/core/text'
+import Link from "@/components/ui/core/link";
+import Text from "@/components/ui/core/text";
 
-import Section from '@/components/ui/common/section'
-import SectionWrapper from '@/components/ui/common/section/wrapper'
+import Section from "@/components/ui/common/section";
+import SectionWrapper from "@/components/ui/common/section/wrapper";
 
-import { breakpoints } from '@/shared-data/theme'
+import { breakpoints } from "@/shared-data/theme";
 
 export default function MyCareerSection() {
   return (
-    <Section 
-      id="my-career"
-    >
-      <SectionWrapper 
-        direction={["column", "column"]} 
+    <Section id="my-career">
+      <SectionWrapper
+        direction={["column", "column"]}
         ssx={{ textAlign: "center", gap: "25px", mb: "20px" }}
       >
-
-        <Text as="h2">
-          Esplora il mio percorso professionale.
-        </Text>
+        <Text as="h2">Esplora il mio percorso professionale.</Text>
 
         <Text color="black" ssx={{ maxWidth: "800px", mx: "auto" }}>
-          Scopri la mia storia professionale in un click.<br />
-          Dal mio <b>background educativo</b> alle <b>esperienze lavorative</b> più rilevanti, 
-          troverai tutto ciò che serve per comprendere il mio percorso e le mie competenze.
+          Scopri la mia storia professionale in un click.
+          <br />
+          Dal mio <b>background educativo</b> alle <b>esperienze lavorative</b>{" "}
+          più rilevanti, troverai tutto ciò che serve per comprendere il mio
+          percorso e le mie competenze.
         </Text>
-        
+
         <div
           sx={{
             position: "relative",
@@ -37,7 +34,7 @@ export default function MyCareerSection() {
             maxWidth: "600px",
             height: "auto",
             mt: "20px",
-            mx: "auto"
+            mx: "auto",
           }}
         >
           <Image
@@ -46,9 +43,9 @@ export default function MyCareerSection() {
             priority
             width={519}
             height={168}
-            sx={{ 
+            sx={{
               filter: "blur(6px)",
-              [breakpoints.mobile]: { filter: "blur(4px)" }
+              [breakpoints.mobile]: { filter: "blur(4px)" },
             }}
           />
 
@@ -62,20 +59,14 @@ export default function MyCareerSection() {
               left: "50%",
               transform: "translate(-50%, -50%)",
               whiteSpace: "nowrap",
-              zIndex: 2
+              zIndex: 2,
             }}
           >
             Scarica il CV
-
-            <CursorArrowRaysIcon
-              width={24} 
-              sx={{ color: "black", ml: 2 }} 
-            />
+            <CursorArrowRaysIcon width={24} sx={{ color: "black", ml: 2 }} />
           </Link>
-            
         </div>
-
       </SectionWrapper>
     </Section>
-  )
+  );
 }

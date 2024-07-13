@@ -1,20 +1,21 @@
-import type { FC } from "react"
+import NextLink from "next/link";
 
-import NextLink from 'next/link'
+import Image from "@/components/ui/core/image";
+import Text from "@/components/ui/core/text";
 
-import Image from "@/components/ui/core/image"
-import Text from '@/components/ui/core/text'
+import type { Service } from "@/shared-data/constants/services";
 
-import type { Service } from '@/shared-data/constants/services'
+interface ServiceItemProps extends Service {}
 
-interface IServiceItemProps extends Service {}
-
-const ServiceItem: FC<IServiceItemProps> = (props: Service) => {
+export default function ServiceItem(props: ServiceItemProps) {
   return (
     <NextLink
       href={`/contattami?s=${props.serviceName}`}
       sx={{
-        ...props.disabled && { filter: "grayscale(1)", pointerEvents: "none" },
+        ...(props.disabled && {
+          filter: "grayscale(1)",
+          pointerEvents: "none",
+        }),
         position: "relative",
         textDecoration: "none",
         maxWidth: "320px",
@@ -24,29 +25,28 @@ const ServiceItem: FC<IServiceItemProps> = (props: Service) => {
         borderRadius: "10px",
         boxShadow: "0px 2px 10px #3334",
         margin: "10px",
-        textAlign: "center"
+        textAlign: "center",
       }}
     >
-
-      {props.disabled &&
-        <Text 
-          color="black" 
-          ssx={{ 
-            position: "absolute", 
+      {props.disabled && (
+        <Text
+          color="black"
+          ssx={{
+            position: "absolute",
             bg: "green",
             borderRadius: "32px",
             p: "1px 8px",
-            top: "8px", 
-            right: "8px", 
+            top: "8px",
+            right: "8px",
             fontSize: "14px",
-            fontWeight: "medium"
+            fontWeight: "medium",
           }}
         >
           Non disponibile
         </Text>
-      }
+      )}
 
-      <Image 
+      <Image
         src={require(`./images/${props.serviceName}.svg`)}
         alt={props.alt ?? ""}
         sx={{ width: "auto", height: "60px", mb: "20px", mx: "auto" }}
@@ -56,12 +56,7 @@ const ServiceItem: FC<IServiceItemProps> = (props: Service) => {
         {props.title}
       </Text>
 
-      <Text color="black">
-        {props.description}
-      </Text>
-
+      <Text color="black">{props.description}</Text>
     </NextLink>
-  )
+  );
 }
-
-export default ServiceItem;

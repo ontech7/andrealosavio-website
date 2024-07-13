@@ -1,13 +1,12 @@
-import type { ChangeEvent, FC } from 'react';
+import type { InputProps } from "./types";
 
-import type { InputProps } from './types';
+interface FormTextareaProps
+  extends Pick<
+    InputProps<string>,
+    "name" | "required" | "value" | "setValue"
+  > {}
 
-interface IFormTextareaProps extends Pick<
-  InputProps<string>, 
-  "name" | "required" | "value" | "setValue"
-> {};
-
-const FormTextarea: FC<IFormTextareaProps> = ({ name, required, value, setValue }) =>  {
+export default function FormTextarea(props: FormTextareaProps) {
   return (
     <textarea
       rows={3}
@@ -33,17 +32,13 @@ const FormTextarea: FC<IFormTextareaProps> = ({ name, required, value, setValue 
           borderWidth: "1px",
           borderStyle: "solid",
           borderColor: "yelow",
-          outline: 0
-        }
+          outline: 0,
+        },
       }}
-      name={name}
-      required={required}
-      value={value}
-      onChange={(e: ChangeEvent<HTMLTextAreaElement>)  => {
-        setValue(name, e.target.value)
+      {...props}
+      onChange={(e) => {
+        props.setValue(props.name, e.target.value);
       }}
     />
-  )
+  );
 }
-
-export default FormTextarea;

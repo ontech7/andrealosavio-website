@@ -1,15 +1,15 @@
-import type { ChangeEvent, FC } from 'react';
+import type { InputProps } from "./types";
 
-import type { InputProps } from './types';
+interface FormInputProps
+  extends Pick<
+    InputProps<string>,
+    "name" | "required" | "type" | "adornment" | "value" | "setValue"
+  > {}
 
-interface IFormInputProps extends Pick<
-  InputProps<string>, 
-  "name" | "required" | "type" | "adornment" | "value" | "setValue"
-> {};
-
-const FormInput: FC<IFormInputProps> = ({ name, required, type, adornment, value, setValue }) => {
-
-  const img = adornment ? require(`./images/${adornment}.svg`) : null;
+export default function FormInput(props: FormInputProps) {
+  const img = props.adornment
+    ? require(`./images/${props.adornment}.svg`)
+    : null;
 
   return (
     <input
@@ -30,29 +30,24 @@ const FormInput: FC<IFormInputProps> = ({ name, required, type, adornment, value
         appearance: "none",
         lineHeight: "27px",
 
-        ...adornment && { 
+        ...(props.adornment && {
           backgroundImage: `url(${img.default.src})`,
           backgroundRepeat: "no-repeat",
           backgroundPositionX: "97%",
-          backgroundPositionY: "9px"
-        },
+          backgroundPositionY: "9px",
+        }),
 
         "&:focus": {
           borderWidth: "1px",
           borderStyle: "solid",
           borderColor: "yelow",
-          outline: 0
-        }
+          outline: 0,
+        },
       }}
-      type={type}
-      name={name}
-      required={required}
-      value={value}
-      onChange={(e: ChangeEvent<HTMLInputElement>) => {
-        setValue(name, e.target.value)
+      {...props}
+      onChange={(e) => {
+        props.setValue(props.name, e.target.value);
       }}
     />
-  )
+  );
 }
-
-export default FormInput;

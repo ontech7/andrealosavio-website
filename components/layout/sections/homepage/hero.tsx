@@ -1,17 +1,17 @@
 import developerLottie from "@/libs/lottie/developer.json";
 import Lottie from "react-lottie-player";
 
-import { breakpoints } from '@/shared-data/theme';
-import { ArrowDownCircleIcon } from '@heroicons/react/24/outline';
+import { breakpoints } from "@/shared-data/theme";
+import { ArrowDownCircleIcon } from "@heroicons/react/24/outline";
 
-import Section from '@/components/ui/common/section';
-import SectionWrapper from '@/components/ui/common/section/wrapper';
+import Section from "@/components/ui/common/section";
+import SectionWrapper from "@/components/ui/common/section/wrapper";
 
 import Link from "@/components/ui/core/link";
 import Text from "@/components/ui/core/text";
 
 import Background from "@/components/background";
-import KeyPoint from '@/components/ui/common/key-point';
+import KeyPoint from "@/components/ui/common/key-point";
 import { useState } from "react";
 
 export default function HeroSection() {
@@ -20,10 +20,9 @@ export default function HeroSection() {
 
   return (
     <>
-
-      <Section 
-        id="hero" 
-        bg="blue" 
+      <Section
+        id="hero"
+        bg="blue"
         ssx={{
           display: "flex",
           height: "780px",
@@ -31,12 +30,10 @@ export default function HeroSection() {
           pb: 0,
           overflowY: "hidden",
           [breakpoints.tablet]: { pt: "80px" },
-          [breakpoints.mobile]: { height: "auto", pt: 0, pb: "30px" }
+          [breakpoints.mobile]: { height: "auto", pt: 0, pb: "30px" },
         }}
       >
-
         <SectionWrapper direction={["column"]}>
-
           <div
             sx={{
               zIndex: 0,
@@ -47,18 +44,18 @@ export default function HeroSection() {
               height: "100%",
               right: -50,
               bottom: "-40px",
-              [breakpoints.tablet]: { 
-                width: "70%", 
-                bottom: 0
+              [breakpoints.tablet]: {
+                width: "70%",
+                bottom: 0,
               },
-              [breakpoints.mobile]: { 
-                position: "relative", 
-                right: 0, 
-                alignSelf: "center", 
-                width: "90vw", 
+              [breakpoints.mobile]: {
+                position: "relative",
+                right: 0,
+                alignSelf: "center",
+                width: "90vw",
                 height: "90vw",
-                my: "-25px"
-              }
+                my: "-25px",
+              },
             }}
           >
             <Lottie
@@ -66,15 +63,15 @@ export default function HeroSection() {
               animationData={developerLottie}
               play
               onLoad={loaded}
-              sx={{ 
+              sx={{
                 opacity: !isLottieLoaded ? 0 : 1,
                 transition: "opacity 0.5s ease",
                 position: "absolute",
                 top: "50%",
                 transform: "translateY(-50%)",
-                zIndex: -1, 
-                width: "100%", 
-                height: "auto" 
+                zIndex: -1,
+                width: "100%",
+                height: "auto",
               }}
             />
           </div>
@@ -83,41 +80,37 @@ export default function HeroSection() {
             Vuoi elevare il tuo business a un livello completamente nuovo?
           </Text>
 
-          <Text 
-            ssx={{ 
-              mb: "70px", 
-              maxWidth: "45%", 
-              [breakpoints.mobile]: { maxWidth: "100%" } 
+          <Text
+            ssx={{
+              mb: "70px",
+              maxWidth: "45%",
+              [breakpoints.mobile]: { maxWidth: "100%" },
             }}
           >
-            Hai bisogno di un sito web accattivante che raggiunga in modo {" "}
-            <KeyPoint as="b">chiaro</KeyPoint>, {" "}
-            <KeyPoint as="b" delay={250}>semplice</KeyPoint> e {" "}
-            <KeyPoint as="b" delay={500}>preciso</KeyPoint> i tuoi clienti?
+            Hai bisogno di un sito web accattivante che raggiunga in modo{" "}
+            <KeyPoint as="b">chiaro</KeyPoint>,{" "}
+            <KeyPoint as="b" delay={250}>
+              semplice
+            </KeyPoint>{" "}
+            e{" "}
+            <KeyPoint as="b" delay={500}>
+              preciso
+            </KeyPoint>{" "}
+            i tuoi clienti?
           </Text>
 
-          <Link 
-            variant="primary" 
-            href="#design" 
+          <Link
+            variant="primary"
+            href="#design"
             ssx={{ alignSelf: "flex-start" }}
           >
             SCOPRI DI PIù
-
-            <ArrowDownCircleIcon 
-              width={24} 
-              sx={{ color: "black", ml: 2 }} 
-            />
+            <ArrowDownCircleIcon width={24} sx={{ color: "black", ml: 2 }} />
           </Link>
-
         </SectionWrapper>
-
       </Section>
 
-      <Background 
-        bgImg="hero" 
-        placement="bottom" 
-      />
-
+      <Background bgImg="hero" placement="bottom" />
     </>
-  )
+  );
 }

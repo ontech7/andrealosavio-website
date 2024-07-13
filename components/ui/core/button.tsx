@@ -1,36 +1,30 @@
-import type { ThemeUIStyleObject } from '@theme-ui/core'
-import type { ButtonHTMLAttributes, ClassAttributes, FC } from 'react'
+import type { ThemeUIStyleObject } from "@theme-ui/core";
+import type { ButtonHTMLAttributes, ClassAttributes } from "react";
 
-interface CustomButtonProps { 
-  variant?: string
-  ssx?: ThemeUIStyleObject 
+interface CustomButtonProps {
+  variant?: string;
+  ssx?: ThemeUIStyleObject;
 }
 
-type ButtonAttributes = 
-  ClassAttributes<HTMLButtonElement> & 
-  ButtonHTMLAttributes<HTMLButtonElement> & 
-  CustomButtonProps
+type ButtonAttributes = ClassAttributes<HTMLButtonElement> &
+  ButtonHTMLAttributes<HTMLButtonElement> &
+  CustomButtonProps;
 
-interface IButtonProps extends ButtonAttributes {}
+interface ButtonProps extends ButtonAttributes {}
 
-const Button: FC<IButtonProps> = (props) => {
+export default function Button(props: ButtonProps) {
   return (
-    <button 
+    <button
       {...props}
-      sx={{ 
+      sx={{
         fontFamily: "body",
         border: 0,
         cursor: "pointer",
-        ...props.ssx, 
-        ...props.variant && { variant: `buttons.${props.variant}` } 
+        ...props.ssx,
+        ...(props.variant && { variant: `buttons.${props.variant}` }),
       }}
     >
-
-
       {props.children}
-    
     </button>
-  )
+  );
 }
-
-export default Button;

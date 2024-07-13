@@ -1,6 +1,6 @@
-import WorkItem from './item'
+import WorkItem from "./item";
 
-import { worksMap } from '@/shared-data/constants/works'
+import { worksMap } from "@/shared-data/constants/works";
 
 export default function WorkList() {
   return (
@@ -9,17 +9,12 @@ export default function WorkList() {
         display: "flex",
         flexWrap: "wrap",
         justifyContent: "center",
-        gap: "40px"
+        gap: "40px",
       }}
     >
-
-      {worksMap.map(item => 
-        <WorkItem 
-          key={item.href}
-          {...item} 
-        />
-      )}
-      
+      {worksMap.map((item) => (
+        <WorkItem key={item.href} {...item} />
+      ))}
     </div>
-  )
+  );
 }

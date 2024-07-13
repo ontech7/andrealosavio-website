@@ -1,16 +1,15 @@
-import type { ChangeEvent, FC } from 'react';
+import type { InputProps } from "./types";
 
-import type { SubjectType } from '@/shared-data/api/contact/types';
-import type { InputProps } from './types';
-
+import { SubjectType } from "@/shared-data/api/contact/types";
 import arrowDownSvg from "./images/arrow-down.svg";
 
-interface IFormSelectProps extends Pick<
-  InputProps<SubjectType | string>, 
-  "name" | "required" | "options" | "value" | "setValue"
-> {};
+interface FormSelectProps
+  extends Pick<
+    InputProps<SubjectType | string>,
+    "name" | "required" | "options" | "value" | "setValue"
+  > {}
 
-const FormSelect: FC<IFormSelectProps> = ({ name, required, options, value, setValue }) => {
+export default function FormSelect(props: FormSelectProps) {
   return (
     <select
       sx={{
@@ -33,34 +32,24 @@ const FormSelect: FC<IFormSelectProps> = ({ name, required, options, value, setV
         backgroundRepeat: "no-repeat",
         backgroundPositionX: "97%",
         backgroundPositionY: "9px",
-        
+
         "&:focus": {
           borderWidth: "1px",
           borderStyle: "solid",
           borderColor: "yelow",
-          outline: 0
-        }
+          outline: 0,
+        },
       }}
-      name={name}
-      required={required}
-      value={value}
-      onChange={(e: ChangeEvent<HTMLSelectElement>)  => {
-        setValue(name, e.target.value)
+      {...props}
+      onChange={(e) => {
+        props.setValue(props.name, e.target.value);
       }}
     >
-
-      {options?.map(([key, value], i) =>
-        <option 
-          key={key}
-          {...!value && { disabled: true }} 
-          value={key} 
-        >
+      {props.options?.map(([key, value]) => (
+        <option key={key} {...(!value && { disabled: true })} value={key}>
           {value}
         </option>
-      )}
-
+      ))}
     </select>
-  )
+  );
 }
-
-export default FormSelect;

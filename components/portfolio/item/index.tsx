@@ -1,23 +1,26 @@
-import Image from "@/components/ui/core/image"
-import { useState, type FC } from 'react'
+import Image from "@/components/ui/core/image";
+import { useState } from "react";
 
-import PortfolioDescription from './description'
-import PortfolioHeader from './header'
-import PortfolioLink from './link'
-import PortfolioOverlay from './overlay'
-import PortfolioTag from './tag'
+import PortfolioDescription from "./description";
+import PortfolioHeader from "./header";
+import PortfolioLink from "./link";
+import PortfolioOverlay from "./overlay";
+import PortfolioTag from "./tag";
 
-import { portfolioTypesMap } from "@/shared-data/constants/portfolio"
-import type { Portfolio, PortfolioTagType } from "@/shared-data/constants/portfolio/types"
-import { isFilteredOrAll } from "@/shared-data/constants/portfolio/utils"
+import { portfolioTypesMap } from "@/shared-data/constants/portfolio";
+import type {
+  Portfolio,
+  PortfolioTagType,
+} from "@/shared-data/constants/portfolio/types";
+import { isFilteredOrAll } from "@/shared-data/constants/portfolio/utils";
 
-interface IPortfolioItemProps extends Portfolio {
-  currFilter: PortfolioTagType | null
+interface PortfolioItemProps extends Portfolio {
+  currFilter: PortfolioTagType | null;
 }
 
-const PortfolioItem: FC<IPortfolioItemProps> = (props) => {
+export default function PortfolioItem(props: PortfolioItemProps) {
   const [isReadMore, setReadMore] = useState(false);
-  const toggle = () => setReadMore(p => !p);
+  const toggle = () => setReadMore((p) => !p);
 
   const [source, ext] = props.imgSrc.split(".");
   const previewFull = source + "-full." + ext;
@@ -25,19 +28,19 @@ const PortfolioItem: FC<IPortfolioItemProps> = (props) => {
   const portofolioTag = portfolioTypesMap[props.tag];
 
   return (
-    <div 
-      sx={{ 
+    <div
+      sx={{
         p: "15px",
         height: "335px",
         transition: "all 0.5s ease",
-        ...!isFilteredOrAll(props.currFilter, props.tag) && {
+        ...(!isFilteredOrAll(props.currFilter, props.tag) && {
           transform: "scale(0)",
           transformOrigin: "left top",
           width: "0px !important",
           height: "0px !important",
           opacity: 0,
-          p: 0
-        }
+          p: 0,
+        }),
       }}
     >
       <div
@@ -49,7 +52,7 @@ const PortfolioItem: FC<IPortfolioItemProps> = (props) => {
           position: "relative",
           borderRadius: "16px",
           overflow: "hidden",
-          bg: "white"      
+          bg: "white",
         }}
       >
         <Image
@@ -60,37 +63,24 @@ const PortfolioItem: FC<IPortfolioItemProps> = (props) => {
         />
 
         <PortfolioOverlay>
-
           <PortfolioTag name={portofolioTag} />
 
-          <PortfolioLink
-            href={previewFull}
-            type="zoom"
-          />
+          <PortfolioLink href={previewFull} type="zoom" />
 
-          {props.link &&
-            <PortfolioLink
-              href={props.link}
-              type="link"
-            />
-          }
-
+          {props.link && <PortfolioLink href={props.link} type="link" />}
         </PortfolioOverlay>
 
-        <PortfolioHeader 
+        <PortfolioHeader
           title={props.title}
-          active={isReadMore} 
-          toggle={toggle} 
+          active={isReadMore}
+          toggle={toggle}
         />
 
         <PortfolioDescription
           description={props.description}
           active={isReadMore}
         />
-        
       </div>
     </div>
-  )
+  );
 }
-
-export default PortfolioItem;
