@@ -62,7 +62,6 @@ export const servicesMap: Service[] = [
       </>
     ),
     description:
-      "Disponibile a insegnare in corsi di programmazione web per tutte le fasce.",
-    disabled: true,
+      "Disponibile a insegnare in corsi di programmazione web per tutte le fasce."
   },
 ];
