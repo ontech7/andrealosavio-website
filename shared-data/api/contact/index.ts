@@ -5,7 +5,7 @@ export const subjectMap: Record<SubjectType | string, string> = {
   mobile: "Creazione Mobile App",
   consulting: "Consulenza",
   design: "Progettazione e Design",
-  //teach: "Insegnamento On-demand",
+  teach: "Insegnamento On-demand",
   collab: "Collaborazione Start Up e Aziende",
   other: "Altro",
 };
