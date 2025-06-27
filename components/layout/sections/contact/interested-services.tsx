@@ -21,7 +21,7 @@ export default function InterestedServicesSection() {
 
         <Link
           variant="primary"
-          href="/contattami"
+          href="/servizi"
           ssx={{ mt: "20px", alignSelf: "center" }}
         >
           SERVIZI
