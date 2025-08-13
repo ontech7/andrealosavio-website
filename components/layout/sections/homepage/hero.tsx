@@ -1,5 +1,5 @@
 import developerLottie from "@/libs/lottie/developer.json";
-import Lottie from "react-lottie-player";
+const Lottie = dynamic(() => import("react-lottie-player"), { ssr: false });
 
 import { breakpoints } from "@/shared-data/theme";
 import { ArrowDownCircleIcon } from "@heroicons/react/24/outline";
@@ -12,6 +12,7 @@ import Text from "@/components/ui/core/text";
 
 import Background from "@/components/background";
 import KeyPoint from "@/components/ui/common/key-point";
+import dynamic from "next/dynamic";
 import { useState } from "react";
 
 export default function HeroSection() {

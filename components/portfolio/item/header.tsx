@@ -1,16 +1,19 @@
 import { ChevronDownIcon, ChevronUpIcon } from "@heroicons/react/24/outline";
 
 import Button from "@/components/ui/core/button";
+import Image from "@/components/ui/core/image";
 import Text from "@/components/ui/core/text";
 
 interface PortfolioHeaderProps {
   title: string;
+  logo?: string;
   active: boolean;
   toggle: () => void;
 }
 
 export default function PortfolioHeader({
   title,
+  logo,
   active,
   toggle,
 }: PortfolioHeaderProps) {
@@ -22,14 +25,25 @@ export default function PortfolioHeader({
         mt: "auto",
         display: "flex",
         justifyContent: "space-between",
-        p: "10px 25px",
+        p: "10px 15px",
         bg: "white",
         boxShadow: "0 -4px 16px #3332",
       }}
     >
-      <Text color="darkBlue" ssx={{ fontWeight: "semiBold" }}>
-        {title}
-      </Text>
+      <div sx={{ display: "flex", gap: "8px" }}>
+        {logo && (
+          <Image
+            src={logo}
+            alt={title}
+            width={32}
+            height={32}
+            sx={{ width: "auto !important", height: "24px" }}
+          />
+        )}
+        <Text color="darkBlue" ssx={{ fontWeight: "semiBold" }}>
+          {title}
+        </Text>
+      </div>
 
       <Button
         onClick={toggle}

@@ -13,6 +13,29 @@ export const portfolioTypesMap = {
 export const portfolioMap: Portfolio[] = [
   {
     tag: "COLLAB",
+    title: "Ravenn",
+    description: (
+      <>
+        <Link target="_blank" href="https://ravenn.io">
+          Ravenn.io
+        </Link>{" "}
+        è una piattaforma intuitiva per la gestione della logistica e ospitalità
+        negli eventi: trova strutture ricettive adatte ai partecipanti e
+        facilita prenotazioni, cancellazioni e modifiche alberghiere in modo
+        semplificato ed efficiente
+        <br />
+        <br />
+        La mia collaborazione si appresta pressoché per lo sviluppo web in{" "}
+        <b>React</b>, <b>Next.js 14 - App router</b>, <b>Prisma</b>,{" "}
+        <b>PostgreSQL</b>.
+      </>
+    ),
+    logoSrc: "/images/projects/ravenn/logo.webp",
+    imgSrc: "/images/projects/ravenn/preview.png",
+    link: "https://ravenn.io/",
+  },
+  {
+    tag: "COLLAB",
     title: "Brainplatform",
     description: (
       <>
@@ -32,6 +55,7 @@ export const portfolioMap: Portfolio[] = [
         <b>React</b> e <b>Next.js 14</b>.
       </>
     ),
+    logoSrc: "/images/projects/brainplatform/logo.png",
     imgSrc: "/images/projects/brainplatform/preview.png",
     link: "https://www.brainplatform.it/",
   },
@@ -45,7 +69,7 @@ export const portfolioMap: Portfolio[] = [
         trasparenza dei dati, autogestiti, senza passare per servizi terzi.
         <br />
         <br />
-        Sviluppata con <b>React Native</b> utilizzando <b>Expo SDK 49</b>
+        Sviluppata con <b>React Native</b> utilizzando <b>Expo SDK 53</b>
         <br />
         <br />
         Puoi scaricare l'applicazione dal{" "}
@@ -54,17 +78,11 @@ export const portfolioMap: Portfolio[] = [
           href="https://play.google.com/store/apps/details?id=com.ontech7.FastMemoApp"
         >
           Play Store
-        </Link>{" "}
-        oppure{" "}
-        <Link
-          target="_blank"
-          href="https://apps.apple.com/us/app/fast-memo-notes-in-one-click/id6450381916"
-        >
-          App Store
         </Link>
         .
       </>
     ),
+    logoSrc: "/images/projects/fastmemo/logo.png",
     imgSrc: "/images/projects/fastmemo/preview.png",
     link: "https://fastmemo.vercel.app/",
   },
@@ -85,6 +103,7 @@ export const portfolioMap: Portfolio[] = [
         <b>React</b> e <b>Next.js 13</b>, e UI&UX con <b>Figma</b>.
       </>
     ),
+    logoSrc: "/images/projects/recrowd/logo.png",
     imgSrc: "/images/projects/recrowd/preview.png",
     link: "https://www.recrowd.com/",
   },
@@ -111,6 +130,7 @@ export const portfolioMap: Portfolio[] = [
         .
       </>
     ),
+    logoSrc: "/images/projects/studiobargiggia/logo.png",
     imgSrc: "/images/projects/studiobargiggia/preview.png",
     link: "https://www.studiobargiggia.it/",
   },

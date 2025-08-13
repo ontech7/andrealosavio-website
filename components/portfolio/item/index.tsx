@@ -72,6 +72,7 @@ export default function PortfolioItem(props: PortfolioItemProps) {
 
         <PortfolioHeader
           title={props.title}
+          logo={props.logoSrc}
           active={isReadMore}
           toggle={toggle}
         />
