@@ -19,9 +19,9 @@ export default function FastMemoBanner() {
   const [isLottieLoaded, setLottieLoaded] = useState(false);
 
   useEffect(() => {
-    // if (localStorage.getItem("fastmemo-banner-closed") === "true") {
-    //   return;
-    // }
+    if (localStorage.getItem("fastmemo-banner-closed") === "true") {
+       return;
+    }
 
     setIsOpen(true);
 
@@ -79,11 +79,7 @@ export default function FastMemoBanner() {
           </BannerButton>
         </div>
 
-        <div
-          sx={{
-            width: "48px",
-          }}
-        >
+        <div sx={{ width: "48px" }}>
           <DynamicLottie
             forwardedRef={lottieRef}
             loop={false}
@@ -106,7 +102,7 @@ export default function FastMemoBanner() {
       <BannerButton
         onClick={() => {
           setIsOpen(false);
-          // localStorage.setItem("fastmemo-banner-closed", "true");
+          localStorage.setItem("fastmemo-banner-closed", "true");
         }}
         ssx={{
           position: "absolute",
