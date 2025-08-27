@@ -13,7 +13,9 @@ export default function InterestedWorkSection() {
         direction={["column", "column"]}
         ssx={{ textAlign: "center", gap: "25px" }}
       >
-        <Text as="h2">Vuoi anche tu un sito web o un altro servizio?</Text>
+        <Text as="h2">
+          Vuoi anche tu un sito web, un app o un altro servizio?
+        </Text>
 
         <Text color="black">
           Contattami ed effettuerò su misura per te un preventivo completamente

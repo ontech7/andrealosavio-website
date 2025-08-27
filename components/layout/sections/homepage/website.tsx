@@ -31,9 +31,9 @@ export default function WebsiteSection() {
             </Text>
 
             <Text color="black">
-              Un sito web che si mostra professionale, aumenta la credibilità
-              della tua attività, fornendoti maggiore visibilità e aiutandoti a
-              costruire la tua <b>Brand Identity</b>.
+              Un sito web o un app che si mostra professionale, aumenta la
+              credibilità della tua attività, fornendoti maggiore visibilità e
+              aiutandoti a costruire la tua <b>Brand Identity</b>.
             </Text>
 
             <Text color="black">

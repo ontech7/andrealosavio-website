@@ -42,7 +42,7 @@ export const portfolioMap: Portfolio[] = [
         <Link target="_blank" href="https://www.brainplatform.it">
           Brain S.R.L.
         </Link>{" "}
-        trasforma il tuo sito web in una potente arma di marketing, unendo
+        trasforma il tuo sito web o app in una potente arma di marketing, unendo
         design accattivante e alte prestazioni, comunicando i valori del tuo
         brand in maniera autorevole per stare al passo con la concorrenza.
         <br />

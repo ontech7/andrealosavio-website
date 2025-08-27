@@ -6,6 +6,10 @@ import HeroSection from "@/components/layout/sections/homepage/hero";
 import WebsiteSection from "@/components/layout/sections/homepage/website";
 import WorkSection from "@/components/layout/sections/homepage/work";
 
+import FastMemoBanner from "@/components/banner/fastmemo";
+import dynamic from "next/dynamic";
+const Lottie = dynamic(() => import("react-lottie-player"), { ssr: false });
+
 export default function HomePage() {
   return (
     <Layout
@@ -17,6 +21,8 @@ export default function HomePage() {
       <DesignSection />
       <WebsiteSection />
       <CollaborationSection />
+
+      <FastMemoBanner />
     </Layout>
   );
 }

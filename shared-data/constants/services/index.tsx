@@ -49,7 +49,7 @@ export const servicesMap: Service[] = [
     alt: "Progettazione e design",
     title: "Progettazione e design",
     description:
-      "Prototipazione e progettazione del vostro sito web o di quello di un vostro cliente.",
+      "Prototipazione e progettazione del vostro sito web, app o di quello di un vostro cliente.",
   },
   {
     serviceName: "teach",
@@ -62,6 +62,6 @@ export const servicesMap: Service[] = [
       </>
     ),
     description:
-      "Disponibile a insegnare in corsi di programmazione web per tutte le fasce."
+      "Disponibile a insegnare in corsi di programmazione web per tutte le fasce.",
   },
 ];

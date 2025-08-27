@@ -1,5 +1,11 @@
 import developerLottie from "@/libs/lottie/developer.json";
-const Lottie = dynamic(() => import("react-lottie-player"), { ssr: false });
+
+const DynamicLottie = dynamic(
+  () => import("../../../ui/common/dyamic-lottie"),
+  {
+    ssr: false,
+  }
+);
 
 import { breakpoints } from "@/shared-data/theme";
 import { ArrowDownCircleIcon } from "@heroicons/react/24/outline";
@@ -59,7 +65,7 @@ export default function HeroSection() {
               },
             }}
           >
-            <Lottie
+            <DynamicLottie
               loop
               animationData={developerLottie}
               play
@@ -88,8 +94,8 @@ export default function HeroSection() {
               [breakpoints.mobile]: { maxWidth: "100%" },
             }}
           >
-            Hai bisogno di un sito web accattivante che raggiunga in modo{" "}
-            <KeyPoint as="b">chiaro</KeyPoint>,{" "}
+            Hai bisogno di un sito web o un app accattivante che raggiunga in
+            modo <KeyPoint as="b">chiaro</KeyPoint>,{" "}
             <KeyPoint as="b" delay={250}>
               semplice
             </KeyPoint>{" "}
