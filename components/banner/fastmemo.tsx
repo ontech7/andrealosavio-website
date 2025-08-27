@@ -55,7 +55,6 @@ export default function FastMemoBanner() {
         borderRadius: "12px",
         padding: "20px",
         background: "linear-gradient(to right, #040E33, #24325A)",
-        boxShadow: "0px 4px 8px #3334",
       }}
     >
       <div
