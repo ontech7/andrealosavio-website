@@ -13,6 +13,27 @@ export const portfolioTypesMap = {
 export const portfolioMap: Portfolio[] = [
   {
     tag: "COLLAB",
+    title: "Quido",
+    description: (
+      <>
+        <Link target="_blank" href="https://quido.ai">
+          Quido.ai
+        </Link>{" "}
+        è una piattaforma di intelligenza artificiale dedicata al mondo del 
+        private equity e delle operazioni di M&A in Italia, progettata per offrire 
+        analisi e insight affidabili a professionisti e investitori.
+        <br />
+        <br />
+        La mia collaborazione si appresta pressoché per lo sviluppo web in{" "}
+        <b>React</b>, <b>Next.js 15 - App router</b>, e UI&UX con <b>Figma</b>.
+      </>
+    ),
+    logoSrc: "/images/projects/quido/logo.svg",
+    imgSrc: "/images/projects/quido/preview.png",
+    link: "https://quido.ai/",
+  },
+  {
+    tag: "COLLAB",
     title: "Ravenn",
     description: (
       <>
