@@ -11,7 +11,7 @@ export default function CopyrightText() {
         "& a": { color: "green", fontWeight: "regular" },
       }}
     >
-      <Text>© Copyright {currentYear} | Andrea Losavio</Text>
+      <Text>© Copyright 2018 - {currentYear} | Andrea Losavio</Text>
 
       <Text>
         <Link target="_blank" href="/privacy-policy">

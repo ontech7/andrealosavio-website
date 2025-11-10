@@ -49,22 +49,39 @@ export default function MyCareerSection() {
             }}
           />
 
-          <Link
-            variant="primary"
-            href="/files/AndreaLosavio_CV.pdf"
-            target="_blank"
+          <div
             sx={{
               position: "absolute",
+              zIndex: 2,
               top: "50%",
               left: "50%",
               transform: "translate(-50%, -50%)",
-              whiteSpace: "nowrap",
-              zIndex: 2,
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              gap: "12px",
             }}
           >
-            Scarica il CV
-            <CursorArrowRaysIcon width={24} sx={{ color: "black", ml: 2 }} />
-          </Link>
+            <Link
+              variant="primary"
+              href="/files/AndreaLosavio_CV_Ita.pdf"
+              target="_blank"
+              sx={{ whiteSpace: "nowrap" }}
+            >
+              Curriculum (IT)
+              <CursorArrowRaysIcon width={24} sx={{ color: "black", ml: 2 }} />
+            </Link>
+
+            <Link
+              variant="primary"
+              href="/files/AndreaLosavio_CV_Eng.pdf"
+              target="_blank"
+              sx={{ whiteSpace: "nowrap" }}
+            >
+              Curriculum (EN)
+              <CursorArrowRaysIcon width={24} sx={{ color: "black", ml: 2 }} />
+            </Link>
+          </div>
         </div>
       </SectionWrapper>
     </Section>
