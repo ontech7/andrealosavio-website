@@ -5,6 +5,7 @@ export default function Document() {
     <Html lang="it">
       <Head />
       <body>
+        <style>{`html { --hr: 31deg; filter: hue-rotate(var(--hr)); } img { filter: hue-rotate(calc(360deg - var(--hr))); }`}</style>
         <Main />
         <NextScript />
       </body>
